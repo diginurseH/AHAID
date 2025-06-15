@@ -1,0 +1,27 @@
+
+[
+  {
+    "icon": "HeartPulse",
+    "iconColor": "text-gold-600",
+    "title": "Empathy & Emotional Intelligence",
+    "description": "AI-driven tools built with deep emotional intelligence and mental wellness sensitivity."
+  },
+  {
+    "icon": "Users",
+    "iconColor": "text-green-700",
+    "title": "Integrity & Accessibility",
+    "description": "Open, honest, accessible, and reliable information for all."
+  },
+  {
+    "icon": "Sparkles",
+    "iconColor": "text-yellow-600",
+    "title": "Innovation & Collaboration",
+    "description": "Creative, collaborative, open-source platforms for real impact."
+  },
+  {
+    "icon": "BookMarked",
+    "iconColor": "text-amber-800",
+    "title": "Afrocentric Empowerment",
+    "description": "Rooted in African values, cultures, and community realities."
+  }
+]
