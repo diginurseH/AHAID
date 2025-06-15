@@ -3,25 +3,65 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Sparkles, Users, HeartPulse, BookMarked } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import DinhaLogo from "@/components/DinhaLogo";
-import coreValuesData from "@/data/coreValues.json";
-import empowermentStreamsData from "@/data/empowermentStreams.json";
 
-const iconComponents: Record<string, any> = {
-  HeartPulse,
-  Users,
-  Sparkles,
-  BookMarked,
-};
+const coreValues = [
+  {
+    icon: <HeartPulse className="text-gold-600" />,
+    title: "Empathy & Emotional Intelligence",
+    description:
+      "AI-driven tools built with deep emotional intelligence and mental wellness sensitivity.",
+  },
+  {
+    icon: <Users className="text-green-700" />,
+    title: "Integrity & Accessibility",
+    description:
+      "Open, honest, accessible, and reliable information for all.",
+  },
+  {
+    icon: <Sparkles className="text-yellow-600" />,
+    title: "Innovation & Collaboration",
+    description:
+      "Creative, collaborative, open-source platforms for real impact.",
+  },
+  {
+    icon: <BookMarked className="text-amber-800" />,
+    title: "Afrocentric Empowerment",
+    description:
+      "Rooted in African values, cultures, and community realities.",
+  },
+];
 
-const coreValues = coreValuesData.map((val) => ({
-  ...val,
-  icon: iconComponents[val.icon as keyof typeof iconComponents],
-}));
-
-const empowermentStreams = empowermentStreamsData.map((val) => ({
-  ...val,
-  icon: iconComponents[val.icon as keyof typeof iconComponents],
-}));
+const empowermentStreams = [
+  {
+    title: "Care",
+    description:
+      "AI-driven chronic disease support, nurse training, emotional support SOPs.",
+    color: "from-green-700 to-green-400",
+    icon: <HeartPulse className="w-7 h-7" />,
+  },
+  {
+    title: "Code",
+    description:
+      "Open-source innovation hub, technical guides, APIs, and developer resources.",
+    color: "from-blue-900 to-blue-400",
+    icon: <Sparkles className="w-7 h-7" />,
+  },
+  {
+    title: "Community",
+    description:
+      "Powerful stories, webinars, emotional wellness resources, testimonials.",
+    color: "from-amber-700 to-yellow-300",
+    icon: <Users className="w-7 h-7" />,
+  },
+  {
+    title: "Commerce",
+    description:
+      "Digital strategy & tools for small and medium-sized African enterprises. DINHA empowers growth through web, mobile & messaging tech—proven with Mister's Bakery: web app & WhatsApp integration.",
+    color: "from-yellow-700 to-yellow-400",
+    icon: <BookMarked className="w-7 h-7" />,
+    proofOfLife: true,
+  },
+];
 
 const Index = () => {
   return (
@@ -85,9 +125,7 @@ const Index = () => {
               {coreValues.map((v) => (
                 <div key={v.title} className="hover:scale-105 transition-all duration-200 shadow border-green-100/80 rounded-xl bg-white animate-fade-in">
                   <div className="flex flex-col items-center p-5">
-                    <div className="mb-3">
-                      {React.createElement(v.icon, { className: v.iconColor })}
-                    </div>
+                    <div className="mb-3">{v.icon}</div>
                     <h4 className="font-semibold mb-1 text-green-900">{v.title}</h4>
                     <p className="text-sm text-muted-foreground text-center">{v.description}</p>
                   </div>
@@ -105,9 +143,10 @@ const Index = () => {
                 key={c.title}
                 className={`rounded-xl bg-gradient-to-br ${c.color} text-white shadow-lg hover:scale-105 transition-transform animate-enter flex flex-col items-center p-7 relative`}
               >
-                {React.createElement(c.icon, { className: "w-7 h-7" })}
+                {c.icon}
                 <h3 className="mt-4 text-xl font-semibold">{c.title}</h3>
                 <p className="mt-2 text-sm text-white/90 text-center">{c.description}</p>
+                {/* Add Proof of Life (Mister's Bakery) visually in Commerce */}
                 {c.proofOfLife && (
                   <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-full px-3">
                     <div className="bg-white bg-opacity-90 border border-yellow-300 rounded-xl shadow-md p-4 mt-6 text-center text-green-900">
@@ -116,6 +155,7 @@ const Index = () => {
                         <span className="font-bold">Mister's Bakery Pilot:</span> <br />
                         DINHA built a web app & WhatsApp integration for real SME impact in Africa.
                       </div>
+                      {/* Button stub; replace link as needed */}
                       <a
                         href="#contact"
                         className="inline-block text-amber-700 border border-amber-700 rounded px-3 py-1.5 mt-1.5 hover:bg-amber-50 transition font-medium text-sm"

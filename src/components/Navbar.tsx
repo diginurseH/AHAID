@@ -1,7 +1,6 @@
 
 import DinhaLogo from "./DinhaLogo";
 import { Button } from "@/components/ui/button";
-import LanguageToggle from "./LanguageToggle";
 
 const menu = [
   { name: "Home", href: "#home" },
@@ -9,7 +8,6 @@ const menu = [
   { name: "Studio", href: "#studio" },
   { name: "Community", href: "#community" },
   { name: "Contact", href: "#contact" },
-  { name: "Docs", href: "/docs" }, // Add Docs route
 ];
 
 const Navbar = () => {
@@ -34,9 +32,6 @@ const Navbar = () => {
                 </a>
               </li>
             ))}
-            <li>
-              <LanguageToggle />
-            </li>
           </ul>
           <Button
             asChild
