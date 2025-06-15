@@ -1,0 +1,49 @@
+
+import DinhaLogo from "./DinhaLogo";
+import { Button } from "@/components/ui/button";
+
+const menu = [
+  { name: "Home", href: "#home" },
+  { name: "Empowerment Streams", href: "#empowerment" },
+  { name: "Studio", href: "#studio" },
+  { name: "Community", href: "#community" },
+  { name: "Contact", href: "#contact" },
+];
+
+const Navbar = () => {
+  return (
+    <nav className="w-full fixed top-0 left-0 z-30 bg-white/90 border-b border-green-50 shadow-sm backdrop-blur-lg">
+      <div className="container max-w-7xl mx-auto flex items-center justify-between px-3 py-1 md:py-2">
+        <a href="/" className="flex items-center gap-3 group" aria-label="DINHA Home">
+          <DinhaLogo size={38} />
+          <span className="font-bold text-xl md:text-2xl text-green-900 tracking-tight group-hover:text-amber-700 transition">
+            DINHA
+          </span>
+        </a>
+        <div className="flex-1 flex justify-end items-center">
+          <ul className="hidden md:flex gap-1 xl:gap-3 items-center">
+            {menu.map((item) => (
+              <li key={item.name}>
+                <a
+                  href={item.href}
+                  className="px-3 py-2 rounded font-medium text-green-900/90 hover:text-amber-700 hover:bg-green-50 transition-colors text-base focus-visible:outline-amber-600 focus-visible:ring-2"
+                >
+                  {item.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <Button
+            asChild
+            size="sm"
+            className="ml-3 bg-amber-700 hover:bg-amber-800 text-white hidden md:inline-flex"
+          >
+            <a href="#contact">Get in Touch</a>
+          </Button>
+        </div>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;
