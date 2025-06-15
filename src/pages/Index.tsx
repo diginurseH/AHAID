@@ -56,9 +56,10 @@ const empowermentStreams = [
   {
     title: "Commerce",
     description:
-      "Entrepreneurship playbooks and resource toolkits for health innovators.",
+      "Digital strategy & tools for small and medium-sized African enterprises. DINHA empowers growth through web, mobile & messaging tech—proven with Mister's Bakery: web app & WhatsApp integration.",
     color: "from-yellow-700 to-yellow-400",
     icon: <BookMarked className="w-7 h-7" />,
+    proofOfLife: true,
   },
 ];
 
@@ -140,14 +141,34 @@ const Index = () => {
             {empowermentStreams.map((c) => (
               <div
                 key={c.title}
-                className={`rounded-xl bg-gradient-to-br ${c.color} text-white shadow-lg hover:scale-105 transition-transform animate-enter flex flex-col items-center p-7`}
+                className={`rounded-xl bg-gradient-to-br ${c.color} text-white shadow-lg hover:scale-105 transition-transform animate-enter flex flex-col items-center p-7 relative`}
               >
                 {c.icon}
                 <h3 className="mt-4 text-xl font-semibold">{c.title}</h3>
                 <p className="mt-2 text-sm text-white/90 text-center">{c.description}</p>
+                {/* Add Proof of Life (Mister's Bakery) visually in Commerce */}
+                {c.proofOfLife && (
+                  <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-full px-3">
+                    <div className="bg-white bg-opacity-90 border border-yellow-300 rounded-xl shadow-md p-4 mt-6 text-center text-green-900">
+                      <div className="font-semibold text-amber-700 mb-1">Proof of Life</div>
+                      <div className="text-[15px] mb-2">
+                        <span className="font-bold">Mister's Bakery Pilot:</span> <br />
+                        DINHA built a web app & WhatsApp integration for real SME impact in Africa.
+                      </div>
+                      {/* Button stub; replace link as needed */}
+                      <a
+                        href="#contact"
+                        className="inline-block text-amber-700 border border-amber-700 rounded px-3 py-1.5 mt-1.5 hover:bg-amber-50 transition font-medium text-sm"
+                      >
+                        Learn More
+                      </a>
+                    </div>
+                  </div>
+                )}
               </div>
             ))}
           </div>
+          <div className="h-12"></div> {/* Spacer for proof-of-life card overlap */}
         </section>
         {/* Studio Section Placeholder */}
         <section id="studio" className="max-w-5xl mx-auto px-4 py-12 flex flex-col items-center">
