@@ -1,11 +1,14 @@
 
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { HeartPulse, Sparkles, Users, BookMarked, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
+import { Metadata } from "@/components/Metadata";
+import { EmpowermentStreamCard, type EmpowermentStreamProps } from "@/components/EmpowermentStreamCard";
+import { LazyLoad } from "@/components/LazyLoad";
+import { useAnalytics } from "@/hooks/useAnalytics";
 
-const empowermentStreams = [
+const empowermentStreams: EmpowermentStreamProps[] = [
   {
     title: "Care",
     description:
@@ -73,8 +76,19 @@ const empowermentStreams = [
 ];
 
 const EmpowermentStreams = () => {
+  // Use analytics hook to track page views and interactions
+  useAnalytics({
+    trackUserInteractions: true,
+    trackOutboundLinks: true
+  });
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-yellow-50 via-emerald-50 to-white">
+      <Metadata 
+        title="Empowerment Streams | The 4C Framework" 
+        description="Our comprehensive approach to empowering Africa's healthcare ecosystem through four interconnected streams: Care, Code, Community, and Commerce."
+        keywords={["healthcare", "africa", "digital health", "empowerment", "4C framework"]}
+      />
       <Navbar />
       
       <main className="pt-20 pb-12">
@@ -103,89 +117,54 @@ const EmpowermentStreams = () => {
         </section>
 
         {/* Empowerment Streams Details */}
-        <section className="max-w-7xl mx-auto px-4">
+        <section className="max-w-7xl mx-auto px-4" aria-labelledby="empowerment-streams-heading">
+          <h2 id="empowerment-streams-heading" className="sr-only">Empowerment Streams Details</h2>
           <div className="grid gap-8">
             {empowermentStreams.map((stream, index) => (
-              <Card key={stream.title} className="overflow-hidden shadow-lg animate-fade-in">
-                <div className={`bg-gradient-to-r ${stream.color} text-white p-6`}>
-                  <CardHeader className="p-0">
-                    <div className="flex items-center gap-4 mb-4">
-                      {stream.icon}
-                      <CardTitle className="text-2xl md:text-3xl font-bold">
-                        {stream.title}
-                      </CardTitle>
-                    </div>
-                    <p className="text-lg text-white/90">
-                      {stream.description}
-                    </p>
-                  </CardHeader>
-                </div>
-                
-                <CardContent className="p-6">
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <h4 className="text-lg font-semibold text-green-800 mb-3">
-                        Overview
-                      </h4>
-                      <p className="text-green-900/80 mb-4">
-                        {stream.fullDescription}
-                      </p>
-                    </div>
-                    
-                    <div>
-                      <h4 className="text-lg font-semibold text-green-800 mb-3">
-                        Key Features
-                      </h4>
-                      <ul className="space-y-2">
-                        {stream.features.map((feature, idx) => (
-                          <li key={idx} className="flex items-start gap-2 text-green-900/80">
-                            <div className="w-1.5 h-1.5 bg-amber-600 rounded-full mt-2 flex-shrink-0" />
-                            {feature}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                  
-                  {stream.proofOfLife && (
-                    <div className="mt-6 bg-amber-50 border border-amber-200 rounded-lg p-4">
-                      <h5 className="font-semibold text-amber-800 mb-2">
-                        {stream.proofOfLife.title}
-                      </h5>
-                      <p className="text-amber-900/80 text-sm">
-                        {stream.proofOfLife.description}
-                      </p>
-                    </div>
-                  )}
-                  
-                  <div className="mt-6 flex flex-wrap gap-3">
-                    <Button className="bg-green-700 hover:bg-green-800 text-white">
-                      Learn More
-                    </Button>
-                    <Button variant="outline" className="border-green-700 text-green-800 hover:bg-green-50">
-                      Get Started
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
+              <div key={stream.title} data-testid={`stream-${stream.title.toLowerCase()}`}>
+                {index < 2 ? (
+                  <EmpowermentStreamCard stream={stream} />
+                ) : (
+                  <LazyLoad>
+                    <EmpowermentStreamCard stream={stream} />
+                  </LazyLoad>
+                )}
+              </div>
             ))}
           </div>
         </section>
 
         {/* Call to Action */}
-        <section className="max-w-4xl mx-auto px-4 py-12 text-center">
-          <h3 className="text-2xl md:text-3xl font-bold text-green-800 mb-4">
+        <section 
+          className="max-w-4xl mx-auto px-4 py-12 text-center"
+          aria-labelledby="cta-heading"
+          data-testid="call-to-action"
+        >
+          <h3 id="cta-heading" className="text-2xl md:text-3xl font-bold text-green-800 mb-4">
             Ready to Transform Healthcare in Africa?
           </h3>
           <p className="text-lg text-green-900/80 mb-6">
             Join us in building a comprehensive digital health ecosystem that empowers communities across Africa.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-amber-700 hover:bg-amber-800 text-white">
+            <Button 
+              size="lg" 
+              className="bg-amber-700 hover:bg-amber-800 text-white"
+              data-action="partner"
+              aria-label="Partner with AHAID"
+            >
               Partner with Us
             </Button>
-            <Button size="lg" variant="outline" className="border-green-700 text-green-800 hover:bg-green-50" asChild>
-              <Link to="/#contact">Get in Touch</Link>
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="border-green-700 text-green-800 hover:bg-green-50" 
+              asChild
+              data-action="contact"
+            >
+              <Link to="/#contact" aria-label="Go to contact section">
+                Get in Touch
+              </Link>
             </Button>
           </div>
         </section>
