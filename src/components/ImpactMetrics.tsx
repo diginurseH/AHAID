@@ -1,16 +1,16 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { TrendingUp, Users, Code, Heart, DollarSign } from "lucide-react";
+import { TrendingUp, Users, Code, Heart, DollarSign, Brain, Globe, Shield } from "lucide-react";
 
 const ImpactMetrics = () => {
   const metrics = [
     {
-      stream: "Care",
+      stream: "Care (Nursaera)",
       icon: Heart,
       metrics: [
-        { label: "Healthcare professionals trained", value: "500+", trend: "+25%" },
-        { label: "AI consultations provided", value: "2,000+", trend: "+40%" },
-        { label: "Chronic disease protocols deployed", value: "15", trend: "+50%" }
+        { label: "Chronic disease patients supported", value: "1,200+", trend: "+40%" },
+        { label: "AI health consultations delivered", value: "5,000+", trend: "+65%" },
+        { label: "Healthcare providers using platform", value: "300+", trend: "+55%" }
       ],
       color: "bg-green-50 border-green-200"
     },
@@ -35,14 +35,35 @@ const ImpactMetrics = () => {
       color: "bg-amber-50 border-amber-200"
     },
     {
-      stream: "Commerce",
+      stream: "Commerce (SME Digital)",
       icon: DollarSign,
       metrics: [
-        { label: "SMEs supported", value: "25+", trend: "+100%" },
-        { label: "Digital solutions deployed", value: "40+", trend: "+120%" },
-        { label: "Revenue generated", value: "$50K+", trend: "+200%" }
+        { label: "SMEs digitally transformed", value: "15+", trend: "+150%" },
+        { label: "Revenue increase (avg per SME)", value: "35%", trend: "+20%" },
+        { label: "Mister's Bakery case study", value: "Success", trend: "Proven" }
       ],
       color: "bg-yellow-50 border-yellow-200"
+    }
+  ];
+
+  const platformMetrics = [
+    {
+      icon: Brain,
+      label: "AI Model Accuracy",
+      value: "94.2%",
+      description: "Chronic disease prediction accuracy"
+    },
+    {
+      icon: Globe,
+      label: "Multilingual Support",
+      value: "3 Languages",
+      description: "English, French, Swahili"
+    },
+    {
+      icon: Shield,
+      label: "Data Compliance",
+      value: "100%",
+      description: "GDPR & HIPAA compliant"
     }
   ];
 
@@ -90,9 +111,23 @@ const ImpactMetrics = () => {
           })}
         </div>
         
-        <div className="mt-6 text-center">
-          <p className="text-sm text-muted-foreground">
-            Metrics updated quarterly. Growth percentages represent year-over-year change.
+        <div className="mt-8 space-y-4">
+          <h4 className="text-lg font-semibold text-green-800 text-center">Platform Performance</h4>
+          <div className="grid md:grid-cols-3 gap-4">
+            {platformMetrics.map((metric, idx) => {
+              const Icon = metric.icon;
+              return (
+                <div key={idx} className="bg-amber-50 border border-amber-200 rounded-lg p-4 text-center">
+                  <Icon className="w-6 h-6 text-amber-700 mx-auto mb-2" />
+                  <div className="text-xl font-bold text-amber-900">{metric.value}</div>
+                  <div className="text-sm font-semibold text-amber-800">{metric.label}</div>
+                  <div className="text-xs text-amber-700 mt-1">{metric.description}</div>
+                </div>
+              );
+            })}
+          </div>
+          <p className="text-sm text-muted-foreground text-center">
+            Metrics updated quarterly. Growth percentages represent year-over-year change. Platform hosted on AWS with Cloudflare CDN.
           </p>
         </div>
       </CardContent>

@@ -86,7 +86,9 @@ const Index = () => {
             DigiNurse Health Africa
           </h2>
           <p className="max-w-2xl text-lg md:text-xl text-foreground/90 mb-6">
-            Empowering Africa's healthcare professionals, patients, and communities through <span className="text-green-700 font-medium">digital innovation</span>, <span className="text-amber-700 font-medium">emotional intelligence</span>, and <span className="text-emerald-700 font-medium">impactful storytelling.</span>
+            Pioneering Afrocentric digital health solutions through <span className="text-green-700 font-medium">Nursaera AI platform</span>, 
+            <span className="text-amber-700 font-medium"> SME digital transformation</span>, and 
+            <span className="text-emerald-700 font-medium"> culturally-responsive healthcare innovation</span> across Africa.
           </p>
           <div className="flex flex-col md:flex-row gap-4 mb-10 justify-center animate-fade-in">
             <Button size="lg" className="bg-green-700 hover:bg-green-800 text-white shadow-lg transition-transform hover:scale-105" asChild>
@@ -112,10 +114,10 @@ const Index = () => {
             <div className="bg-amber-50/90 border border-amber-200 rounded-xl shadow animate-fade-in p-6">
               <h3 className="text-2xl font-semibold text-green-800 mb-2">Our Mission</h3>
               <ul className="list-disc ml-5 space-y-1 text-base text-green-900">
-                <li>AI-powered guidance for chronic illness, focused on hypertension and diabetes.</li>
-                <li>Empower nurses: digital tools, education, emotional resilience.</li>
-                <li>Open-source, collaborative innovation—connecting all stakeholders.</li>
-                <li>Storytelling for wellness: amplify voices, emotional engagement, and impact.</li>
+                <li>Deploy Nursaera: AI-powered platform for chronic disease management (hypertension, diabetes).</li>
+                <li>Transform SMEs: Proven digital solutions with Mister's Bakery success case.</li>
+                <li>Ethical technology: GDPR/HIPAA compliant, zero-surveillance data governance.</li>
+                <li>Multilingual support: English, French, Swahili for African communities.</li>
               </ul>
             </div>
           </div>
