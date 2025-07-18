@@ -34,12 +34,19 @@ interface BreadcrumbNavProps {
   }>;
 }
 
+interface BreadcrumbItem {
+  label: string;
+  href?: string;
+  icon?: React.ComponentType<{ className?: string }>;
+  isCurrentPage?: boolean;
+}
+
 const BreadcrumbNav = ({ customItems }: BreadcrumbNavProps) => {
   const location = useLocation();
   const pathSegments = location.pathname.split('/').filter(Boolean);
   
   // Build breadcrumb items from URL segments
-  const breadcrumbItems = [
+  const breadcrumbItems: BreadcrumbItem[] = [
     { label: 'Home', href: '/', icon: Home }
   ];
 
