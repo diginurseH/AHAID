@@ -76,6 +76,17 @@ const Navbar = () => {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
+                <NavigationMenuLink asChild>
+                  <Link
+                    to="/#about"
+                    className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-green-50 hover:text-amber-700 focus:bg-green-50 focus:text-amber-700 focus:outline-none"
+                  >
+                    About
+                  </Link>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
                 <NavigationMenuTrigger className="bg-background hover:bg-green-50 hover:text-amber-700 focus:bg-green-50 focus:text-amber-700">
                   Solutions
                 </NavigationMenuTrigger>
@@ -166,6 +177,14 @@ const Navbar = () => {
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     Home
+                  </Link>
+
+                  <Link
+                    to="/#about"
+                    className="block px-3 py-2 rounded-md text-base font-medium text-green-900 hover:text-amber-700 hover:bg-green-50 transition-colors"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    About
                   </Link>
                   
                   <div className="space-y-1">

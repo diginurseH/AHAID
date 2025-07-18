@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Sparkles, Users, HeartPulse, BookMarked } from "lucide-react";
@@ -78,18 +79,54 @@ const Index = () => {
           <h3 className="text-lg md:text-xl text-green-800 font-semibold mb-6">
             Where Care Meets Code
           </h3>
-          <div className="flex flex-col md:flex-row gap-4 mb-10 justify-center animate-fade-in">
+          <div className="flex justify-center animate-fade-in">
             <Button size="lg" className="bg-green-700 hover:bg-green-800 text-white shadow-lg transition-transform hover:scale-105" asChild>
               <Link to="/ecosystem">Explore the Ecosystem</Link>
             </Button>
-            <Button size="lg" variant="outline" className="border-green-700 text-green-800 hover:bg-green-50">
-              Meet Your DINHA AI
-            </Button>
-            <Button size="lg" variant="secondary" className="bg-amber-700 text-white hover:bg-amber-800">
-              Join Our Community
-            </Button>
           </div>
         </section>
+
+        {/* About Us Section */}
+        <section id="about" className="max-w-5xl mx-auto px-4 py-12">
+          <h2 className="text-3xl font-bold text-green-800 mb-8 text-center">About Us</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-white rounded-xl shadow-lg p-6 animate-fade-in">
+              <h3 className="text-xl font-semibold text-green-800 mb-4">Our Story</h3>
+              <p className="text-green-900 leading-relaxed mb-4">
+                Born from the intersection of nursing expertise and technological innovation, DINHA represents 
+                a quiet revolution in African healthcare. We emerged from the recognition that healthcare 
+                transformation requires both deep clinical understanding and cutting-edge digital solutions.
+              </p>
+              <p className="text-green-900 leading-relaxed">
+                Our founder, drawing from extensive nursing experience across multiple healthcare systems, 
+                identified the critical gap between available technology and real-world healthcare needs in 
+                resource-constrained environments.
+              </p>
+            </div>
+            <div className="bg-amber-50 rounded-xl border border-amber-200 p-6 animate-fade-in">
+              <h3 className="text-xl font-semibold text-green-800 mb-4">What Makes Us Different</h3>
+              <ul className="space-y-3 text-green-900">
+                <li className="flex items-start gap-2">
+                  <HeartPulse className="w-5 h-5 text-green-700 mt-0.5 flex-shrink-0" />
+                  <span><strong>Nurse-Led Innovation:</strong> Built by healthcare professionals who understand real clinical challenges</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Sparkles className="w-5 h-5 text-yellow-600 mt-0.5 flex-shrink-0" />
+                  <span><strong>Cultural Sensitivity:</strong> Solutions designed with African contexts and values at the core</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Users className="w-5 h-5 text-green-700 mt-0.5 flex-shrink-0" />
+                  <span><strong>Community-Centered:</strong> Technology that strengthens rather than replaces human connections</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <BookMarked className="w-5 h-5 text-amber-800 mt-0.5 flex-shrink-0" />
+                  <span><strong>Open Source Commitment:</strong> Transparent, accessible, and collaboratively developed</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
         {/* Mission & Vision */}
         <section className="max-w-5xl mx-auto px-4 py-6">
           <div className="grid md:grid-cols-2 gap-6 mb-10">
@@ -127,6 +164,7 @@ const Index = () => {
             </div>
           </div>
         </section>
+
         {/* 4C Empowerment Streams */}
         <section id="empowerment" className="max-w-6xl mx-auto px-4 py-12">
           <div className="text-center mb-8">
@@ -148,6 +186,7 @@ const Index = () => {
             ))}
           </div>
         </section>
+
         {/* Studio Section Placeholder */}
         <section id="studio" className="max-w-5xl mx-auto px-4 py-12 flex flex-col items-center">
           <h2 className="text-2xl md:text-3xl font-bold text-amber-700 mb-2">DINHA Studio</h2>
@@ -158,16 +197,41 @@ const Index = () => {
             Visit Studio Blog
           </Button>
         </section>
-        {/* Community Section Placeholder */}
-        <section id="community" className="max-w-5xl mx-auto px-4 py-10 flex flex-col items-center">
-          <h2 className="text-2xl md:text-3xl font-bold text-green-800 mb-2">Community Voices</h2>
-          <p className="mb-3 text-green-900 text-base md:text-lg text-center max-w-2xl">
-            Real experiences, webinars, and testimonials. Join a thriving community dedicated to healthcare transformation across Africa.
-          </p>
-          <Button variant="secondary" className="bg-green-700 text-white hover:bg-green-800">
-            Join the Conversation
-          </Button>
+
+        {/* Enhanced Community Section */}
+        <section id="community" className="max-w-5xl mx-auto px-4 py-12">
+          <div className="bg-gradient-to-r from-green-800 to-emerald-700 text-white rounded-2xl p-8 text-center shadow-xl">
+            <Users className="h-12 w-12 mx-auto mb-4 text-yellow-300" />
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">Join Our Community</h2>
+            <p className="mb-6 text-green-100 text-base md:text-lg max-w-2xl mx-auto">
+              Connect with healthcare professionals, developers, and innovators across Africa. Share experiences, 
+              participate in webinars, and access exclusive resources for healthcare transformation.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" variant="secondary" className="bg-white text-green-800 hover:bg-green-50" asChild>
+                <Link to="/community">Explore Community</Link>
+              </Button>
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+                View Testimonials
+              </Button>
+            </div>
+            <div className="mt-6 grid grid-cols-3 gap-4 max-w-md mx-auto text-center">
+              <div>
+                <div className="text-2xl font-bold text-yellow-300">2,500+</div>
+                <div className="text-sm text-green-100">Members</div>
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-yellow-300">15</div>
+                <div className="text-sm text-green-100">Countries</div>
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-yellow-300">450+</div>
+                <div className="text-sm text-green-100">Discussions</div>
+              </div>
+            </div>
+          </div>
         </section>
+
         {/* Contact Section */}
         <section id="contact" className="max-w-2xl mx-auto px-4 py-10">
           <h2 className="text-2xl font-bold text-amber-700 mb-4">Contact & Collaborate</h2>
