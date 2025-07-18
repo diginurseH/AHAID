@@ -72,7 +72,7 @@ const Index = () => {
         {/* Header Section */}
         <section id="home" className="max-w-4xl mx-auto py-14 px-4 flex flex-col items-center text-center animate-fade-in">
           <h1 className="text-4xl md:text-5xl font-bold text-green-900 mb-3 tracking-tight">
-            DigiNurse Health Africa
+            AFRICA'S HEALTH AND INCLUSIVE DIGITALIZATION (AHAID)
           </h1>
           <h3 className="text-lg md:text-xl text-green-800 font-semibold mb-6">
             Where Care Meets Code
@@ -303,7 +303,7 @@ const Index = () => {
       {/* Footer */}
       <footer className="w-full py-8 px-4 bg-green-800/95 text-white text-center text-xs mt-16 tracking-wide animate-fade-in flex flex-col gap-2">
         <div>
-          © {new Date().getFullYear()} DINHA – DigiNurse Health Africa. Empowering Africa, Digitally & Compassionately.
+          © {new Date().getFullYear()} DINHA – AFRICA'S HEALTH AND INCLUSIVE DIGITALIZATION (AHAID). Empowering Africa, Digitally & Compassionately.
         </div>
         <div>
           <a href="#" className="underline hover:text-amber-300 transition">Privacy Policy</a>{" "}
