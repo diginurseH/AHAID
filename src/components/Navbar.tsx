@@ -2,7 +2,7 @@
 import AhaidLogo from "./AhaidLogo";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { useState } from "react";
 import {
   NavigationMenu,
@@ -20,6 +20,11 @@ import {
   DrawerTrigger,
   DrawerClose,
 } from "@/components/ui/drawer";
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
 
 const solutionsItems = [
   {
@@ -54,6 +59,8 @@ const resourcesItems = [
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [solutionsOpen, setSolutionsOpen] = useState(false);
+  const [resourcesOpen, setResourcesOpen] = useState(false);
 
   return (
     <nav className="w-full fixed top-0 left-0 z-30 bg-white/90 border-b border-green-50 shadow-sm backdrop-blur-lg">
@@ -192,37 +199,43 @@ const Navbar = () => {
                     About
                   </Link>
                   
-                  <div className="space-y-1">
-                    <div className="px-3 py-2 text-sm font-semibold text-green-800 uppercase tracking-wider">
+                  <Collapsible open={solutionsOpen} onOpenChange={setSolutionsOpen}>
+                    <CollapsibleTrigger className="flex items-center justify-between w-full px-3 py-2 text-sm font-semibold text-green-800 uppercase tracking-wider hover:text-amber-700 transition-colors">
                       Solutions
-                    </div>
-                    {solutionsItems.map((item) => (
-                      <Link
-                        key={item.title}
-                        to={item.href}
-                        className="block px-6 py-2 rounded-md text-base font-medium text-green-900 hover:text-amber-700 hover:bg-green-50 transition-colors"
-                        onClick={() => setMobileMenuOpen(false)}
-                      >
-                        {item.title}
-                      </Link>
-                    ))}
-                  </div>
+                      <ChevronDown className={`h-4 w-4 transition-transform ${solutionsOpen ? 'rotate-180' : ''}`} />
+                    </CollapsibleTrigger>
+                    <CollapsibleContent className="space-y-1">
+                      {solutionsItems.map((item) => (
+                        <Link
+                          key={item.title}
+                          to={item.href}
+                          className="block px-6 py-2 rounded-md text-base font-medium text-green-900 hover:text-amber-700 hover:bg-green-50 transition-colors"
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          {item.title}
+                        </Link>
+                      ))}
+                    </CollapsibleContent>
+                  </Collapsible>
 
-                  <div className="space-y-1">
-                    <div className="px-3 py-2 text-sm font-semibold text-green-800 uppercase tracking-wider">
+                  <Collapsible open={resourcesOpen} onOpenChange={setResourcesOpen}>
+                    <CollapsibleTrigger className="flex items-center justify-between w-full px-3 py-2 text-sm font-semibold text-green-800 uppercase tracking-wider hover:text-amber-700 transition-colors">
                       Resources
-                    </div>
-                    {resourcesItems.map((item) => (
-                      <Link
-                        key={item.title}
-                        to={item.href}
-                        className="block px-6 py-2 rounded-md text-base font-medium text-green-900 hover:text-amber-700 hover:bg-green-50 transition-colors"
-                        onClick={() => setMobileMenuOpen(false)}
-                      >
-                        {item.title}
-                      </Link>
-                    ))}
-                  </div>
+                      <ChevronDown className={`h-4 w-4 transition-transform ${resourcesOpen ? 'rotate-180' : ''}`} />
+                    </CollapsibleTrigger>
+                    <CollapsibleContent className="space-y-1">
+                      {resourcesItems.map((item) => (
+                        <Link
+                          key={item.title}
+                          to={item.href}
+                          className="block px-6 py-2 rounded-md text-base font-medium text-green-900 hover:text-amber-700 hover:bg-green-50 transition-colors"
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          {item.title}
+                        </Link>
+                      ))}
+                    </CollapsibleContent>
+                  </Collapsible>
 
                   <div className="pt-4">
                     <Button
