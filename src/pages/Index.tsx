@@ -1,10 +1,9 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Sparkles, Users, HeartPulse, BookMarked } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
-import DinhaLogo from "@/components/DinhaLogo";
+import ProgressiveDisclosure from "@/components/ProgressiveDisclosure";
 
 const coreValues = [
   {
@@ -15,7 +14,7 @@ const coreValues = [
   },
   {
     icon: <Users className="text-green-700" />,
-    title: "Integrity & Accessibility",
+    title: "Integrity & Accessibility", 
     description:
       "Open, honest, accessible, and reliable information for all.",
   },
@@ -67,9 +66,8 @@ const empowermentStreams = [
 const Index = () => {
   return (
     <div className="relative min-h-screen w-full bg-gradient-to-b from-yellow-50 via-emerald-50 to-white font-sans">
-      {/* Navigation Bar */}
       <Navbar />
-      {/* Main Content Below Nav */}
+      
       <main className="pt-20 pb-6">
         {/* Header Section */}
         <section id="home" className="max-w-4xl mx-auto py-14 px-4 flex flex-col items-center text-center animate-fade-in">
@@ -86,71 +84,88 @@ const Index = () => {
           </div>
         </section>
 
-        {/* About Us Section */}
+        {/* About Us Section - Progressive Disclosure */}
         <section id="about" className="max-w-5xl mx-auto px-4 py-12">
           <h2 className="text-3xl font-bold text-green-800 mb-8 text-center">About Us</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-xl shadow-lg p-6 animate-fade-in">
-              <h3 className="text-xl font-semibold text-green-800 mb-4">Our Story</h3>
+          
+          <div className="space-y-6">
+            <ProgressiveDisclosure
+              title="Our Story"
+              summary="Born from the intersection of nursing expertise and technological innovation, DINHA represents a quiet revolution in African healthcare."
+              defaultOpen={true}
+            >
               <p className="text-green-900 leading-relaxed mb-4">
-                Born from the intersection of nursing expertise and technological innovation, DINHA represents 
-                a quiet revolution in African healthcare. We emerged from the recognition that healthcare 
-                transformation requires both deep clinical understanding and cutting-edge digital solutions.
+                We emerged from the recognition that healthcare transformation requires both deep clinical 
+                understanding and cutting-edge digital solutions. Our founder, drawing from extensive nursing 
+                experience across multiple healthcare systems, identified the critical gap between available 
+                technology and real-world healthcare needs in resource-constrained environments.
               </p>
-              <p className="text-green-900 leading-relaxed">
-                Our founder, drawing from extensive nursing experience across multiple healthcare systems, 
-                identified the critical gap between available technology and real-world healthcare needs in 
-                resource-constrained environments.
-              </p>
-            </div>
-            <div className="bg-amber-50 rounded-xl border border-amber-200 p-6 animate-fade-in">
-              <h3 className="text-xl font-semibold text-green-800 mb-4">What Makes Us Different</h3>
-              <ul className="space-y-3 text-green-900">
-                <li className="flex items-start gap-2">
-                  <HeartPulse className="w-5 h-5 text-green-700 mt-0.5 flex-shrink-0" />
-                  <span><strong>Nurse-Led Innovation:</strong> Built by healthcare professionals who understand real clinical challenges</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <Sparkles className="w-5 h-5 text-yellow-600 mt-0.5 flex-shrink-0" />
-                  <span><strong>Cultural Sensitivity:</strong> Solutions designed with African contexts and values at the core</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <Users className="w-5 h-5 text-green-700 mt-0.5 flex-shrink-0" />
-                  <span><strong>Community-Centered:</strong> Technology that strengthens rather than replaces human connections</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <BookMarked className="w-5 h-5 text-amber-800 mt-0.5 flex-shrink-0" />
-                  <span><strong>Open Source Commitment:</strong> Transparent, accessible, and collaboratively developed</span>
-                </li>
-              </ul>
-            </div>
+            </ProgressiveDisclosure>
+
+            <ProgressiveDisclosure
+              title="What Makes Us Different"
+              summary="Four key differentiators set DINHA apart in the digital health landscape."
+            >
+              <div className="grid md:grid-cols-2 gap-4">
+                <div className="flex items-start gap-3">
+                  <HeartPulse className="w-5 h-5 text-green-700 mt-1 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-semibold text-green-800">Nurse-Led Innovation</h4>
+                    <p className="text-sm text-green-700">Built by healthcare professionals who understand real clinical challenges</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Sparkles className="w-5 h-5 text-yellow-600 mt-1 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-semibold text-green-800">Cultural Sensitivity</h4>
+                    <p className="text-sm text-green-700">Solutions designed with African contexts and values at the core</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Users className="w-5 h-5 text-green-700 mt-1 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-semibold text-green-800">Community-Centered</h4>
+                    <p className="text-sm text-green-700">Technology that strengthens rather than replaces human connections</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <BookMarked className="w-5 h-5 text-amber-800 mt-1 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-semibold text-green-800">Open Source Commitment</h4>
+                    <p className="text-sm text-green-700">Transparent, accessible, and collaboratively developed</p>
+                  </div>
+                </div>
+              </div>
+            </ProgressiveDisclosure>
           </div>
         </section>
 
-        {/* Mission & Vision */}
+        {/* Mission & Vision - Condensed */}
         <section className="max-w-5xl mx-auto px-4 py-6">
           <div className="grid md:grid-cols-2 gap-6 mb-10">
             <div className="bg-green-700/95 text-white rounded-xl shadow-lg animate-fade-in p-6">
               <h3 className="text-2xl font-semibold mb-2">Our Vision</h3>
               <p>
                 We envision a world where <strong>digital dignity</strong> is a human right in healthcare. 
-                Where every nurse is a knowledge node, remote villages have the same access to innovation as urban hospitals, 
-                and care is personalized, predictive, and powered by empathy + intelligence.
+                Where every nurse is a knowledge node, and care is personalized, predictive, and powered by empathy + intelligence.
               </p>
             </div>
             <div className="bg-amber-50/90 border border-amber-200 rounded-xl shadow animate-fade-in p-6">
               <h3 className="text-2xl font-semibold text-green-800 mb-2">The Problem We're Solving</h3>
               <ul className="list-disc ml-5 space-y-2 text-base text-green-900">
-                <li><strong>1 in 3 patients</strong> in low-resource areas lack access to timely emergency care</li>
-                <li>Nurses are often excluded from tech innovation despite being <strong>70% of the health workforce</strong></li>
-                <li>Existing digital tools are <strong>not culturally adapted or user-empathetic</strong></li>
-                <li className="text-green-700 font-medium">DINHA changes that by embedding critical care expertise into smart, localized, AI-integrated tools</li>
+                <li><strong>1 in 3 patients</strong> lack access to timely emergency care</li>
+                <li>Nurses excluded from tech innovation despite being <strong>70% of health workforce</strong></li>
+                <li>Existing tools are <strong>not culturally adapted</strong></li>
+                <li className="text-green-700 font-medium">DINHA changes that with smart, localized, AI-integrated solutions</li>
               </ul>
             </div>
           </div>
-          {/* Values */}
-          <div>
-            <h3 className="text-2xl font-semibold mb-4 text-center text-amber-700">Core Values</h3>
+
+          {/* Core Values - Collapsed by Default */}
+          <ProgressiveDisclosure
+            title="Core Values"
+            summary="Four fundamental principles guide everything we do at DINHA."
+          >
             <div className="grid md:grid-cols-4 gap-6">
               {coreValues.map((v) => (
                 <div key={v.title} className="hover:scale-105 transition-all duration-200 shadow border-green-100/80 rounded-xl bg-white animate-fade-in">
@@ -162,10 +177,10 @@ const Index = () => {
                 </div>
               ))}
             </div>
-          </div>
+          </ProgressiveDisclosure>
         </section>
 
-        {/* 4C Empowerment Streams */}
+        {/* 4C Empowerment Streams - Always Visible */}
         <section id="empowerment" className="max-w-6xl mx-auto px-4 py-12">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-green-800 mb-4">Empowerment Streams: The 4C Framework</h2>
@@ -187,75 +202,91 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Studio Section Placeholder */}
-        <section id="studio" className="max-w-5xl mx-auto px-4 py-12 flex flex-col items-center">
-          <h2 className="text-2xl md:text-3xl font-bold text-amber-700 mb-2">DINHA Studio</h2>
-          <p className="mb-5 text-green-900 text-base md:text-lg text-center max-w-2xl">
-            Explore inspiring stories, health innovation blogs, and personal narratives. Integrated with Medium and Notion for seamless African healthcare storytelling and knowledge sharing.
-          </p>
-          <Button variant="outline" className="border-amber-700 text-amber-700 hover:bg-yellow-50">
-            Visit Studio Blog
-          </Button>
-        </section>
-
-        {/* Enhanced Community Section */}
-        <section id="community" className="max-w-5xl mx-auto px-4 py-12">
-          <div className="bg-gradient-to-r from-green-800 to-emerald-700 text-white rounded-2xl p-8 text-center shadow-xl">
-            <Users className="h-12 w-12 mx-auto mb-4 text-yellow-300" />
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">Join Our Community</h2>
-            <p className="mb-6 text-green-100 text-base md:text-lg max-w-2xl mx-auto">
-              Connect with healthcare professionals, developers, and innovators across Africa. Share experiences, 
-              participate in webinars, and access exclusive resources for healthcare transformation.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary" className="bg-white text-green-800 hover:bg-green-50" asChild>
-                <Link to="/community">Explore Community</Link>
-              </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
-                View Testimonials
+        {/* Condensed Sections */}
+        <section className="max-w-5xl mx-auto px-4 py-12 space-y-8">
+          <ProgressiveDisclosure
+            title="DINHA Studio"
+            summary="Explore inspiring stories, health innovation blogs, and personal narratives integrated with Medium and Notion."
+          >
+            <div className="text-center">
+              <p className="mb-5 text-green-900 text-base md:text-lg max-w-2xl mx-auto">
+                Seamless African healthcare storytelling and knowledge sharing platform featuring 
+                curated content, expert insights, and community-driven narratives.
+              </p>
+              <Button variant="outline" className="border-amber-700 text-amber-700 hover:bg-yellow-50">
+                Visit Studio Blog
               </Button>
             </div>
-            <div className="mt-6 grid grid-cols-3 gap-4 max-w-md mx-auto text-center">
-              <div>
-                <div className="text-2xl font-bold text-yellow-300">2,500+</div>
-                <div className="text-sm text-green-100">Members</div>
+          </ProgressiveDisclosure>
+
+          <ProgressiveDisclosure
+            title="Join Our Community"
+            summary="Connect with 2,500+ healthcare professionals, developers, and innovators across 15 African countries."
+            defaultOpen={true}
+          >
+            <div className="bg-gradient-to-r from-green-800 to-emerald-700 text-white rounded-2xl p-8 text-center shadow-xl">
+              <Users className="h-12 w-12 mx-auto mb-4 text-yellow-300" />
+              <p className="mb-6 text-green-100 text-base md:text-lg max-w-2xl mx-auto">
+                Share experiences, participate in webinars, and access exclusive resources for healthcare transformation.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
+                <Button size="lg" variant="secondary" className="bg-white text-green-800 hover:bg-green-50" asChild>
+                  <Link to="/community">Explore Community</Link>
+                </Button>
+                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+                  View Testimonials
+                </Button>
               </div>
-              <div>
-                <div className="text-2xl font-bold text-yellow-300">15</div>
-                <div className="text-sm text-green-100">Countries</div>
-              </div>
-              <div>
-                <div className="text-2xl font-bold text-yellow-300">450+</div>
-                <div className="text-sm text-green-100">Discussions</div>
+              <div className="grid grid-cols-3 gap-4 max-w-md mx-auto text-center">
+                <div>
+                  <div className="text-2xl font-bold text-yellow-300">2,500+</div>
+                  <div className="text-sm text-green-100">Members</div>
+                </div>
+                <div>
+                  <div className="text-2xl font-bold text-yellow-300">15</div>
+                  <div className="text-sm text-green-100">Countries</div>
+                </div>
+                <div>
+                  <div className="text-2xl font-bold text-yellow-300">450+</div>
+                  <div className="text-sm text-green-100">Discussions</div>
+                </div>
               </div>
             </div>
-          </div>
+          </ProgressiveDisclosure>
         </section>
 
-        {/* Contact Section */}
+        {/* Contact Section - Simplified */}
         <section id="contact" className="max-w-2xl mx-auto px-4 py-10">
-          <h2 className="text-2xl font-bold text-amber-700 mb-4">Contact & Collaborate</h2>
-          <form className="bg-white rounded shadow p-6 flex flex-col gap-4" autoComplete="off">
-            <div>
-              <label htmlFor="name" className="block text-green-900 font-medium mb-1">Name</label>
-              <input id="name" name="name" className="w-full px-3 py-2 border border-green-200 rounded focus:outline-amber-700" placeholder="Your Name" />
-            </div>
-            <div>
-              <label htmlFor="email" className="block text-green-900 font-medium mb-1">Email</label>
-              <input id="email" name="email" type="email" className="w-full px-3 py-2 border border-green-200 rounded focus:outline-amber-700" placeholder="you@email.com" />
-            </div>
-            <div>
-              <label htmlFor="message" className="block text-green-900 font-medium mb-1">Message</label>
-              <textarea id="message" name="message" rows={3} className="w-full px-3 py-2 border border-green-200 rounded focus:outline-amber-700" placeholder="How can we help or collaborate?" />
-            </div>
-            <Button type="submit" className="bg-amber-700 text-white hover:bg-amber-800 w-full">Send Message</Button>
-          </form>
+          <ProgressiveDisclosure
+            title="Contact & Collaborate"
+            summary="Ready to join the healthcare transformation? Get in touch with our team."
+          >
+            <form className="bg-white rounded shadow p-6 flex flex-col gap-4" autoComplete="off">
+              <div>
+                <label htmlFor="name" className="block text-green-900 font-medium mb-1">Name</label>
+                <input id="name" name="name" className="w-full px-3 py-2 border border-green-200 rounded focus:outline-amber-700" placeholder="Your Name" />
+              </div>
+              <div>
+                <label htmlFor="email" className="block text-green-900 font-medium mb-1">Email</label>
+                <input id="email" name="email" type="email" className="w-full px-3 py-2 border border-green-200 rounded focus:outline-amber-700" placeholder="you@email.com" />
+              </div>
+              <div>
+                <label htmlFor="message" className="block text-green-900 font-medium mb-1">Message</label>
+                <textarea id="message" name="message" rows={3} className="w-full px-3 py-2 border border-green-200 rounded focus:outline-amber-700" placeholder="How can we help or collaborate?" />
+              </div>
+              <Button type="submit" className="bg-amber-700 text-white hover:bg-amber-800 w-full">Send Message</Button>
+            </form>
+          </ProgressiveDisclosure>
         </section>
       </main>
-        {/* Founder's Note */}
-        <section className="max-w-4xl mx-auto px-4 py-12">
+
+      {/* Founder's Note - Collapsed */}
+      <section className="max-w-4xl mx-auto px-4 py-12">
+        <ProgressiveDisclosure
+          title="Founder's Note"
+          summary="A personal message about the vision and mission behind DINHA."
+        >
           <div className="bg-gradient-to-r from-green-800 to-emerald-700 text-white rounded-2xl p-8 text-center shadow-xl">
-            <h3 className="text-2xl font-bold mb-4 text-amber-200">Founder's Note</h3>
             <blockquote className="text-lg italic leading-relaxed mb-6">
               "This is not a platform. It is a remembering. DINHA is the breath that systems forgot to take—care rendered in code, 
               a quiet revolt, a sacred redesign. It was created for the nurse who healed without tools, for the patient who waited in silence, 
@@ -266,19 +297,20 @@ const Index = () => {
               New ancestors, in real time—writing futures in the language of dignity.
             </p>
           </div>
-        </section>
-        
-        {/* Footer */}
-        <footer className="w-full py-8 px-4 bg-green-800/95 text-white text-center text-xs mt-16 tracking-wide animate-fade-in flex flex-col gap-2">
-          <div>
-            © {new Date().getFullYear()} DINHA – DigiNurse Health Africa. Empowering Africa, Digitally & Compassionately.
-          </div>
-          <div>
-            <a href="#" className="underline hover:text-amber-300 transition">Privacy Policy</a>{" "}
-            |{" "}
-            <a href="#contact" className="underline hover:text-amber-300 transition">Contact</a>
-          </div>
-        </footer>
+        </ProgressiveDisclosure>
+      </section>
+      
+      {/* Footer */}
+      <footer className="w-full py-8 px-4 bg-green-800/95 text-white text-center text-xs mt-16 tracking-wide animate-fade-in flex flex-col gap-2">
+        <div>
+          © {new Date().getFullYear()} DINHA – DigiNurse Health Africa. Empowering Africa, Digitally & Compassionately.
+        </div>
+        <div>
+          <a href="#" className="underline hover:text-amber-300 transition">Privacy Policy</a>{" "}
+          |{" "}
+          <a href="#contact" className="underline hover:text-amber-300 transition">Contact</a>
+        </div>
+      </footer>
     </div>
   );
 };
