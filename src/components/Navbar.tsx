@@ -2,17 +2,54 @@
 import DinhaLogo from "./DinhaLogo";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { Menu, X } from "lucide-react";
+import { useState } from "react";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
+import {
+  Drawer,
+  DrawerContent,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+  DrawerClose,
+} from "@/components/ui/drawer";
 
-const menu = [
-  { name: "Home", href: "#home" },
-  { name: "Ecosystem", href: "/ecosystem", isRoute: true },
-  { name: "Empowerment Streams", href: "/empowerment-streams", isRoute: true },
-  { name: "Studio", href: "/studio", isRoute: true },
-  { name: "Community", href: "/community", isRoute: true },
-  { name: "Contact", href: "#contact" },
+const solutionsItems = [
+  {
+    title: "Ecosystem Overview",
+    href: "/ecosystem",
+    description: "Explore our comprehensive healthcare ecosystem and integrated solutions."
+  },
+  {
+    title: "Empowerment Streams",
+    href: "/empowerment-streams", 
+    description: "Discover pathways for healthcare professional development and growth."
+  }
+];
+
+const resourcesItems = [
+  {
+    title: "Studio",
+    href: "/studio",
+    description: "Creative tools and resources for healthcare innovation."
+  },
+  {
+    title: "Community",
+    href: "/community",
+    description: "Connect with healthcare professionals and innovators across Africa."
+  }
 ];
 
 const Navbar = () => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
     <nav className="w-full fixed top-0 left-0 z-30 bg-white/90 border-b border-green-50 shadow-sm backdrop-blur-lg">
       <div className="container max-w-7xl mx-auto flex items-center justify-between px-3 py-1 md:py-2">
@@ -22,35 +59,160 @@ const Navbar = () => {
             DINHA
           </span>
         </Link>
-        <div className="flex-1 flex justify-end items-center">
-          <ul className="hidden md:flex gap-1 xl:gap-3 items-center">
-            {menu.map((item) => (
-              <li key={item.name}>
-                {item.isRoute ? (
+
+        {/* Desktop Navigation */}
+        <div className="hidden lg:flex items-center gap-4">
+          <NavigationMenu>
+            <NavigationMenuList>
+              <NavigationMenuItem>
+                <NavigationMenuLink asChild>
                   <Link
-                    to={item.href}
-                    className="px-3 py-2 rounded font-medium text-green-900/90 hover:text-amber-700 hover:bg-green-50 transition-colors text-base focus-visible:outline-amber-600 focus-visible:ring-2"
+                    to="/#home"
+                    className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-green-50 hover:text-amber-700 focus:bg-green-50 focus:text-amber-700 focus:outline-none"
                   >
-                    {item.name}
+                    Home
                   </Link>
-                ) : (
-                  <a
-                    href={item.href}
-                    className="px-3 py-2 rounded font-medium text-green-900/90 hover:text-amber-700 hover:bg-green-50 transition-colors text-base focus-visible:outline-amber-600 focus-visible:ring-2"
-                  >
-                    {item.name}
-                  </a>
-                )}
-              </li>
-            ))}
-          </ul>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className="bg-background hover:bg-green-50 hover:text-amber-700 focus:bg-green-50 focus:text-amber-700">
+                  Solutions
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <div className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-1 lg:w-[600px] bg-white border border-green-100 shadow-lg">
+                    {solutionsItems.map((item) => (
+                      <NavigationMenuLink key={item.title} asChild>
+                        <Link
+                          to={item.href}
+                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-green-50 hover:text-amber-700 focus:bg-green-50 focus:text-amber-700"
+                        >
+                          <div className="text-sm font-medium leading-none text-green-900">
+                            {item.title}
+                          </div>
+                          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                            {item.description}
+                          </p>
+                        </Link>
+                      </NavigationMenuLink>
+                    ))}
+                  </div>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className="bg-background hover:bg-green-50 hover:text-amber-700 focus:bg-green-50 focus:text-amber-700">
+                  Resources
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <div className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-1 lg:w-[600px] bg-white border border-green-100 shadow-lg">
+                    {resourcesItems.map((item) => (
+                      <NavigationMenuLink key={item.title} asChild>
+                        <Link
+                          to={item.href}
+                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-green-50 hover:text-amber-700 focus:bg-green-50 focus:text-amber-700"
+                        >
+                          <div className="text-sm font-medium leading-none text-green-900">
+                            {item.title}
+                          </div>
+                          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                            {item.description}
+                          </p>
+                        </Link>
+                      </NavigationMenuLink>
+                    ))}
+                  </div>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
+
           <Button
             asChild
             size="sm"
-            className="ml-3 bg-amber-700 hover:bg-amber-800 text-white hidden md:inline-flex"
+            className="ml-3 bg-amber-700 hover:bg-amber-800 text-white"
           >
             <a href="#contact">Get in Touch</a>
           </Button>
+        </div>
+
+        {/* Mobile Navigation */}
+        <div className="lg:hidden">
+          <Drawer open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
+            <DrawerTrigger asChild>
+              <Button variant="ghost" size="sm" className="p-2">
+                <Menu className="h-6 w-6 text-green-900" />
+                <span className="sr-only">Open menu</span>
+              </Button>
+            </DrawerTrigger>
+            <DrawerContent className="bg-white">
+              <DrawerHeader className="text-left">
+                <div className="flex items-center justify-between">
+                  <DrawerTitle className="text-green-900 text-lg font-bold">
+                    Navigation
+                  </DrawerTitle>
+                  <DrawerClose asChild>
+                    <Button variant="ghost" size="sm" className="p-2">
+                      <X className="h-5 w-5" />
+                    </Button>
+                  </DrawerClose>
+                </div>
+              </DrawerHeader>
+              <div className="px-4 pb-8">
+                <nav className="space-y-2">
+                  <Link
+                    to="/#home"
+                    className="block px-3 py-2 rounded-md text-base font-medium text-green-900 hover:text-amber-700 hover:bg-green-50 transition-colors"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Home
+                  </Link>
+                  
+                  <div className="space-y-1">
+                    <div className="px-3 py-2 text-sm font-semibold text-green-800 uppercase tracking-wider">
+                      Solutions
+                    </div>
+                    {solutionsItems.map((item) => (
+                      <Link
+                        key={item.title}
+                        to={item.href}
+                        className="block px-6 py-2 rounded-md text-base font-medium text-green-900 hover:text-amber-700 hover:bg-green-50 transition-colors"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        {item.title}
+                      </Link>
+                    ))}
+                  </div>
+
+                  <div className="space-y-1">
+                    <div className="px-3 py-2 text-sm font-semibold text-green-800 uppercase tracking-wider">
+                      Resources
+                    </div>
+                    {resourcesItems.map((item) => (
+                      <Link
+                        key={item.title}
+                        to={item.href}
+                        className="block px-6 py-2 rounded-md text-base font-medium text-green-900 hover:text-amber-700 hover:bg-green-50 transition-colors"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        {item.title}
+                      </Link>
+                    ))}
+                  </div>
+
+                  <div className="pt-4">
+                    <Button
+                      asChild
+                      className="w-full bg-amber-700 hover:bg-amber-800 text-white"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      <a href="#contact">Get in Touch</a>
+                    </Button>
+                  </div>
+                </nav>
+              </div>
+            </DrawerContent>
+          </Drawer>
         </div>
       </div>
     </nav>

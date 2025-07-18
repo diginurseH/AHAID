@@ -1,7 +1,8 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Users, MessageCircle, Calendar, Globe, Heart, Zap } from "lucide-react";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Users, MessageCircle, Calendar, Globe, Heart, Zap, Trophy, BookOpen } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 
@@ -36,6 +37,54 @@ const upcomingEvents = [
     time: "16:00 GMT",
     type: "Meetup",
     attendees: 200
+  }
+];
+
+const forumTopics = [
+  {
+    id: 1,
+    title: "Best Practices for Rural Healthcare",
+    author: "Dr. Amina Hassan",
+    replies: 24,
+    lastActivity: "2 hours ago",
+    category: "Healthcare"
+  },
+  {
+    id: 2,
+    title: "Tech Solutions for Patient Management",
+    author: "Michael Okonkwo",
+    replies: 18,
+    lastActivity: "4 hours ago",
+    category: "Technology"
+  },
+  {
+    id: 3,
+    title: "Community Health Worker Training",
+    author: "Sarah Kiplagat",
+    replies: 31,
+    lastActivity: "1 day ago",
+    category: "Training"
+  }
+];
+
+const resources = [
+  {
+    title: "Healthcare Innovation Toolkit",
+    description: "Comprehensive guide for implementing health tech solutions",
+    type: "PDF Guide",
+    downloads: 1250
+  },
+  {
+    title: "Community Health Metrics Dashboard",
+    description: "Templates and tools for tracking community health outcomes",
+    type: "Excel Template",
+    downloads: 890
+  },
+  {
+    title: "Funding Opportunities Database",
+    description: "Curated list of grants and funding sources for health projects",
+    type: "Database",
+    downloads: 2100
   }
 ];
 
@@ -99,56 +148,128 @@ const Community = () => {
           </div>
         </section>
 
-        {/* Upcoming Events */}
+        {/* Tab Navigation */}
         <section className="max-w-6xl mx-auto px-4 py-12">
-          <h2 className="text-2xl font-bold text-green-800 mb-8 text-center">Upcoming Events</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            {upcomingEvents.map((event) => (
-              <Card key={event.id} className="hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <div className="flex justify-between items-start mb-2">
-                    <span className="text-xs font-medium text-green-700 bg-green-50 px-2 py-1 rounded">
-                      {event.type}
-                    </span>
-                    <span className="text-xs text-muted-foreground">
-                      {event.attendees} attending
-                    </span>
-                  </div>
-                  <CardTitle className="text-lg">{event.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex items-center gap-4 text-sm text-muted-foreground mb-4">
-                    <div className="flex items-center gap-1">
-                      <Calendar className="h-4 w-4" />
-                      <span>{new Date(event.date).toLocaleDateString()}</span>
-                    </div>
-                    <span>{event.time}</span>
-                  </div>
-                  <Button className="w-full bg-green-700 hover:bg-green-800">
-                    Register Now
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </section>
+          <Tabs defaultValue="events" className="w-full">
+            <TabsList className="grid w-full grid-cols-4 max-w-md mx-auto mb-8">
+              <TabsTrigger value="events" className="flex items-center gap-2">
+                <Calendar className="h-4 w-4" />
+                Events
+              </TabsTrigger>
+              <TabsTrigger value="forum" className="flex items-center gap-2">
+                <MessageCircle className="h-4 w-4" />
+                Forum
+              </TabsTrigger>
+              <TabsTrigger value="resources" className="flex items-center gap-2">
+                <BookOpen className="h-4 w-4" />
+                Resources
+              </TabsTrigger>
+              <TabsTrigger value="voices" className="flex items-center gap-2">
+                <Trophy className="h-4 w-4" />
+                Voices
+              </TabsTrigger>
+            </TabsList>
 
-        {/* Community Voices */}
-        <section className="max-w-6xl mx-auto px-4 py-12">
-          <h2 className="text-2xl font-bold text-green-800 mb-8 text-center">Community Voices</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="bg-green-50">
-                <CardContent className="p-6">
-                  <p className="text-green-900 mb-4 italic">"{testimonial.quote}"</p>
-                  <div>
-                    <div className="font-semibold text-green-800">{testimonial.name}</div>
-                    <div className="text-sm text-muted-foreground">{testimonial.role}</div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+            <TabsContent value="events">
+              <div className="grid md:grid-cols-3 gap-6">
+                {upcomingEvents.map((event) => (
+                  <Card key={event.id} className="hover:shadow-lg transition-shadow">
+                    <CardHeader>
+                      <div className="flex justify-between items-start mb-2">
+                        <span className="text-xs font-medium text-green-700 bg-green-50 px-2 py-1 rounded">
+                          {event.type}
+                        </span>
+                        <span className="text-xs text-muted-foreground">
+                          {event.attendees} attending
+                        </span>
+                      </div>
+                      <CardTitle className="text-lg">{event.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="flex items-center gap-4 text-sm text-muted-foreground mb-4">
+                        <div className="flex items-center gap-1">
+                          <Calendar className="h-4 w-4" />
+                          <span>{new Date(event.date).toLocaleDateString()}</span>
+                        </div>
+                        <span>{event.time}</span>
+                      </div>
+                      <Button className="w-full bg-green-700 hover:bg-green-800">
+                        Register Now
+                      </Button>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </TabsContent>
+
+            <TabsContent value="forum">
+              <div className="space-y-4">
+                {forumTopics.map((topic) => (
+                  <Card key={topic.id} className="hover:shadow-md transition-shadow">
+                    <CardContent className="p-6">
+                      <div className="flex justify-between items-start">
+                        <div className="flex-1">
+                          <h3 className="text-lg font-semibold text-green-900 mb-2">{topic.title}</h3>
+                          <div className="flex items-center gap-4 text-sm text-muted-foreground">
+                            <span>by {topic.author}</span>
+                            <span>{topic.replies} replies</span>
+                            <span className="text-xs bg-green-50 text-green-700 px-2 py-1 rounded">
+                              {topic.category}
+                            </span>
+                          </div>
+                        </div>
+                        <div className="text-xs text-muted-foreground">
+                          {topic.lastActivity}
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </TabsContent>
+
+            <TabsContent value="resources">
+              <div className="grid md:grid-cols-3 gap-6">
+                {resources.map((resource, index) => (
+                  <Card key={index} className="hover:shadow-lg transition-shadow">
+                    <CardHeader>
+                      <CardTitle className="text-lg">{resource.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-muted-foreground mb-4">{resource.description}</p>
+                      <div className="flex justify-between items-center">
+                        <span className="text-xs bg-amber-50 text-amber-700 px-2 py-1 rounded">
+                          {resource.type}
+                        </span>
+                        <span className="text-xs text-muted-foreground">
+                          {resource.downloads} downloads
+                        </span>
+                      </div>
+                      <Button className="w-full mt-4 bg-green-700 hover:bg-green-800">
+                        Download
+                      </Button>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </TabsContent>
+
+            <TabsContent value="voices">
+              <div className="grid md:grid-cols-3 gap-6">
+                {testimonials.map((testimonial, index) => (
+                  <Card key={index} className="bg-green-50">
+                    <CardContent className="p-6">
+                      <p className="text-green-900 mb-4 italic">"{testimonial.quote}"</p>
+                      <div>
+                        <div className="font-semibold text-green-800">{testimonial.name}</div>
+                        <div className="text-sm text-muted-foreground">{testimonial.role}</div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </TabsContent>
+          </Tabs>
         </section>
 
         {/* Join Call to Action */}
