@@ -34,9 +34,6 @@ const EcosystemOverview = () => {
                 DINHA Ecosystem
               </h1>
             </div>
-            <h2 className="text-xl md:text-2xl text-amber-700 mb-6">
-              DigiNurse Health Africa: Pioneering Afrocentric Digital Health Solutions
-            </h2>
             <p className="max-w-3xl mx-auto text-lg text-green-900/80">
               Discover our comprehensive ecosystem featuring Nursaera (our AI-powered digital health platform), 
               SME digital transformation services, and culturally-responsive healthcare solutions. 
