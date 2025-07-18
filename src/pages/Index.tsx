@@ -72,12 +72,6 @@ const Index = () => {
       <main className="pt-20 pb-6">
         {/* Header Section */}
         <section id="home" className="max-w-4xl mx-auto py-14 px-4 flex flex-col items-center text-center animate-fade-in">
-          <div className="mb-5">
-            {/* Big logo for home, hidden on mobile */}
-            <span className="hidden md:block">
-              <DinhaLogo size={90} />
-            </span>
-          </div>
           <h1 className="text-4xl md:text-5xl font-bold text-green-900 mb-3 tracking-tight">
             DigiNurse Health Africa
           </h1>
