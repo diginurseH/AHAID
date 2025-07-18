@@ -1,5 +1,5 @@
 
-import DinhaLogo from "./DinhaLogo";
+import AhaidLogo from "./AhaidLogo";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
@@ -58,10 +58,10 @@ const Navbar = () => {
   return (
     <nav className="w-full fixed top-0 left-0 z-30 bg-white/90 border-b border-green-50 shadow-sm backdrop-blur-lg">
       <div className="container max-w-7xl mx-auto flex items-center justify-between px-3 py-1 md:py-2">
-        <Link to="/" className="flex items-center gap-3 group" aria-label="DINHA Home">
-          <DinhaLogo size={38} />
+        <Link to="/" className="flex items-center gap-3 group" aria-label="AHAID Home">
+          <AhaidLogo size={38} />
           <span className="font-bold text-xl md:text-2xl text-green-900 tracking-tight group-hover:text-amber-700 transition">
-            DINHA
+            AHAID
           </span>
         </Link>
 

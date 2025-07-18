@@ -92,7 +92,7 @@ const SMETransformation = () => {
           </div>
           
           <p className="text-amber-800 mb-4">
-            Our flagship SME transformation project demonstrating real-world impact of DINHA's digital solutions 
+            Our flagship SME transformation project demonstrating real-world impact of AHAID's digital solutions 
             for African small businesses.
           </p>
 

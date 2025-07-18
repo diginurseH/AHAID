@@ -67,7 +67,7 @@ const empowermentStreams = [
     ],
     proofOfLife: {
       title: "Mister's Bakery Success Story",
-      description: "DINHA successfully implemented a comprehensive digital solution for Mister's Bakery, including a custom web application and WhatsApp integration, resulting in increased customer engagement and streamlined operations."
+      description: "AHAID successfully implemented a comprehensive digital solution for Mister's Bakery, including a custom web application and WhatsApp integration, resulting in increased customer engagement and streamlined operations."
     }
   },
 ];

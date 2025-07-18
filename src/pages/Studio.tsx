@@ -29,7 +29,7 @@ const featuredStories = [
     id: 2,
     title: "Building Digital Bridges in Healthcare",
     excerpt: "How technology is connecting remote communities to life-saving care.",
-    author: "Tech Team DINHA",
+    author: "Tech Team AHAID",
     date: "2024-01-10",
     readTime: "8 min read",
     category: "Innovation"
@@ -121,7 +121,7 @@ const Studio = () => {
         {/* Header Section */}
         <section className="max-w-4xl mx-auto py-12 px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-amber-700 mb-4">
-            DINHA Studio
+            AHAID Studio
           </h1>
           <p className="text-lg text-green-900 mb-8 max-w-2xl mx-auto">
             Where stories of healing meet innovation. Explore inspiring narratives, 
@@ -262,7 +262,7 @@ const Studio = () => {
             <h3 className="text-2xl font-bold mb-4">Share Your Story</h3>
             <p className="mb-6 text-amber-100">
               Have a story of innovation, care, or transformation? 
-              We'd love to feature your voice in DINHA Studio.
+              We'd love to feature your voice in AHAID Studio.
             </p>
             <Button 
               size="lg" 

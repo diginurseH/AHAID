@@ -91,7 +91,7 @@ const Index = () => {
           <div className="space-y-6">
             <ProgressiveDisclosure
               title="Our Story"
-              summary="Born from the intersection of nursing expertise and technological innovation, DINHA represents a quiet revolution in African healthcare."
+              summary="Born from the intersection of nursing expertise and technological innovation, AHAID represents a quiet revolution in African healthcare."
               defaultOpen={true}
             >
               <p className="text-green-900 leading-relaxed mb-4">
@@ -104,7 +104,7 @@ const Index = () => {
 
             <ProgressiveDisclosure
               title="What Makes Us Different"
-              summary="Four key differentiators set DINHA apart in the digital health landscape."
+              summary="Four key differentiators set AHAID apart in the digital health landscape."
             >
               <div className="grid md:grid-cols-2 gap-4">
                 <div className="flex items-start gap-3">
@@ -156,7 +156,7 @@ const Index = () => {
                 <li><strong>1 in 3 patients</strong> lack access to timely emergency care</li>
                 <li>Nurses excluded from tech innovation despite being <strong>70% of health workforce</strong></li>
                 <li>Existing tools are <strong>not culturally adapted</strong></li>
-                <li className="text-green-700 font-medium">DINHA changes that with smart, localized, AI-integrated solutions</li>
+                <li className="text-green-700 font-medium">AHAID changes that with smart, localized, AI-integrated solutions</li>
               </ul>
             </div>
           </div>
@@ -164,7 +164,7 @@ const Index = () => {
           {/* Core Values - Collapsed by Default */}
           <ProgressiveDisclosure
             title="Core Values"
-            summary="Four fundamental principles guide everything we do at DINHA."
+            summary="Four fundamental principles guide everything we do at AHAID."
           >
             <div className="grid md:grid-cols-4 gap-6">
               {coreValues.map((v) => (
@@ -205,7 +205,7 @@ const Index = () => {
         {/* Condensed Sections */}
         <section className="max-w-5xl mx-auto px-4 py-12 space-y-8">
           <ProgressiveDisclosure
-            title="DINHA Studio"
+            title="AHAID Studio"
             summary="Explore inspiring stories, health innovation blogs, and personal narratives integrated with Medium and Notion."
           >
             <div className="text-center">
@@ -284,11 +284,11 @@ const Index = () => {
       <section className="max-w-4xl mx-auto px-4 py-12">
         <ProgressiveDisclosure
           title="Founder's Note"
-          summary="A personal message about the vision and mission behind DINHA."
+          summary="A personal message about the vision and mission behind AHAID."
         >
           <div className="bg-gradient-to-r from-green-800 to-emerald-700 text-white rounded-2xl p-8 text-center shadow-xl">
             <blockquote className="text-lg italic leading-relaxed mb-6">
-              "This is not a platform. It is a remembering. DINHA is the breath that systems forgot to take—care rendered in code, 
+              "This is not a platform. It is a remembering. AHAID is the breath that systems forgot to take—care rendered in code, 
               a quiet revolt, a sacred redesign. It was created for the nurse who healed without tools, for the patient who waited in silence, 
               and for the system that lost its pulse."
             </blockquote>
@@ -303,7 +303,7 @@ const Index = () => {
       {/* Footer */}
       <footer className="w-full py-8 px-4 bg-green-800/95 text-white text-center text-xs mt-16 tracking-wide animate-fade-in flex flex-col gap-2">
         <div>
-          © {new Date().getFullYear()} DINHA – AFRICA'S HEALTH AND INCLUSIVE DIGITALIZATION (AHAID). Empowering Africa, Digitally & Compassionately.
+          © {new Date().getFullYear()} AHAID – AFRICA'S HEALTH AND INCLUSIVE DIGITALIZATION (AHAID). Empowering Africa, Digitally & Compassionately.
         </div>
         <div>
           <a href="#" className="underline hover:text-amber-300 transition">Privacy Policy</a>{" "}

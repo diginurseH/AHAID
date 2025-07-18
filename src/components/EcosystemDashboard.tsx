@@ -115,7 +115,7 @@ const EcosystemDashboard = ({ onSectionClick }: EcosystemDashboardProps) => {
       <div className="text-center">
         <h2 className="text-3xl font-bold text-green-800 mb-4">Explore Our Ecosystem</h2>
         <p className="text-green-700 max-w-2xl mx-auto">
-          Click on any section below to dive deeper into specific aspects of the DINHA ecosystem
+          Click on any section below to dive deeper into specific aspects of the AHAID ecosystem
         </p>
       </div>
 

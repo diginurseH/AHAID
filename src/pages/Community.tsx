@@ -92,7 +92,7 @@ const testimonials = [
   {
     name: "Dr. Sarah Kipkoech",
     role: "Community Health Nurse, Kenya",
-    quote: "DINHA's community has transformed how I approach patient care. The support and knowledge sharing here is incredible."
+    quote: "AHAID's community has transformed how I approach patient care. The support and knowledge sharing here is incredible."
   },
   {
     name: "Michael Osei",
@@ -115,7 +115,7 @@ const Community = () => {
         {/* Header Section */}
         <section className="max-w-4xl mx-auto py-12 px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-green-800 mb-4">
-            DINHA Community
+            AHAID Community
           </h1>
           <p className="text-lg text-green-900 mb-8 max-w-2xl mx-auto">
             Join a thriving community of healthcare professionals, developers, 

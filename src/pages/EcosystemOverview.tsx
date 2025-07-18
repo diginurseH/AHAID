@@ -49,7 +49,7 @@ const EcosystemOverview = () => {
               <div className="flex items-center justify-center gap-3 mb-4">
                 <Network className="w-8 h-8 text-green-700" />
                 <h1 className="text-4xl md:text-5xl font-bold text-green-800">
-                  DINHA Ecosystem
+                  AHAID Ecosystem
                 </h1>
               </div>
               <p className="max-w-3xl mx-auto text-lg text-green-900/80">
@@ -78,7 +78,7 @@ const EcosystemOverview = () => {
           {/* Call to Action */}
           <section id="join" className="py-12 text-center">
             <h3 className="text-2xl md:text-3xl font-bold text-green-800 mb-4">
-              Join the DINHA Ecosystem
+              Join the AHAID Ecosystem
             </h3>
             <p className="text-lg text-green-900/80 mb-6">
               Whether you're a healthcare professional, developer, entrepreneur, or community leader, 
