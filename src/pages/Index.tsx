@@ -78,12 +78,6 @@ const Index = () => {
               <DinhaLogo size={90} />
             </span>
           </div>
-          <div className="mb-6 text-center">
-            <blockquote className="text-lg md:text-xl text-green-800 italic font-medium mb-4">
-              "To every healthcare worker without a voice, tool, or platform—we build for you.<br />
-              To every patient left behind—<strong>we bring you forward.</strong>"
-            </blockquote>
-          </div>
           <h1 className="text-4xl md:text-5xl font-bold text-green-900 mb-3 tracking-tight">
             DigiNurse Health Africa
           </h1>
