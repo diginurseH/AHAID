@@ -95,8 +95,9 @@ const Index = () => {
             Where Care Meets Code
           </h3>
           <p className="max-w-2xl text-lg md:text-xl text-foreground/90 mb-6">
-            A <span className="text-green-700 font-medium">human-centered digital health ecosystem</span> transforming frontline care delivery—
-            <span className="text-amber-700 font-medium"> led by nurses, powered by technology, and rooted in purpose</span>.
+            Pioneering Afrocentric digital health solutions through <span className="text-green-700 font-medium">Nursaera AI platform</span>, 
+            <span className="text-amber-700 font-medium"> SME digital transformation</span>, and 
+            <span className="text-emerald-700 font-medium"> culturally-responsive healthcare innovation</span> across Africa.
           </p>
           <div className="flex flex-col md:flex-row gap-4 mb-10 justify-center animate-fade-in">
             <Button size="lg" className="bg-green-700 hover:bg-green-800 text-white shadow-lg transition-transform hover:scale-105" asChild>
