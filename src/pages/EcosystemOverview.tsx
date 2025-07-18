@@ -4,6 +4,7 @@ import { ArrowLeft, Network } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import EcosystemMap from "@/components/EcosystemMap";
+import CoreProblems from "@/components/CoreProblems";
 import StakeholderNetwork from "@/components/StakeholderNetwork";
 import ImpactMetrics from "@/components/ImpactMetrics";
 import SustainabilityModel from "@/components/SustainabilityModel";
@@ -45,6 +46,11 @@ const EcosystemOverview = () => {
 
         {/* Ecosystem Components */}
         <section className="max-w-7xl mx-auto px-4 space-y-12">
+          {/* Core Problems & SDG Alignment */}
+          <div className="animate-fade-in">
+            <CoreProblems />
+          </div>
+
           {/* Ecosystem Map */}
           <div className="animate-fade-in">
             <EcosystemMap />
@@ -90,6 +96,9 @@ const EcosystemOverview = () => {
               <Link to="/empowerment-streams">Explore Streams</Link>
             </Button>
             <Button size="lg" variant="outline" className="border-amber-700 text-amber-800 hover:bg-amber-50" asChild>
+              <Link to="/resources">Access Resources</Link>
+            </Button>
+            <Button size="lg" variant="outline" className="border-green-700 text-green-800 hover:bg-green-50" asChild>
               <Link to="/#contact">Get Involved</Link>
             </Button>
           </div>

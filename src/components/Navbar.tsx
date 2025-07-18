@@ -36,6 +36,11 @@ const solutionsItems = [
 
 const resourcesItems = [
   {
+    title: "Resources Hub",
+    href: "/resources",
+    description: "Access digital tools, training materials, and developer documentation."
+  },
+  {
     title: "Studio",
     href: "/studio",
     description: "Creative tools and resources for healthcare innovation."
