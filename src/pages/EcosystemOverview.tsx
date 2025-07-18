@@ -2,16 +2,19 @@
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Network } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import Navbar from "@/components/Navbar";
-import EcosystemMap from "@/components/EcosystemMap";
 import CoreProblems from "@/components/CoreProblems";
-import StakeholderNetwork from "@/components/StakeholderNetwork";
-import ImpactMetrics from "@/components/ImpactMetrics";
-import SustainabilityModel from "@/components/SustainabilityModel";
-import NursaeraPlatform from "@/components/NursaeraPlatform";
-import SMETransformation from "@/components/SMETransformation";
+import EcosystemDashboard from "@/components/EcosystemDashboard";
+import EcosystemDetailModal from "@/components/EcosystemDetailModal";
 
 const EcosystemOverview = () => {
+  const [selectedSection, setSelectedSection] = useState<string | null>(null);
+
+  const handleSectionClick = (sectionId: string) => {
+    setSelectedSection(sectionId);
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-yellow-50 via-emerald-50 to-white">
       <Navbar />
@@ -44,41 +47,17 @@ const EcosystemOverview = () => {
           </div>
         </section>
 
-        {/* Ecosystem Components */}
-        <section className="max-w-7xl mx-auto px-4 space-y-12">
-          {/* Core Problems & SDG Alignment */}
+        {/* Core Problems - Always Visible */}
+        <section className="max-w-7xl mx-auto px-4 mb-12">
           <div className="animate-fade-in">
             <CoreProblems />
           </div>
+        </section>
 
-          {/* Ecosystem Map */}
+        {/* Interactive Dashboard */}
+        <section className="max-w-7xl mx-auto px-4 mb-12">
           <div className="animate-fade-in">
-            <EcosystemMap />
-          </div>
-
-          {/* Nursaera Platform */}
-          <div className="animate-fade-in">
-            <NursaeraPlatform />
-          </div>
-
-          {/* SME Transformation */}
-          <div className="animate-fade-in">
-            <SMETransformation />
-          </div>
-
-          {/* Stakeholder Network */}
-          <div className="animate-fade-in">
-            <StakeholderNetwork />
-          </div>
-
-          {/* Impact Metrics */}
-          <div className="animate-fade-in">
-            <ImpactMetrics />
-          </div>
-
-          {/* Sustainability Model */}
-          <div className="animate-fade-in">
-            <SustainabilityModel />
+            <EcosystemDashboard onSectionClick={handleSectionClick} />
           </div>
         </section>
 
@@ -104,6 +83,13 @@ const EcosystemOverview = () => {
           </div>
         </section>
       </main>
+
+      {/* Detail Modal */}
+      <EcosystemDetailModal 
+        sectionId={selectedSection}
+        isOpen={!!selectedSection}
+        onClose={() => setSelectedSection(null)}
+      />
     </div>
   );
 };
