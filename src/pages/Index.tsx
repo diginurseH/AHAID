@@ -79,25 +79,14 @@ const Index = () => {
               <DinhaLogo size={90} />
             </span>
           </div>
-          <div className="mb-6 text-center">
-            <blockquote className="text-lg md:text-xl text-green-800 italic font-medium mb-4">
-              "To every healthcare worker without a voice, tool, or platform—we build for you.<br />
-              To every patient left behind—<strong>we bring you forward.</strong>"
-            </blockquote>
-          </div>
           <h1 className="text-5xl md:text-6xl font-bold text-green-900 mb-3 tracking-tight">
             DINHA
           </h1>
-          <h2 className="text-xl md:text-2xl font-semibold text-amber-700 mb-2">
+          <h2 className="text-xl md:text-2xl font-semibold text-amber-700 mb-6">
             DigiNurse Health Africa
           </h2>
-          <h3 className="text-lg md:text-xl text-green-800 font-semibold mb-6">
-            Where Care Meets Code
-          </h3>
           <p className="max-w-2xl text-lg md:text-xl text-foreground/90 mb-6">
-            Pioneering Afrocentric digital health solutions through <span className="text-green-700 font-medium">Nursaera AI platform</span>, 
-            <span className="text-amber-700 font-medium"> SME digital transformation</span>, and 
-            <span className="text-emerald-700 font-medium"> culturally-responsive healthcare innovation</span> across Africa.
+            Empowering Africa's healthcare professionals, patients, and communities through <span className="text-green-700 font-medium">digital innovation</span>, <span className="text-amber-700 font-medium">emotional intelligence</span>, and <span className="text-emerald-700 font-medium">impactful storytelling.</span>
           </p>
           <div className="flex flex-col md:flex-row gap-4 mb-10 justify-center animate-fade-in">
             <Button size="lg" className="bg-green-700 hover:bg-green-800 text-white shadow-lg transition-transform hover:scale-105" asChild>
@@ -117,18 +106,16 @@ const Index = () => {
             <div className="bg-green-700/95 text-white rounded-xl shadow-lg animate-fade-in p-6">
               <h3 className="text-2xl font-semibold mb-2">Our Vision</h3>
               <p>
-                We envision a world where <strong>digital dignity</strong> is a human right in healthcare. 
-                Where every nurse is a knowledge node, remote villages have the same access to innovation as urban hospitals, 
-                and care is personalized, predictive, and powered by empathy + intelligence.
+                To revolutionize healthcare across Africa—empowering every nurse, patient, and innovator to thrive through digital, emotional, and communal strength.
               </p>
             </div>
             <div className="bg-amber-50/90 border border-amber-200 rounded-xl shadow animate-fade-in p-6">
-              <h3 className="text-2xl font-semibold text-green-800 mb-2">The Problem We're Solving</h3>
-              <ul className="list-disc ml-5 space-y-2 text-base text-green-900">
-                <li><strong>1 in 3 patients</strong> in low-resource areas lack access to timely emergency care</li>
-                <li>Nurses are often excluded from tech innovation despite being <strong>70% of the health workforce</strong></li>
-                <li>Existing digital tools are <strong>not culturally adapted or user-empathetic</strong></li>
-                <li className="text-green-700 font-medium">DINHA changes that by embedding critical care expertise into smart, localized, AI-integrated tools</li>
+              <h3 className="text-2xl font-semibold text-green-800 mb-2">Our Mission</h3>
+              <ul className="list-disc ml-5 space-y-1 text-base text-green-900">
+                <li>AI-powered guidance for chronic illness, focused on hypertension and diabetes.</li>
+                <li>Empower nurses: digital tools, education, emotional resilience.</li>
+                <li>Open-source, collaborative innovation—connecting all stakeholders.</li>
+                <li>Storytelling for wellness: amplify voices, emotional engagement, and impact.</li>
               </ul>
             </div>
           </div>
@@ -229,33 +216,17 @@ const Index = () => {
           </form>
         </section>
       </main>
-        {/* Founder's Note */}
-        <section className="max-w-4xl mx-auto px-4 py-12">
-          <div className="bg-gradient-to-r from-green-800 to-emerald-700 text-white rounded-2xl p-8 text-center shadow-xl">
-            <h3 className="text-2xl font-bold mb-4 text-amber-200">Founder's Note</h3>
-            <blockquote className="text-lg italic leading-relaxed mb-6">
-              "This is not a platform. It is a remembering. DINHA is the breath that systems forgot to take—care rendered in code, 
-              a quiet revolt, a sacred redesign. It was created for the nurse who healed without tools, for the patient who waited in silence, 
-              and for the system that lost its pulse."
-            </blockquote>
-            <p className="font-semibold text-amber-200">
-              We are not what broke us; we are what rebuilds—with presence. We are not the aftermath. We are the architects. 
-              New ancestors, in real time—writing futures in the language of dignity.
-            </p>
-          </div>
-        </section>
-        
-        {/* Footer */}
-        <footer className="w-full py-8 px-4 bg-green-800/95 text-white text-center text-xs mt-16 tracking-wide animate-fade-in flex flex-col gap-2">
-          <div>
-            © {new Date().getFullYear()} DINHA – DigiNurse Health Africa. Empowering Africa, Digitally & Compassionately.
-          </div>
-          <div>
-            <a href="#" className="underline hover:text-amber-300 transition">Privacy Policy</a>{" "}
-            |{" "}
-            <a href="#contact" className="underline hover:text-amber-300 transition">Contact</a>
-          </div>
-        </footer>
+      {/* Footer */}
+      <footer className="w-full py-8 px-4 bg-green-800/95 text-white text-center text-xs mt-16 tracking-wide animate-fade-in flex flex-col gap-2">
+        <div>
+          © {new Date().getFullYear()} DINHA – DigiNurse Health Africa. Empowering Africa, Digitally & Compassionately.
+        </div>
+        <div>
+          <a href="#" className="underline hover:text-amber-300 transition">Privacy Policy</a>{" "}
+          |{" "}
+          <a href="#contact" className="underline hover:text-amber-300 transition">Contact</a>
+        </div>
+      </footer>
     </div>
   );
 };

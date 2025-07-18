@@ -7,8 +7,6 @@ import EcosystemMap from "@/components/EcosystemMap";
 import StakeholderNetwork from "@/components/StakeholderNetwork";
 import ImpactMetrics from "@/components/ImpactMetrics";
 import SustainabilityModel from "@/components/SustainabilityModel";
-import NursaeraPlatform from "@/components/NursaeraPlatform";
-import SMETransformation from "@/components/SMETransformation";
 
 const EcosystemOverview = () => {
   return (
@@ -35,13 +33,11 @@ const EcosystemOverview = () => {
               </h1>
             </div>
             <h2 className="text-xl md:text-2xl text-amber-700 mb-6">
-              DigiNurse Health Africa: Pioneering Afrocentric Digital Health Solutions
+              A Comprehensive View of Our Interconnected Healthcare Innovation Network
             </h2>
             <p className="max-w-3xl mx-auto text-lg text-green-900/80">
-              Discover our comprehensive ecosystem featuring Nursaera (our AI-powered digital health platform), 
-              SME digital transformation services, and culturally-responsive healthcare solutions. 
-              See how our 4C Framework creates sustainable impact across African communities through ethical technology, 
-              multilingual support, and community-driven innovation.
+              Explore how our four empowerment streams work together to create sustainable impact across Africa's healthcare landscape, 
+              connecting stakeholders, measuring outcomes, and building a self-sustaining ecosystem for transformation.
             </p>
           </div>
         </section>
@@ -51,16 +47,6 @@ const EcosystemOverview = () => {
           {/* Ecosystem Map */}
           <div className="animate-fade-in">
             <EcosystemMap />
-          </div>
-
-          {/* Nursaera Platform */}
-          <div className="animate-fade-in">
-            <NursaeraPlatform />
-          </div>
-
-          {/* SME Transformation */}
-          <div className="animate-fade-in">
-            <SMETransformation />
           </div>
 
           {/* Stakeholder Network */}
