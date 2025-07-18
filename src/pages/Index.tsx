@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Sparkles, Users, HeartPulse, BookMarked } from "lucide-react";
@@ -87,11 +86,11 @@ const Index = () => {
             DigiNurse Health Africa
           </h2>
           <p className="max-w-2xl text-lg md:text-xl text-foreground/90 mb-6">
-            Empowering Africa’s healthcare professionals, patients, and communities through <span className="text-green-700 font-medium">digital innovation</span>, <span className="text-amber-700 font-medium">emotional intelligence</span>, and <span className="text-emerald-700 font-medium">impactful storytelling.</span>
+            Empowering Africa's healthcare professionals, patients, and communities through <span className="text-green-700 font-medium">digital innovation</span>, <span className="text-amber-700 font-medium">emotional intelligence</span>, and <span className="text-emerald-700 font-medium">impactful storytelling.</span>
           </p>
           <div className="flex flex-col md:flex-row gap-4 mb-10 justify-center animate-fade-in">
-            <Button size="lg" className="bg-green-700 hover:bg-green-800 text-white shadow-lg transition-transform hover:scale-105">
-              Explore the Ecosystem
+            <Button size="lg" className="bg-green-700 hover:bg-green-800 text-white shadow-lg transition-transform hover:scale-105" asChild>
+              <Link to="/ecosystem">Explore the Ecosystem</Link>
             </Button>
             <Button size="lg" variant="outline" className="border-green-700 text-green-800 hover:bg-green-50">
               Meet Your DINHA AI
@@ -138,7 +137,12 @@ const Index = () => {
         </section>
         {/* 4C Empowerment Streams */}
         <section id="empowerment" className="max-w-6xl mx-auto px-4 py-12">
-          <h2 className="text-3xl font-bold text-green-800 text-center mb-8">Empowerment Streams: The 4C Framework</h2>
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold text-green-800 mb-4">Empowerment Streams: The 4C Framework</h2>
+            <Button variant="outline" className="border-green-700 text-green-800 hover:bg-green-50" asChild>
+              <Link to="/empowerment-streams">View Detailed Streams</Link>
+            </Button>
+          </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
             {empowermentStreams.map((c) => (
               <div
