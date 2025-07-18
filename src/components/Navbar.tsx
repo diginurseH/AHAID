@@ -7,8 +7,8 @@ const menu = [
   { name: "Home", href: "#home" },
   { name: "Ecosystem", href: "/ecosystem", isRoute: true },
   { name: "Empowerment Streams", href: "/empowerment-streams", isRoute: true },
-  { name: "Studio", href: "#studio" },
-  { name: "Community", href: "#community" },
+  { name: "Studio", href: "/studio", isRoute: true },
+  { name: "Community", href: "/community", isRoute: true },
   { name: "Contact", href: "#contact" },
 ];
 
