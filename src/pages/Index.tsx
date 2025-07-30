@@ -100,61 +100,54 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Impact Metrics */}
-        <ImpactMetricsSection />
-
-        {/* Quick Start Flow */}
+        {/* Key Highlights - Simplified */}
         <section className="max-w-6xl mx-auto px-4 py-16">
-          <QuickStartFlow />
-        </section>
-
-        {/* Stakeholder Portal */}
-        <StakeholderPortal />
-
-        {/* Evidence Validation Dashboard */}
-        <EvidenceValidationDashboard />
-
-        {/* Technical Documentation */}
-        <InteroperabilityDocs />
-
-        {/* Mission & Vision - Simplified */}
-        <section className="max-w-6xl mx-auto px-4 py-16">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-green-800 mb-4">Our Mission & Vision</h2>
-            <p className="text-lg text-green-600">AHAID's commitment to African healthcare</p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-8 mb-16">
-            <div className="bg-gradient-to-br from-green-700 to-green-500 text-white rounded-2xl p-8 shadow-xl">
-              <h3 className="text-2xl font-bold mb-4">Our Vision</h3>
-              <p className="text-lg leading-relaxed">
-                A world where <strong>digital dignity</strong> is a human right in healthcare, 
-                where every nurse is a knowledge node, and care is personalized, predictive, 
-                and powered by empathy + intelligence.
-              </p>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white rounded-xl p-6 shadow-lg border border-green-100">
+              <div className="text-3xl font-bold text-green-700 mb-2">2,500+</div>
+              <div className="text-green-600 mb-4">Healthcare Professionals</div>
+              <Button variant="outline" size="sm" className="border-green-700 text-green-700">
+                <Link to="/ecosystem" className="flex items-center">
+                  View Impact <ArrowRight className="w-3 h-3 ml-1" />
+                </Link>
+              </Button>
             </div>
             
-            <div className="bg-white border-2 border-green-200 rounded-2xl p-8 shadow-lg">
-              <h3 className="text-2xl font-bold text-green-800 mb-4">The Challenge</h3>
-              <div className="space-y-3">
-                <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-red-500 rounded-full"></div>
-                  <span className="text-gray-700"><strong>1 in 3 patients</strong> lack timely emergency care</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
-                  <span className="text-gray-700">Nurses excluded despite being <strong>70% of workforce</strong></span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
-                  <span className="text-gray-700">Tools not <strong>culturally adapted</strong></span>
-                </div>
-                <div className="flex items-center gap-3 mt-4 p-3 bg-green-50 rounded-lg">
-                  <ArrowRight className="w-5 h-5 text-green-600" />
-                  <span className="text-green-700 font-semibold">AHAID changes this with smart, localized solutions</span>
-                </div>
-              </div>
+            <div className="bg-white rounded-xl p-6 shadow-lg border border-amber-100">
+              <div className="text-3xl font-bold text-amber-700 mb-2">4C</div>
+              <div className="text-amber-600 mb-4">Framework Approach</div>
+              <Button variant="outline" size="sm" className="border-amber-700 text-amber-700">
+                <Link to="/empowerment-streams" className="flex items-center">
+                  Learn More <ArrowRight className="w-3 h-3 ml-1" />
+                </Link>
+              </Button>
             </div>
+            
+            <div className="bg-white rounded-xl p-6 shadow-lg border border-blue-100">
+              <div className="text-3xl font-bold text-blue-700 mb-2">24/7</div>
+              <div className="text-blue-600 mb-4">AI-Powered Support</div>
+              <Button variant="outline" size="sm" className="border-blue-700 text-blue-700">
+                <Link to="/resources" className="flex items-center">
+                  Explore <ArrowRight className="w-3 h-3 ml-1" />
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </section>
+
+        {/* Mission Statement - Condensed */}
+        <section className="max-w-4xl mx-auto px-4 py-16 text-center">
+          <div className="bg-gradient-to-br from-green-700 to-green-500 text-white rounded-2xl p-8 shadow-xl">
+            <h2 className="text-3xl font-bold mb-4">Our Mission</h2>
+            <p className="text-xl leading-relaxed mb-6">
+              Creating <strong>digital dignity</strong> in healthcare through AI-driven tools 
+              that empower African healthcare professionals and communities.
+            </p>
+            <Button variant="secondary" className="bg-white text-green-700 hover:bg-green-50">
+              <Link to="/ecosystem" className="flex items-center">
+                Learn Our Story <ArrowRight className="w-4 h-4 ml-2" />
+              </Link>
+            </Button>
           </div>
         </section>
 
