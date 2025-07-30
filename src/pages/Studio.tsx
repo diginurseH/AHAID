@@ -101,12 +101,8 @@ const Studio = () => {
   };
 
   const handleGetInTouch = () => {
-    console.log("Opening contact form");
-    // This would scroll to contact section or open contact modal
-    const contactSection = document.getElementById('contact');
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
-    }
+    // Navigate to home page contact section
+    window.location.href = '/#contact';
   };
 
   return (
