@@ -80,13 +80,13 @@ const Index = () => {
           <div className="mb-8">
             <div className="inline-flex items-center gap-2 bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Star className="w-4 h-4" />
-              Transforming African Healthcare Through Technology
+              AHAID
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-green-900 mb-4 tracking-tight">
               Where Care Meets Code
             </h1>
             <p className="text-xl md:text-2xl text-green-700 mb-8 max-w-3xl mx-auto">
-              Empowering healthcare professionals with AI-driven tools, community support, and open-source innovation across Africa
+              Africa's Health and Inclusive Digitalization platform empowering healthcare through technology
             </p>
           </div>
           
@@ -121,7 +121,7 @@ const Index = () => {
         <section className="max-w-6xl mx-auto px-4 py-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-green-800 mb-4">Our Mission & Vision</h2>
-            <p className="text-lg text-green-600">Driving healthcare transformation through technology and community</p>
+            <p className="text-lg text-green-600">AHAID's commitment to African healthcare</p>
           </div>
           
           <div className="grid md:grid-cols-2 gap-8 mb-16">
@@ -188,7 +188,7 @@ const Index = () => {
         <section id="empowerment" className="max-w-6xl mx-auto px-4 py-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-green-800 mb-4">The 4C Framework</h2>
-            <p className="text-lg text-green-600 mb-6">Click any stream to discover how we empower African healthcare</p>
+            <p className="text-lg text-green-600 mb-6">Click any stream to discover AHAID's comprehensive approach</p>
             <Button variant="outline" className="border-green-700 text-green-700 hover:bg-green-50" asChild>
               <Link to="/empowerment-streams">Explore All Streams <ArrowRight className="w-4 h-4 ml-2" /></Link>
             </Button>
@@ -216,7 +216,7 @@ const Index = () => {
             <BookMarked className="h-12 w-12 mx-auto mb-4 text-white/90" />
             <h3 className="text-2xl font-bold mb-4">AHAID Studio</h3>
             <p className="text-lg mb-6 max-w-2xl mx-auto text-white/90">
-              Discover inspiring healthcare stories and innovation insights from across Africa
+              Healthcare stories and innovation insights from across Africa
             </p>
             <Button size="lg" variant="secondary" className="bg-white text-amber-700 hover:bg-amber-50" asChild>
               <Link to="/studio">Visit Studio <ArrowRight className="w-4 h-4 ml-2" /></Link>
@@ -226,9 +226,9 @@ const Index = () => {
           {/* Community CTA */}
           <div className="bg-gradient-to-r from-green-700 to-emerald-600 text-white rounded-2xl p-8 text-center shadow-xl">
             <Users className="h-12 w-12 mx-auto mb-4 text-green-200" />
-            <h3 className="text-2xl font-bold mb-4">Join Our Growing Community</h3>
+            <h3 className="text-2xl font-bold mb-4">Join Our Community</h3>
             <p className="text-lg mb-6 max-w-2xl mx-auto text-green-100">
-              Connect with healthcare professionals, share experiences, and access exclusive resources
+              Connect with healthcare professionals and access exclusive resources
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" variant="secondary" className="bg-white text-green-700 hover:bg-green-50" asChild>
