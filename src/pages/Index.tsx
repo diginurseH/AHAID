@@ -79,10 +79,10 @@ const Index = () => {
         <section id="home" className="max-w-6xl mx-auto py-16 px-4 text-center animate-fade-in">
           <div className="mb-8">
             <h1 className="text-5xl md:text-6xl font-bold text-green-900 mb-4 tracking-tight">
-              Where Care Meets Code
+              AHAID - Africa's Health and Inclusive Digitalization
             </h1>
             <p className="text-xl md:text-2xl text-green-700 mb-8 max-w-3xl mx-auto">
-              AHAID - Africa's Health and Inclusive Digitalization
+              Where Care Meets Code
             </p>
           </div>
           
