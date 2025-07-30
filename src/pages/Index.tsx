@@ -1,9 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Sparkles, Users, HeartPulse, BookMarked } from "lucide-react";
+import { Sparkles, Users, HeartPulse, BookMarked, ArrowRight, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import ProgressiveDisclosure from "@/components/ProgressiveDisclosure";
+import { InteractiveCard } from "@/components/InteractiveCard";
+import { QuickStartFlow } from "@/components/QuickStartFlow";
+import { ImpactMetricsSection } from "@/components/ImpactMetricsSection";
 
 const coreValues = [
   {
@@ -35,31 +38,31 @@ const coreValues = [
 const empowermentStreams = [
   {
     title: "Care",
-    description:
-      "AI-driven chronic disease support, nurse training, emotional support SOPs.",
+    summary: "AI-driven health tools for professionals",
+    details: "Comprehensive chronic disease support, nurse training programs, emotional support protocols, and intelligent health monitoring systems designed for African healthcare contexts.",
     color: "from-green-700 to-green-400",
-    icon: <HeartPulse className="w-7 h-7" />,
+    icon: <HeartPulse className="w-8 h-8" />,
   },
   {
     title: "Code",
-    description:
-      "Open-source innovation hub, technical guides, APIs, and developer resources.",
+    summary: "Open-source innovation for health tech",
+    details: "Developer-focused innovation hub featuring technical guides, APIs, SDKs, and collaborative development resources for building scalable health technology solutions.",
     color: "from-blue-900 to-blue-400",
-    icon: <Sparkles className="w-7 h-7" />,
+    icon: <Sparkles className="w-8 h-8" />,
   },
   {
     title: "Community",
-    description:
-      "Powerful stories, webinars, emotional wellness resources, testimonials.",
+    summary: "Connect, share, and grow together",
+    details: "Platform for sharing powerful stories, participating in educational webinars, accessing emotional wellness resources, and building meaningful professional networks.",
     color: "from-amber-700 to-yellow-300",
-    icon: <Users className="w-7 h-7" />,
+    icon: <Users className="w-8 h-8" />,
   },
   {
     title: "Commerce",
-    description:
-      "Digital strategy & tools for small and medium-sized African enterprises, empowering growth through web, mobile & messaging technology solutions.",
+    summary: "Digital tools for African enterprises",
+    details: "Comprehensive digital strategy and technology solutions for small and medium-sized African businesses, featuring web, mobile, and messaging platform integrations.",
     color: "from-yellow-700 to-yellow-400",
-    icon: <BookMarked className="w-7 h-7" />,
+    icon: <BookMarked className="w-8 h-8" />,
   },
 ];
 
@@ -69,235 +72,232 @@ const Index = () => {
       <Navbar />
       
       <main className="pt-20 pb-6">
-        {/* Header Section */}
-        <section id="home" className="max-w-4xl mx-auto py-14 px-4 flex flex-col items-center text-center animate-fade-in">
-          <h1 className="text-4xl md:text-5xl font-bold text-green-900 mb-3 tracking-tight">
-            AFRICA'S HEALTH AND INCLUSIVE DIGITALIZATION (AHAID)
-          </h1>
-          <h3 className="text-lg md:text-xl text-green-800 font-semibold mb-6">
-            Where Care Meets Code
-          </h3>
-          <div className="flex justify-center animate-fade-in">
-            <Button size="lg" className="bg-green-700 hover:bg-green-800 text-white shadow-lg transition-transform hover:scale-105" asChild>
-              <Link to="/ecosystem">Explore the Ecosystem</Link>
-            </Button>
+        {/* Hero Section - Simplified and Action-Oriented */}
+        <section id="home" className="max-w-6xl mx-auto py-16 px-4 text-center animate-fade-in">
+          <div className="mb-8">
+            <div className="inline-flex items-center gap-2 bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
+              <Star className="w-4 h-4" />
+              Transforming African Healthcare Through Technology
+            </div>
+            <h1 className="text-5xl md:text-6xl font-bold text-green-900 mb-4 tracking-tight">
+              Where Care Meets Code
+            </h1>
+            <p className="text-xl md:text-2xl text-green-700 mb-8 max-w-3xl mx-auto">
+              Empowering healthcare professionals with AI-driven tools, community support, and open-source innovation across Africa
+            </p>
           </div>
-        </section>
-
-        {/* About Us Section - Progressive Disclosure */}
-        <section id="about" className="max-w-5xl mx-auto px-4 py-12">
-          <h2 className="text-3xl font-bold text-green-800 mb-8 text-center">About Us</h2>
           
-          <div className="space-y-6">
-            <ProgressiveDisclosure
-              title="Our Story"
-              summary="Born from the intersection of nursing expertise and technological innovation, AHAID represents a quiet revolution in African healthcare."
-              defaultOpen={true}
-            >
-              <p className="text-green-900 leading-relaxed mb-4">
-                We emerged from the recognition that healthcare transformation requires both deep clinical 
-                understanding and cutting-edge digital solutions. Our founder, drawing from extensive nursing 
-                experience across multiple healthcare systems, identified the critical gap between available 
-                technology and real-world healthcare needs in resource-constrained environments.
-              </p>
-            </ProgressiveDisclosure>
-
-            <ProgressiveDisclosure
-              title="What Makes Us Different"
-              summary="Four key differentiators set AHAID apart in the digital health landscape."
-            >
-              <div className="grid md:grid-cols-2 gap-4">
-                <div className="flex items-start gap-3">
-                  <HeartPulse className="w-5 h-5 text-green-700 mt-1 flex-shrink-0" />
-                  <div>
-                    <h4 className="font-semibold text-green-800">Nurse-Led Innovation</h4>
-                    <p className="text-sm text-green-700">Built by healthcare professionals who understand real clinical challenges</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <Sparkles className="w-5 h-5 text-yellow-600 mt-1 flex-shrink-0" />
-                  <div>
-                    <h4 className="font-semibold text-green-800">Cultural Sensitivity</h4>
-                    <p className="text-sm text-green-700">Solutions designed with African contexts and values at the core</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <Users className="w-5 h-5 text-green-700 mt-1 flex-shrink-0" />
-                  <div>
-                    <h4 className="font-semibold text-green-800">Community-Centered</h4>
-                    <p className="text-sm text-green-700">Technology that strengthens rather than replaces human connections</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <BookMarked className="w-5 h-5 text-amber-800 mt-1 flex-shrink-0" />
-                  <div>
-                    <h4 className="font-semibold text-green-800">Open Source Commitment</h4>
-                    <p className="text-sm text-green-700">Transparent, accessible, and collaboratively developed</p>
-                  </div>
-                </div>
-              </div>
-            </ProgressiveDisclosure>
-          </div>
-        </section>
-
-        {/* Mission & Vision - Condensed */}
-        <section className="max-w-5xl mx-auto px-4 py-6">
-          <div className="grid md:grid-cols-2 gap-6 mb-10">
-            <div className="bg-green-700/95 text-white rounded-xl shadow-lg animate-fade-in p-6">
-              <h3 className="text-2xl font-semibold mb-2">Our Vision</h3>
-              <p>
-                We envision a world where <strong>digital dignity</strong> is a human right in healthcare. 
-                Where every nurse is a knowledge node, and care is personalized, predictive, and powered by empathy + intelligence.
-              </p>
-            </div>
-            <div className="bg-amber-50/90 border border-amber-200 rounded-xl shadow animate-fade-in p-6">
-              <h3 className="text-2xl font-semibold text-green-800 mb-2">The Problem We're Solving</h3>
-              <ul className="list-disc ml-5 space-y-2 text-base text-green-900">
-                <li><strong>1 in 3 patients</strong> lack access to timely emergency care</li>
-                <li>Nurses excluded from tech innovation despite being <strong>70% of health workforce</strong></li>
-                <li>Existing tools are <strong>not culturally adapted</strong></li>
-                <li className="text-green-700 font-medium">AHAID changes that with smart, localized, AI-integrated solutions</li>
-              </ul>
-            </div>
-          </div>
-
-          {/* Core Values - Collapsed by Default */}
-          <ProgressiveDisclosure
-            title="Core Values"
-            summary="Four fundamental principles guide everything we do at AHAID."
-          >
-            <div className="grid md:grid-cols-4 gap-6">
-              {coreValues.map((v) => (
-                <div key={v.title} className="hover:scale-105 transition-all duration-200 shadow border-green-100/80 rounded-xl bg-white animate-fade-in">
-                  <div className="flex flex-col items-center p-5">
-                    <div className="mb-3">{v.icon}</div>
-                    <h4 className="font-semibold mb-1 text-green-900">{v.title}</h4>
-                    <p className="text-sm text-muted-foreground text-center">{v.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </ProgressiveDisclosure>
-        </section>
-
-        {/* 4C Empowerment Streams - Always Visible */}
-        <section id="empowerment" className="max-w-6xl mx-auto px-4 py-12">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-green-800 mb-4">Empowerment Streams: The 4C Framework</h2>
-            <Button variant="outline" className="border-green-700 text-green-800 hover:bg-green-50" asChild>
-              <Link to="/empowerment-streams">View Detailed Streams</Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <Button size="lg" className="bg-green-700 hover:bg-green-800 text-white shadow-lg transition-transform hover:scale-105" asChild>
+              <Link to="/ecosystem">Explore Our Ecosystem</Link>
+            </Button>
+            <Button size="lg" variant="outline" className="border-green-700 text-green-700 hover:bg-green-50" asChild>
+              <Link to="/community">Join 2,500+ Members</Link>
             </Button>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-            {empowermentStreams.map((c) => (
-              <div
-                key={c.title}
-                className={`rounded-xl bg-gradient-to-br ${c.color} text-white shadow-lg hover:scale-105 transition-transform animate-enter flex flex-col items-center p-7 relative`}
-              >
-                {c.icon}
-                <h3 className="mt-4 text-xl font-semibold">{c.title}</h3>
-                <p className="mt-2 text-sm text-white/90 text-center">{c.description}</p>
+        </section>
+
+        {/* Impact Metrics */}
+        <ImpactMetricsSection />
+
+        {/* Quick Start Flow */}
+        <section className="max-w-6xl mx-auto px-4 py-16">
+          <QuickStartFlow />
+        </section>
+
+        {/* Mission & Vision - Simplified */}
+        <section className="max-w-6xl mx-auto px-4 py-16">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-green-800 mb-4">Our Mission & Vision</h2>
+            <p className="text-lg text-green-600">Driving healthcare transformation through technology and community</p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8 mb-16">
+            <div className="bg-gradient-to-br from-green-700 to-green-500 text-white rounded-2xl p-8 shadow-xl">
+              <h3 className="text-2xl font-bold mb-4">Our Vision</h3>
+              <p className="text-lg leading-relaxed">
+                A world where <strong>digital dignity</strong> is a human right in healthcare, 
+                where every nurse is a knowledge node, and care is personalized, predictive, 
+                and powered by empathy + intelligence.
+              </p>
+            </div>
+            
+            <div className="bg-white border-2 border-green-200 rounded-2xl p-8 shadow-lg">
+              <h3 className="text-2xl font-bold text-green-800 mb-4">The Challenge</h3>
+              <div className="space-y-3">
+                <div className="flex items-center gap-3">
+                  <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+                  <span className="text-gray-700"><strong>1 in 3 patients</strong> lack timely emergency care</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
+                  <span className="text-gray-700">Nurses excluded despite being <strong>70% of workforce</strong></span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
+                  <span className="text-gray-700">Tools not <strong>culturally adapted</strong></span>
+                </div>
+                <div className="flex items-center gap-3 mt-4 p-3 bg-green-50 rounded-lg">
+                  <ArrowRight className="w-5 h-5 text-green-600" />
+                  <span className="text-green-700 font-semibold">AHAID changes this with smart, localized solutions</span>
+                </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Core Values - Interactive Cards */}
+        <section className="max-w-6xl mx-auto px-4 py-16">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-green-800 mb-4">What Drives Us</h2>
+            <p className="text-lg text-green-600">Click any card to explore our core values</p>
+          </div>
+          
+          <div className="grid md:grid-cols-4 gap-6">
+            {coreValues.map((value) => (
+              <InteractiveCard
+                key={value.title}
+                title={value.title}
+                summary={value.description}
+                details={`${value.description} This value shapes every decision we make and every solution we build, ensuring our work truly serves African communities.`}
+                icon={value.icon}
+                gradient={
+                  value.title.includes('Empathy') ? 'from-red-500 to-pink-400' :
+                  value.title.includes('Integrity') ? 'from-green-600 to-green-400' :
+                  value.title.includes('Innovation') ? 'from-yellow-500 to-orange-400' :
+                  'from-amber-600 to-yellow-500'
+                }
+              />
             ))}
           </div>
         </section>
 
-        {/* Condensed Sections */}
-        <section className="max-w-5xl mx-auto px-4 py-12 space-y-8">
-          <ProgressiveDisclosure
-            title="AHAID Studio"
-            summary="Explore inspiring stories, health innovation blogs, and personal narratives integrated with Medium and Notion."
-          >
-            <div className="text-center">
-              <p className="mb-5 text-green-900 text-base md:text-lg max-w-2xl mx-auto">
-                Seamless African healthcare storytelling and knowledge sharing platform featuring 
-                curated content, expert insights, and community-driven narratives.
-              </p>
-              <Button variant="outline" className="border-amber-700 text-amber-700 hover:bg-yellow-50" asChild>
-                <Link to="/studio">Visit Studio Blog</Link>
-              </Button>
-            </div>
-          </ProgressiveDisclosure>
-
-          <ProgressiveDisclosure
-            title="Join Our Community"
-            summary="Connect with 2,500+ healthcare professionals, developers, and innovators across 15 African countries."
-            defaultOpen={true}
-          >
-            <div className="bg-gradient-to-r from-green-800 to-emerald-700 text-white rounded-2xl p-8 text-center shadow-xl">
-              <Users className="h-12 w-12 mx-auto mb-4 text-yellow-300" />
-              <p className="mb-6 text-green-100 text-base md:text-lg max-w-2xl mx-auto">
-                Share experiences, participate in webinars, and access exclusive resources for healthcare transformation.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
-                <Button size="lg" variant="secondary" className="bg-white text-green-800 hover:bg-green-50" asChild>
-                  <Link to="/community">Explore Community</Link>
-                </Button>
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
-                  View Testimonials
-                </Button>
-              </div>
-              <div className="grid grid-cols-3 gap-4 max-w-md mx-auto text-center">
-                <div>
-                  <div className="text-2xl font-bold text-yellow-300">2,500+</div>
-                  <div className="text-sm text-green-100">Members</div>
-                </div>
-                <div>
-                  <div className="text-2xl font-bold text-yellow-300">15</div>
-                  <div className="text-sm text-green-100">Countries</div>
-                </div>
-                <div>
-                  <div className="text-2xl font-bold text-yellow-300">450+</div>
-                  <div className="text-sm text-green-100">Discussions</div>
-                </div>
-              </div>
-            </div>
-          </ProgressiveDisclosure>
+        {/* 4C Empowerment Streams - Interactive */}
+        <section id="empowerment" className="max-w-6xl mx-auto px-4 py-16">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-green-800 mb-4">The 4C Framework</h2>
+            <p className="text-lg text-green-600 mb-6">Click any stream to discover how we empower African healthcare</p>
+            <Button variant="outline" className="border-green-700 text-green-700 hover:bg-green-50" asChild>
+              <Link to="/empowerment-streams">Explore All Streams <ArrowRight className="w-4 h-4 ml-2" /></Link>
+            </Button>
+          </div>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+            {empowermentStreams.map((stream) => (
+              <InteractiveCard
+                key={stream.title}
+                title={stream.title}
+                summary={stream.summary}
+                details={stream.details}
+                icon={stream.icon}
+                gradient={stream.color}
+                className="h-80"
+              />
+            ))}
+          </div>
         </section>
 
-        {/* Contact Section - Simplified */}
-        <section id="contact" className="max-w-2xl mx-auto px-4 py-10">
-          <ProgressiveDisclosure
-            title="Contact & Collaborate"
-            summary="Ready to join the healthcare transformation? Get in touch with our team."
-          >
-            <form className="bg-white rounded shadow p-6 flex flex-col gap-4" autoComplete="off">
+        {/* Call-to-Action Sections */}
+        <section className="max-w-6xl mx-auto px-4 py-16 space-y-12">
+          {/* Studio CTA */}
+          <div className="bg-gradient-to-r from-amber-500 to-orange-500 text-white rounded-2xl p-8 text-center shadow-xl">
+            <BookMarked className="h-12 w-12 mx-auto mb-4 text-white/90" />
+            <h3 className="text-2xl font-bold mb-4">AHAID Studio</h3>
+            <p className="text-lg mb-6 max-w-2xl mx-auto text-white/90">
+              Discover inspiring healthcare stories and innovation insights from across Africa
+            </p>
+            <Button size="lg" variant="secondary" className="bg-white text-amber-700 hover:bg-amber-50" asChild>
+              <Link to="/studio">Visit Studio <ArrowRight className="w-4 h-4 ml-2" /></Link>
+            </Button>
+          </div>
+
+          {/* Community CTA */}
+          <div className="bg-gradient-to-r from-green-700 to-emerald-600 text-white rounded-2xl p-8 text-center shadow-xl">
+            <Users className="h-12 w-12 mx-auto mb-4 text-green-200" />
+            <h3 className="text-2xl font-bold mb-4">Join Our Growing Community</h3>
+            <p className="text-lg mb-6 max-w-2xl mx-auto text-green-100">
+              Connect with healthcare professionals, share experiences, and access exclusive resources
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" variant="secondary" className="bg-white text-green-700 hover:bg-green-50" asChild>
+                <Link to="/community">Join Community <ArrowRight className="w-4 h-4 ml-2" /></Link>
+              </Button>
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+                View Success Stories
+              </Button>
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Section - Streamlined */}
+        <section id="contact" className="max-w-4xl mx-auto px-4 py-16">
+          <div className="bg-white rounded-2xl shadow-xl p-8">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl font-bold text-green-800 mb-4">Get in Touch</h2>
+              <p className="text-lg text-green-600">Ready to transform healthcare? Let's collaborate!</p>
+            </div>
+            
+            <form className="grid md:grid-cols-2 gap-6" autoComplete="off">
               <div>
-                <label htmlFor="name" className="block text-green-900 font-medium mb-1">Name</label>
-                <input id="name" name="name" className="w-full px-3 py-2 border border-green-200 rounded focus:outline-amber-700" placeholder="Your Name" />
+                <label htmlFor="name" className="block text-green-900 font-medium mb-2">Full Name</label>
+                <input 
+                  id="name" 
+                  name="name" 
+                  className="w-full px-4 py-3 border border-green-200 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent" 
+                  placeholder="Your full name" 
+                />
               </div>
               <div>
-                <label htmlFor="email" className="block text-green-900 font-medium mb-1">Email</label>
-                <input id="email" name="email" type="email" className="w-full px-3 py-2 border border-green-200 rounded focus:outline-amber-700" placeholder="you@email.com" />
+                <label htmlFor="email" className="block text-green-900 font-medium mb-2">Email Address</label>
+                <input 
+                  id="email" 
+                  name="email" 
+                  type="email" 
+                  className="w-full px-4 py-3 border border-green-200 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent" 
+                  placeholder="your@email.com" 
+                />
               </div>
-              <div>
-                <label htmlFor="message" className="block text-green-900 font-medium mb-1">Message</label>
-                <textarea id="message" name="message" rows={3} className="w-full px-3 py-2 border border-green-200 rounded focus:outline-amber-700" placeholder="How can we help or collaborate?" />
+              <div className="md:col-span-2">
+                <label htmlFor="message" className="block text-green-900 font-medium mb-2">Message</label>
+                <textarea 
+                  id="message" 
+                  name="message" 
+                  rows={4} 
+                  className="w-full px-4 py-3 border border-green-200 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent" 
+                  placeholder="Tell us about your project or how we can collaborate..."
+                />
               </div>
-              <Button type="submit" className="bg-amber-700 text-white hover:bg-amber-800 w-full">Send Message</Button>
+              <div className="md:col-span-2">
+                <Button type="submit" size="lg" className="w-full bg-green-700 hover:bg-green-800 text-white">
+                  Send Message
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
+              </div>
             </form>
-          </ProgressiveDisclosure>
+          </div>
         </section>
       </main>
 
-      {/* Founder's Note - Collapsed */}
-      <section className="max-w-4xl mx-auto px-4 py-12">
-        <ProgressiveDisclosure
-          title="Founder's Note"
-          summary="A personal message about the vision and mission behind AHAID."
-        >
-          <div className="bg-gradient-to-r from-green-800 to-emerald-700 text-white rounded-2xl p-8 text-center shadow-xl">
-            <blockquote className="text-lg italic leading-relaxed mb-6">
-              "This is not a platform. It is a remembering. AHAID is the breath that systems forgot to take—care rendered in code, 
-              a quiet revolt, a sacred redesign. It was created for the nurse who healed without tools, for the patient who waited in silence, 
-              and for the system that lost its pulse."
-            </blockquote>
-            <p className="font-semibold text-amber-200">
-              We are not what broke us; we are what rebuilds—with presence. We are not the aftermath. We are the architects. 
-              New ancestors, in real time—writing futures in the language of dignity.
-            </p>
+      {/* Founder's Note - Inspirational Quote */}
+      <section className="max-w-4xl mx-auto px-4 py-16">
+        <div className="bg-gradient-to-r from-green-800 to-emerald-700 text-white rounded-2xl p-12 text-center shadow-2xl">
+          <div className="mb-6">
+            <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+              <HeartPulse className="w-8 h-8 text-white" />
+            </div>
+            <h3 className="text-2xl font-bold mb-4">A Message from Our Founder</h3>
           </div>
-        </ProgressiveDisclosure>
+          
+          <blockquote className="text-xl italic leading-relaxed mb-8 max-w-3xl mx-auto">
+            "AHAID is the breath that systems forgot to take—care rendered in code, 
+            a quiet revolt, a sacred redesign. We are not the aftermath. We are the architects."
+          </blockquote>
+          
+          <p className="text-lg text-green-100 max-w-2xl mx-auto">
+            Built for every nurse who healed without tools, every patient who waited in silence, 
+            and every system ready to rediscover its pulse.
+          </p>
+        </div>
       </section>
       
       {/* Footer */}
