@@ -78,24 +78,24 @@ const Index = () => {
         {/* Hero Section - Simplified and Action-Oriented */}
         <section id="home" className="max-w-6xl mx-auto py-16 px-4 text-center animate-fade-in">
           <div className="mb-8">
-            <div className="inline-flex items-center gap-2 bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
-              <Star className="w-4 h-4" />
-              AHAID
-            </div>
             <h1 className="text-5xl md:text-6xl font-bold text-green-900 mb-4 tracking-tight">
               Where Care Meets Code
             </h1>
             <p className="text-xl md:text-2xl text-green-700 mb-8 max-w-3xl mx-auto">
-              Africa's Health and Inclusive Digitalization platform empowering healthcare through technology
+              AHAID - Africa's Health and Inclusive Digitalization
             </p>
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button size="lg" className="bg-green-700 hover:bg-green-800 text-white shadow-lg transition-transform hover:scale-105" asChild>
-              <Link to="/ecosystem">Explore Our Ecosystem</Link>
+            <Button size="lg" className="bg-green-700 hover:bg-green-800 text-white shadow-lg transition-transform hover:scale-105">
+              <Link to="/ecosystem" className="flex items-center">
+                Explore Our Ecosystem
+              </Link>
             </Button>
-            <Button size="lg" variant="outline" className="border-green-700 text-green-700 hover:bg-green-50" asChild>
-              <Link to="/community">Join 2,500+ Members</Link>
+            <Button size="lg" variant="outline" className="border-green-700 text-green-700 hover:bg-green-50">
+              <Link to="/community" className="flex items-center">
+                Join 2,500+ Members
+              </Link>
             </Button>
           </div>
         </section>
@@ -189,8 +189,10 @@ const Index = () => {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-green-800 mb-4">The 4C Framework</h2>
             <p className="text-lg text-green-600 mb-6">Click any stream to discover AHAID's comprehensive approach</p>
-            <Button variant="outline" className="border-green-700 text-green-700 hover:bg-green-50" asChild>
-              <Link to="/empowerment-streams">Explore All Streams <ArrowRight className="w-4 h-4 ml-2" /></Link>
+            <Button variant="outline" className="border-green-700 text-green-700 hover:bg-green-50">
+              <Link to="/empowerment-streams" className="flex items-center">
+                Explore All Streams <ArrowRight className="w-4 h-4 ml-2" />
+              </Link>
             </Button>
           </div>
           
@@ -218,8 +220,10 @@ const Index = () => {
             <p className="text-lg mb-6 max-w-2xl mx-auto text-white/90">
               Healthcare stories and innovation insights from across Africa
             </p>
-            <Button size="lg" variant="secondary" className="bg-white text-amber-700 hover:bg-amber-50" asChild>
-              <Link to="/studio">Visit Studio <ArrowRight className="w-4 h-4 ml-2" /></Link>
+            <Button size="lg" variant="secondary" className="bg-white text-amber-700 hover:bg-amber-50">
+              <Link to="/studio" className="flex items-center">
+                Visit Studio <ArrowRight className="w-4 h-4 ml-2" />
+              </Link>
             </Button>
           </div>
 
@@ -231,8 +235,10 @@ const Index = () => {
               Connect with healthcare professionals and access exclusive resources
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary" className="bg-white text-green-700 hover:bg-green-50" asChild>
-                <Link to="/community">Join Community <ArrowRight className="w-4 h-4 ml-2" /></Link>
+              <Button size="lg" variant="secondary" className="bg-white text-green-700 hover:bg-green-50">
+                <Link to="/community" className="flex items-center">
+                  Join Community <ArrowRight className="w-4 h-4 ml-2" />
+                </Link>
               </Button>
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
                 View Success Stories
