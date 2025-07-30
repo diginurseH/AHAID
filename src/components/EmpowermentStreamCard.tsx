@@ -88,6 +88,12 @@ export function EmpowermentStreamCard({ stream }: { stream: EmpowermentStreamPro
             className="bg-green-700 hover:bg-green-800 text-white"
             aria-label={`Learn more about ${stream.title}`}
             data-action={`learn-more-${stream.title.toLowerCase()}`}
+            onClick={() => {
+              const element = document.getElementById(`stream-${stream.title.toLowerCase()}-overview`);
+              if (element) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              }
+            }}
           >
             Learn More
           </Button>
@@ -96,6 +102,9 @@ export function EmpowermentStreamCard({ stream }: { stream: EmpowermentStreamPro
             className="border-green-700 text-green-800 hover:bg-green-50"
             aria-label={`Get started with ${stream.title}`}
             data-action={`get-started-${stream.title.toLowerCase()}`}
+            onClick={() => {
+              window.open('/#contact', '_blank');
+            }}
           >
             Get Started
           </Button>

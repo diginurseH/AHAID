@@ -152,6 +152,9 @@ const EmpowermentStreams = () => {
               className="bg-amber-700 hover:bg-amber-800 text-white"
               data-action="partner"
               aria-label="Partner with AHAID"
+              onClick={() => {
+                window.location.href = 'mailto:partnerships@ahaid.org?subject=Partnership Inquiry&body=Hello AHAID team, I am interested in exploring partnership opportunities with your organization.';
+              }}
             >
               Partner with Us
             </Button>
