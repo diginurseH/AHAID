@@ -213,8 +213,8 @@ const Index = () => {
                 Seamless African healthcare storytelling and knowledge sharing platform featuring 
                 curated content, expert insights, and community-driven narratives.
               </p>
-              <Button variant="outline" className="border-amber-700 text-amber-700 hover:bg-yellow-50">
-                Visit Studio Blog
+              <Button variant="outline" className="border-amber-700 text-amber-700 hover:bg-yellow-50" asChild>
+                <Link to="/studio">Visit Studio Blog</Link>
               </Button>
             </div>
           </ProgressiveDisclosure>
