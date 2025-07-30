@@ -7,6 +7,9 @@ import ProgressiveDisclosure from "@/components/ProgressiveDisclosure";
 import { InteractiveCard } from "@/components/InteractiveCard";
 import { QuickStartFlow } from "@/components/QuickStartFlow";
 import { ImpactMetricsSection } from "@/components/ImpactMetricsSection";
+import { StakeholderPortal } from "@/components/StakeholderPortal";
+import { InteroperabilityDocs } from "@/components/InteroperabilityDocs";
+import { EvidenceValidationDashboard } from "@/components/EvidenceValidationDashboard";
 
 const coreValues = [
   {
@@ -104,6 +107,15 @@ const Index = () => {
         <section className="max-w-6xl mx-auto px-4 py-16">
           <QuickStartFlow />
         </section>
+
+        {/* Stakeholder Portal */}
+        <StakeholderPortal />
+
+        {/* Evidence Validation Dashboard */}
+        <EvidenceValidationDashboard />
+
+        {/* Technical Documentation */}
+        <InteroperabilityDocs />
 
         {/* Mission & Vision - Simplified */}
         <section className="max-w-6xl mx-auto px-4 py-16">
