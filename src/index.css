@@ -33,16 +33,19 @@
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 8%;
 
-    --primary: 142 76% 36%;
+    /* Professional Blue Primary */
+    --primary: 222 84% 47%;
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 0 0% 15%;
+    /* Warm Charcoal Secondary */
+    --secondary: 219 14% 28%;
     --secondary-foreground: 0 0% 98%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 142 69% 58%;
+    /* Subtle Gold Accent */
+    --accent: 45 93% 47%;
     --accent-foreground: 0 0% 8%;
 
     --destructive: 0 84.2% 60.2%;
@@ -50,19 +53,25 @@
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 142 76% 36%;
+    --ring: 222 84% 47%;
 
     --radius: 0.5rem;
 
-    /* Black variants for design balance */
-    --black: 0 0% 8%;
-    --black-soft: 0 0% 15%;
-    --black-muted: 0 0% 25%;
-
-    /* Green variants */
-    --green-primary: 142 76% 36%;
-    --green-light: 142 69% 58%;
-    --green-dark: 142 80% 25%;
+    /* Professional color palette */
+    --professional-blue: 222 84% 47%;
+    --charcoal: 219 14% 28%;
+    --charcoal-light: 219 14% 40%;
+    --gold: 45 93% 47%;
+    --gold-light: 45 93% 60%;
+    
+    /* Refined green - limited use for success/health only */
+    --success: 160 84% 39%;
+    --success-light: 160 84% 55%;
+    
+    /* Consistent text hierarchy */
+    --text-primary: 0 0% 8%;
+    --text-secondary: 219 14% 28%;
+    --text-muted: 215.4 16.3% 46.9%;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -84,34 +93,43 @@
     --popover: 0 0% 8%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 142 69% 58%;
+    /* Professional Blue Primary - lighter in dark mode */
+    --primary: 222 84% 60%;
     --primary-foreground: 0 0% 8%;
 
-    --secondary: 0 0% 15%;
+    /* Charcoal Secondary - adjusted for dark mode */
+    --secondary: 219 14% 20%;
     --secondary-foreground: 0 0% 98%;
 
     --muted: 0 0% 15%;
     --muted-foreground: 0 0% 65%;
 
-    --accent: 142 76% 36%;
-    --accent-foreground: 0 0% 98%;
+    /* Gold Accent - slightly muted for dark mode */
+    --accent: 45 93% 55%;
+    --accent-foreground: 0 0% 8%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
 
     --border: 0 0% 20%;
     --input: 0 0% 20%;
-    --ring: 142 69% 58%;
+    --ring: 222 84% 60%;
 
-    /* Dark mode black variants */
-    --black: 0 0% 8%;
-    --black-soft: 0 0% 12%;
-    --black-muted: 0 0% 20%;
-
-    /* Dark mode green variants */
-    --green-primary: 142 69% 58%;
-    --green-light: 142 69% 70%;
-    --green-dark: 142 76% 36%;
+    /* Professional color palette - dark mode */
+    --professional-blue: 222 84% 60%;
+    --charcoal: 219 14% 20%;
+    --charcoal-light: 219 14% 35%;
+    --gold: 45 93% 55%;
+    --gold-light: 45 93% 70%;
+    
+    /* Refined green - dark mode */
+    --success: 160 84% 50%;
+    --success-light: 160 84% 65%;
+    
+    /* Consistent text hierarchy - dark mode */
+    --text-primary: 0 0% 98%;
+    --text-secondary: 219 14% 80%;
+    --text-muted: 0 0% 65%;
 
     --sidebar-background: 0 0% 8%;
     --sidebar-foreground: 0 0% 95%;

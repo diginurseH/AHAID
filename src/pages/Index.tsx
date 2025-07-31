@@ -144,8 +144,8 @@ const Index = () => {
         <section id="about" className="max-w-6xl mx-auto px-4 py-16">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-bold mb-6">
-                <span className="text-secondary">About</span> <span className="text-primary">AHAID</span>
+              <h2 className="text-4xl font-bold text-text-primary mb-6">
+                About AHAID
               </h2>
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
                 Creating <strong>digital dignity</strong> in healthcare through AI-driven tools 
@@ -174,8 +174,8 @@ const Index = () => {
         {/* Core Values */}
         <section className="max-w-6xl mx-auto px-4 py-16 bg-muted/30">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">
-              <span className="text-secondary">What</span> <span className="text-primary">Drives Us</span>
+            <h2 className="text-3xl font-bold text-text-primary mb-4">
+              What Drives Us
             </h2>
           </div>
           
@@ -197,8 +197,8 @@ const Index = () => {
         {/* 4C Framework */}
         <section id="empowerment" className="max-w-6xl mx-auto px-4 py-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">
-              <span className="text-secondary">The</span> <span className="text-primary">4C Framework</span>
+            <h2 className="text-3xl font-bold text-text-primary mb-4">
+              The 4C Framework
             </h2>
             <p className="text-lg text-muted-foreground mb-6">Our comprehensive approach to digital health transformation</p>
           </div>
@@ -236,8 +236,8 @@ const Index = () => {
               />
             </div>
             <div>
-              <h2 className="text-3xl font-bold mb-6">
-                <span className="text-secondary">Innovation</span> <span className="text-primary">in Action</span>
+              <h2 className="text-3xl font-bold text-text-primary mb-6">
+                Innovation in Action
               </h2>
               <p className="text-lg text-muted-foreground mb-6">
                 From AI-powered health assistants to digital transformation tools, 
@@ -269,8 +269,8 @@ const Index = () => {
         {/* Contact Section */}
         <section id="contact" className="max-w-4xl mx-auto px-4 py-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">
-              <span className="text-secondary">Get</span> <span className="text-primary">In Touch</span>
+            <h2 className="text-3xl font-bold text-text-primary mb-4">
+              Get In Touch
             </h2>
             <p className="text-lg text-muted-foreground">
               Ready to be part of Africa's digital health transformation? Let's connect.
