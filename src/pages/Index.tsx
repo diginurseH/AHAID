@@ -1,15 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Sparkles, Users, HeartPulse, BookMarked, ArrowRight, Star } from "lucide-react";
+import { Sparkles, Users, HeartPulse, BookMarked, ArrowRight, Star, Globe, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
-import ProgressiveDisclosure from "@/components/ProgressiveDisclosure";
 import { InteractiveCard } from "@/components/InteractiveCard";
-import { QuickStartFlow } from "@/components/QuickStartFlow";
-import { ImpactMetricsSection } from "@/components/ImpactMetricsSection";
-import { StakeholderPortal } from "@/components/StakeholderPortal";
-import { InteroperabilityDocs } from "@/components/InteroperabilityDocs";
-import { EvidenceValidationDashboard } from "@/components/EvidenceValidationDashboard";
+import heroImage from "@/assets/hero-healthcare.jpg";
+import communityImage from "@/assets/community-digital.jpg";
+import innovationImage from "@/assets/innovation-workspace.jpg";
+import nurseImage from "@/assets/nurse-technology.jpg";
 
 const coreValues = [
   {
@@ -75,28 +73,38 @@ const Index = () => {
       <Navbar />
       
       <main className="pt-20 pb-6">
-        {/* Hero Section - Simplified and Action-Oriented */}
-        <section id="home" className="max-w-6xl mx-auto py-16 px-4 text-center animate-fade-in">
-          <div className="mb-8">
-            <h1 className="text-5xl md:text-6xl font-bold text-green-900 mb-4 tracking-tight">
-              Africa's Health and Inclusive Digitalization (AHAID)
-            </h1>
-            <p className="text-xl md:text-2xl text-green-700 mb-8 max-w-3xl mx-auto">
-              Where Care Meets Code
-            </p>
+        {/* Hero Section with Background Image */}
+        <section id="home" className="relative overflow-hidden">
+          <div className="absolute inset-0">
+            <img 
+              src={heroImage} 
+              alt="African healthcare professionals collaborating" 
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-green-900/70"></div>
           </div>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button size="lg" className="bg-green-700 hover:bg-green-800 text-white shadow-lg transition-transform hover:scale-105">
-              <Link to="/ecosystem" className="flex items-center">
-                Explore Our Ecosystem
-              </Link>
-            </Button>
-            <Button size="lg" variant="outline" className="border-green-700 text-green-700 hover:bg-green-50">
-              <Link to="/community" className="flex items-center">
-                Join 2,500+ Members
-              </Link>
-            </Button>
+          <div className="relative max-w-6xl mx-auto py-24 px-4 text-center animate-fade-in">
+            <div className="mb-8">
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-4 tracking-tight">
+                Africa's Health and Inclusive Digitalization (AHAID)
+              </h1>
+              <p className="text-xl md:text-2xl text-green-100 mb-8 max-w-3xl mx-auto">
+                Where Care Meets Code
+              </p>
+            </div>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+              <Button size="lg" className="bg-white text-green-700 hover:bg-green-50 shadow-lg transition-transform hover:scale-105">
+                <Link to="/ecosystem" className="flex items-center">
+                  Explore Our Ecosystem
+                </Link>
+              </Button>
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+                <Link to="/community" className="flex items-center">
+                  Join 2,500+ Members
+                </Link>
+              </Button>
+            </div>
           </div>
         </section>
 
@@ -135,71 +143,107 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Mission Statement - Condensed */}
-        <section className="max-w-4xl mx-auto px-4 py-16 text-center">
-          <div className="bg-gradient-to-br from-green-700 to-green-500 text-white rounded-2xl p-8 shadow-xl">
-            <h2 className="text-3xl font-bold mb-4">Our Mission</h2>
-            <p className="text-xl leading-relaxed mb-6">
-              Creating <strong>digital dignity</strong> in healthcare through AI-driven tools 
-              that empower African healthcare professionals and communities.
-            </p>
-            <Button variant="secondary" className="bg-white text-green-700 hover:bg-green-50">
-              <Link to="/ecosystem" className="flex items-center">
-                Learn Our Story <ArrowRight className="w-4 h-4 ml-2" />
-              </Link>
-            </Button>
+        {/* About Us - Mission Statement with Image */}
+        <section id="about" className="max-w-6xl mx-auto px-4 py-16">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-4xl font-bold text-green-800 mb-6">About AHAID</h2>
+              <p className="text-lg text-green-700 mb-6 leading-relaxed">
+                Creating <strong>digital dignity</strong> in healthcare through AI-driven tools 
+                that empower African healthcare professionals and communities.
+              </p>
+              <p className="text-green-600 mb-8">
+                We bridge the gap between cutting-edge technology and compassionate care, 
+                ensuring every healthcare solution is built with African values at its core.
+              </p>
+              <Button className="bg-green-700 hover:bg-green-800 text-white">
+                <Link to="/ecosystem" className="flex items-center">
+                  Learn Our Story <ArrowRight className="w-4 h-4 ml-2" />
+                </Link>
+              </Button>
+            </div>
+            <div className="relative">
+              <img 
+                src={nurseImage} 
+                alt="African nurse using digital technology"
+                className="rounded-2xl shadow-xl w-full h-auto"
+              />
+            </div>
           </div>
         </section>
 
-        {/* Core Values - Interactive Cards */}
-        <section className="max-w-6xl mx-auto px-4 py-16">
+        {/* Core Values - Simplified Cards */}
+        <section className="max-w-6xl mx-auto px-4 py-16 bg-green-50">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-green-800 mb-4">What Drives Us</h2>
-            <p className="text-lg text-green-600">Click any card to explore our core values</p>
           </div>
           
           <div className="grid md:grid-cols-4 gap-6">
             {coreValues.map((value) => (
-              <InteractiveCard
-                key={value.title}
-                title={value.title}
-                summary={value.description}
-                details={`${value.description} This value shapes every decision we make and every solution we build, ensuring our work truly serves African communities.`}
-                icon={value.icon}
-                gradient={
-                  value.title.includes('Empathy') ? 'from-red-500 to-pink-400' :
-                  value.title.includes('Integrity') ? 'from-green-600 to-green-400' :
-                  value.title.includes('Innovation') ? 'from-yellow-500 to-orange-400' :
-                  'from-amber-600 to-yellow-500'
-                }
-              />
+              <Card key={value.title} className="border-green-200 hover:shadow-lg transition-shadow">
+                <CardContent className="p-6 text-center">
+                  <div className="mb-4 flex justify-center">
+                    {value.icon}
+                  </div>
+                  <h3 className="font-semibold text-green-800 mb-2">{value.title}</h3>
+                  <p className="text-sm text-green-600">{value.description}</p>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </section>
 
-        {/* 4C Empowerment Streams - Interactive */}
+        {/* 4C Empowerment Streams with Images */}
         <section id="empowerment" className="max-w-6xl mx-auto px-4 py-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-green-800 mb-4">The 4C Framework</h2>
-            <p className="text-lg text-green-600 mb-6">Click any stream to discover AHAID's comprehensive approach</p>
-            <Button variant="outline" className="border-green-700 text-green-700 hover:bg-green-50">
-              <Link to="/empowerment-streams" className="flex items-center">
-                Explore All Streams <ArrowRight className="w-4 h-4 ml-2" />
-              </Link>
-            </Button>
+            <p className="text-lg text-green-600 mb-6">Our comprehensive approach to digital health transformation</p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <div className="relative group">
+              <img 
+                src={communityImage} 
+                alt="Community digital engagement"
+                className="rounded-xl w-full h-64 object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent rounded-xl"></div>
+              <div className="absolute bottom-4 left-4 text-white">
+                <h3 className="text-xl font-bold mb-2">Community & Care</h3>
+                <p className="text-sm opacity-90">Connecting healthcare professionals and communities</p>
+              </div>
+            </div>
+            
+            <div className="relative group">
+              <img 
+                src={innovationImage} 
+                alt="Innovation workspace"
+                className="rounded-xl w-full h-64 object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent rounded-xl"></div>
+              <div className="absolute bottom-4 left-4 text-white">
+                <h3 className="text-xl font-bold mb-2">Code & Commerce</h3>
+                <p className="text-sm opacity-90">Building innovative solutions for African enterprises</p>
+              </div>
+            </div>
           </div>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
             {empowermentStreams.map((stream) => (
-              <InteractiveCard
-                key={stream.title}
-                title={stream.title}
-                summary={stream.summary}
-                details={stream.details}
-                icon={stream.icon}
-                gradient={stream.color}
-                className="h-80"
-              />
+              <Card key={stream.title} className="border-green-200 hover:shadow-lg transition-all hover:-translate-y-1">
+                <CardContent className="p-6">
+                  <div className="mb-4 text-center">
+                    {stream.icon}
+                  </div>
+                  <h3 className="font-bold text-green-800 mb-2 text-center">{stream.title}</h3>
+                  <p className="text-sm text-green-600 text-center mb-4">{stream.summary}</p>
+                  <Button size="sm" variant="outline" className="w-full border-green-700 text-green-700">
+                    <Link to="/empowerment-streams">
+                      Learn More
+                    </Link>
+                  </Button>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </section>
