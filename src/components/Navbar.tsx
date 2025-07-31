@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { useState } from "react";
+import { LanguageSelector } from "./LanguageSelector";
+import { useI18n } from "@/hooks/useI18n";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -58,6 +60,7 @@ const resourcesItems = [
 ];
 
 const Navbar = () => {
+  const { t } = useI18n();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [solutionsOpen, setSolutionsOpen] = useState(false);
   const [resourcesOpen, setResourcesOpen] = useState(false);
@@ -150,10 +153,11 @@ const Navbar = () => {
             </NavigationMenuList>
           </NavigationMenu>
 
+          <LanguageSelector />
           <Button
             asChild
             size="sm"
-            className="ml-3 bg-amber-700 hover:bg-amber-800 text-white"
+            className="ml-3 bg-accent hover:bg-accent/90 text-accent-foreground"
           >
             <a href="#contact">Get in Touch</a>
           </Button>
