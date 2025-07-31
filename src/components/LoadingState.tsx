@@ -19,8 +19,8 @@ export function LoadingState({
   
   const content = (
     <div className="flex flex-col items-center justify-center gap-2">
-      <Loader2 className={`${sizeClass[size]} animate-spin text-primary`} />
-      {text && <p className="text-text-secondary font-medium">{text}</p>}
+      <Loader2 className={`${sizeClass[size]} animate-spin text-green-700`} />
+      {text && <p className="text-green-800 font-medium">{text}</p>}
     </div>
   );
 

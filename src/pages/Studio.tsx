@@ -90,20 +90,14 @@ const Studio = () => {
   const displayedStories = showAllStories ? filteredStories : filteredStories.slice(0, 3);
 
   const handleStoryClick = (storyId: number) => {
-    // Create a detailed story view modal or navigate to a dedicated story page
-    const story = featuredStories.find(s => s.id === storyId);
-    if (story) {
-      // For now, show an alert with story details, could be expanded to a modal
-      alert(`Story: ${story.title}\n\nBy: ${story.author}\nDate: ${story.date}\n\n${story.excerpt}\n\nThis would open the full story in a real implementation.`);
-    }
+    console.log(`Opening story with ID: ${storyId}`);
+    // For now, we'll just log the story click
+    // In a real app, this would navigate to the full story
   };
 
   const handleSubmitStory = () => {
-    // Open story submission form in a new window/tab or navigate to contact
-    const isConfirmed = window.confirm("Ready to share your story? We'd love to hear from you!\n\nClick OK to go to our contact form where you can submit your story.");
-    if (isConfirmed) {
-      window.open('/#contact', '_self');
-    }
+    console.log("Opening story submission form");
+    // This would open a story submission form or navigate to a submission page
   };
 
   const handleGetInTouch = () => {

@@ -25,7 +25,7 @@ const ResourcesOrganized = () => {
       type: "Web Application",
       status: "Live",
       icon: Stethoscope,
-      link: "https://triage.nursaera.com"
+      link: "#"
     },
     {
       title: "Follow-up Care Dashboard",
@@ -33,7 +33,7 @@ const ResourcesOrganized = () => {
       type: "Dashboard",
       status: "Live",
       icon: FileText,
-      link: "https://dashboard.nursaera.com"
+      link: "#"
     },
     {
       title: "Remote Monitoring System",
@@ -41,7 +41,7 @@ const ResourcesOrganized = () => {
       type: "Mobile App",
       status: "Beta",
       icon: Smartphone,
-      link: "https://beta.nursaera.com/monitoring"
+      link: "#"
     },
     {
       title: "Referral Alert System",
@@ -49,7 +49,7 @@ const ResourcesOrganized = () => {
       type: "API Service",
       status: "Live",
       icon: Users,
-      link: "https://api.nursaera.com/referrals"
+      link: "#"
     }
   ];
 
@@ -60,7 +60,7 @@ const ResourcesOrganized = () => {
       duration: "40 hours",
       level: "Beginner to Advanced",
       icon: GraduationCap,
-      downloadLink: "https://resources.nursaera.com/training/digital-health-literacy.pdf"
+      downloadLink: "#"
     },
     {
       title: "Clinical Case Studies",
@@ -68,7 +68,7 @@ const ResourcesOrganized = () => {
       duration: "Self-paced",
       level: "Intermediate",
       icon: BookOpen,
-      downloadLink: "https://resources.nursaera.com/training/case-studies.pdf"
+      downloadLink: "#"
     },
     {
       title: "Care Protocol Guidelines",
@@ -76,7 +76,7 @@ const ResourcesOrganized = () => {
       duration: "Reference Material",
       level: "All Levels",
       icon: Shield,
-      downloadLink: "https://resources.nursaera.com/protocols/care-guidelines.pdf"
+      downloadLink: "#"
     },
     {
       title: "Quality Assurance Framework",
@@ -84,7 +84,7 @@ const ResourcesOrganized = () => {
       duration: "Implementation Guide",
       level: "Advanced",
       icon: FileText,
-      downloadLink: "https://resources.nursaera.com/qa/quality-framework.pdf"
+      downloadLink: "#"
     }
   ];
 
@@ -95,7 +95,7 @@ const ResourcesOrganized = () => {
       version: "v2.1",
       language: "REST API",
       icon: Code,
-      link: "https://docs.nursaera.com/api"
+      link: "#"
     },
     {
       title: "React Component Library",
@@ -103,7 +103,7 @@ const ResourcesOrganized = () => {
       version: "v1.5",
       language: "TypeScript",
       icon: Code,
-      link: "https://github.com/nursaera/react-components"
+      link: "#"
     },
     {
       title: "AI Model Integration Guide",
@@ -111,7 +111,7 @@ const ResourcesOrganized = () => {
       version: "v1.0",
       language: "Python",
       icon: Globe,
-      link: "https://docs.nursaera.com/ai-models"
+      link: "#"
     },
     {
       title: "WhatsApp Business Integration",
@@ -119,7 +119,7 @@ const ResourcesOrganized = () => {
       version: "v2.0",
       language: "Node.js",
       icon: Smartphone,
-      link: "https://github.com/nursaera/whatsapp-sdk"
+      link: "#"
     }
   ];
 

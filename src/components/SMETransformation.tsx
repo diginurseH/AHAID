@@ -126,12 +126,7 @@ const SMETransformation = () => {
           </div>
 
           <div className="mt-4 pt-4 border-t border-amber-200">
-            <Button 
-              className="bg-amber-700 hover:bg-amber-800 text-white"
-              onClick={() => {
-                window.open('https://misterbakery.com', '_blank');
-              }}
-            >
+            <Button className="bg-amber-700 hover:bg-amber-800 text-white">
               View Full Case Study
             </Button>
           </div>
