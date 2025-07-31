@@ -278,12 +278,37 @@ const Index = () => {
           </div>
           
           <div className="bg-card border rounded-2xl p-8 shadow-lg">
-            <form className="grid md:grid-cols-2 gap-6">
+            <form 
+              className="grid md:grid-cols-2 gap-6"
+              onSubmit={(e) => {
+                e.preventDefault();
+                const formData = new FormData(e.target as HTMLFormElement);
+                const name = formData.get('name') as string;
+                const email = formData.get('email') as string;
+                const message = formData.get('message') as string;
+                
+                if (!name || !email || !message) {
+                  alert('Please fill in all fields.');
+                  return;
+                }
+                
+                // Create mailto link with form data
+                const subject = encodeURIComponent('Contact from AHAID Website');
+                const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+                const mailtoUrl = `mailto:contact@ahaid.org?subject=${subject}&body=${body}`;
+                
+                window.location.href = mailtoUrl;
+                
+                // Show success message
+                alert('Thank you for your message! Your email client should open now. If not, please email us directly at contact@ahaid.org');
+              }}
+            >
               <div>
                 <label htmlFor="name" className="block text-card-foreground font-medium mb-2">Full Name</label>
                 <input 
                   id="name" 
                   name="name" 
+                  required
                   className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent" 
                   placeholder="Your full name" 
                 />
@@ -294,6 +319,7 @@ const Index = () => {
                   id="email" 
                   name="email" 
                   type="email" 
+                  required
                   className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent" 
                   placeholder="your@email.com" 
                 />
@@ -304,6 +330,7 @@ const Index = () => {
                   id="message" 
                   name="message" 
                   rows={4} 
+                  required
                   className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent" 
                   placeholder="Tell us about your project or how we can collaborate..."
                 />
@@ -325,7 +352,7 @@ const Index = () => {
           © {new Date().getFullYear()} AHAID – AFRICA'S HEALTH AND INCLUSIVE DIGITALIZATION (AHAID). Empowering Africa, Digitally & Compassionately.
         </div>
         <div>
-          <a href="#" className="underline hover:text-accent transition">Privacy Policy</a>{" "}
+          <a href="/privacy" className="underline hover:text-accent transition">Privacy Policy</a>{" "}
           |{" "}
           <a href="#contact" className="underline hover:text-accent transition">Contact</a>
         </div>
