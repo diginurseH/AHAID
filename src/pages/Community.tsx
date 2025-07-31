@@ -5,6 +5,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Users, MessageCircle, Calendar, Globe, Heart, Zap, Trophy, BookOpen } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
+import communityImage from "@/assets/community-health-tech.jpg";
 
 const communityStats = [
   { icon: <Users className="h-6 w-6" />, label: "Active Members", value: "2,500+" },
@@ -108,28 +109,39 @@ const testimonials = [
 
 const Community = () => {
   return (
-    <div className="relative min-h-screen w-full bg-gradient-to-b from-green-50 via-emerald-50 to-white font-sans">
+    <div className="relative min-h-screen w-full bg-background font-sans">
       <Navbar />
       
       <main className="pt-20 pb-16">
-        {/* Header Section */}
-        <section className="max-w-4xl mx-auto py-12 px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-green-800 mb-4">
-            AHAID Community
-          </h1>
-          <p className="text-lg text-green-900 mb-8 max-w-2xl mx-auto">
-            Join a thriving community of healthcare professionals, developers, 
-            and innovators dedicated to transforming healthcare across Africa.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-green-700 hover:bg-green-800">
-              <Users className="mr-2 h-5 w-5" />
-              Join Community
-            </Button>
-            <Button size="lg" variant="outline" className="border-green-700 text-green-800">
-              <MessageCircle className="mr-2 h-5 w-5" />
-              Start Discussion
-            </Button>
+        {/* Header Section with Image */}
+        <section className="max-w-6xl mx-auto py-12 px-4">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h1 className="text-4xl md:text-5xl font-bold mb-4">
+                <span className="text-secondary">AHAID</span> <span className="text-primary">Community</span>
+              </h1>
+              <p className="text-lg text-muted-foreground mb-8">
+                Join a thriving community of healthcare professionals, developers, 
+                and innovators dedicated to transforming healthcare across Africa.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button size="lg" className="bg-primary hover:bg-primary/90">
+                  <Users className="mr-2 h-5 w-5" />
+                  Join Community
+                </Button>
+                <Button size="lg" variant="outline">
+                  <MessageCircle className="mr-2 h-5 w-5" />
+                  Start Discussion
+                </Button>
+              </div>
+            </div>
+            <div>
+              <img 
+                src={communityImage} 
+                alt="African community members using digital health technology" 
+                className="w-full h-80 object-cover rounded-2xl shadow-xl"
+              />
+            </div>
           </div>
         </section>
 

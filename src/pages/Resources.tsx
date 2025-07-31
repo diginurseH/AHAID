@@ -6,6 +6,7 @@ import Navbar from "@/components/Navbar";
 import BreadcrumbNav from "@/components/BreadcrumbNav";
 import TableOfContents from "@/components/TableOfContents";
 import ResourcesOrganized from "@/components/ResourcesOrganized";
+import resourcesImage from "@/assets/resources-digital.jpg";
 
 const Resources = () => {
   const tocItems = [
@@ -15,7 +16,7 @@ const Resources = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 via-green-50 to-white">
+    <div className="min-h-screen bg-background">
       <Navbar />
       
       <main className="pt-20 pb-12">
@@ -24,7 +25,7 @@ const Resources = () => {
           
           <TableOfContents items={tocItems} />
 
-          {/* Header Section */}
+          {/* Header Section with Image */}
           <section id="overview" className="py-12">
             <div className="flex items-center gap-4 mb-8">
               <Button variant="outline" size="sm" asChild>
@@ -35,17 +36,29 @@ const Resources = () => {
               </Button>
             </div>
             
-            <div className="text-center mb-12">
-              <div className="flex items-center justify-center gap-3 mb-4">
-                <BookOpen className="w-8 h-8 text-green-700" />
-                <h1 className="text-4xl md:text-5xl font-bold text-green-800">
-                  Resources Hub
-                </h1>
+            <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
+              <div>
+                <div className="flex items-center gap-3 mb-6">
+                  <BookOpen className="w-8 h-8 text-primary" />
+                  <h1 className="text-4xl md:text-5xl font-bold">
+                    <span className="text-secondary">Resources</span> <span className="text-primary">Hub</span>
+                  </h1>
+                </div>
+                <p className="text-lg text-muted-foreground mb-6">
+                  Access comprehensive digital tools, training materials, and developer resources 
+                  to support healthcare innovation across Africa.
+                </p>
+                <Button className="bg-primary hover:bg-primary/90" asChild>
+                  <Link to="#resources">Browse Resources</Link>
+                </Button>
               </div>
-              <p className="max-w-3xl mx-auto text-lg text-green-900/80">
-                Access comprehensive digital tools, training materials, and developer resources 
-                to support healthcare innovation and digital transformation across Africa.
-              </p>
+              <div>
+                <img 
+                  src={resourcesImage} 
+                  alt="Digital resources and training materials interface" 
+                  className="w-full h-80 object-cover rounded-2xl shadow-xl"
+                />
+              </div>
             </div>
           </section>
 
