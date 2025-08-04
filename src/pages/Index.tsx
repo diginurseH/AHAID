@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Sparkles, Users, HeartPulse, BookMarked, ArrowRight, Star, Globe, Zap, Award, Shield, Users2 } from "lucide-react";
@@ -6,9 +7,14 @@ import Navbar from "@/components/Navbar";
 import { HeroSection } from "@/components/HeroSection";
 import { UserPersonas } from "@/components/UserPersonas";
 import { Interactive4CFramework } from "@/components/Interactive4CFramework";
+import UserProfileAssessment from "@/components/UserProfileAssessment";
+import InteractiveJourneyMap from "@/components/InteractiveJourneyMap";
+import StreamIntegrationView from "@/components/StreamIntegrationView";
+import ActionPlanningTool from "@/components/ActionPlanningTool";
 import communityImage from "@/assets/community-digital.jpg";
 import innovationImage from "@/assets/innovation-workspace.jpg";
 import nurseImage from "@/assets/nurse-technology.jpg";
+import { useAnalytics } from "@/hooks/useAnalytics";
 
 const coreValues = [
   {
@@ -61,6 +67,22 @@ const trustIndicators = [
 ];
 
 const Index = () => {
+  const [userProfile, setUserProfile] = useState<any>(null);
+  const [userProgress, setUserProgress] = useState<any>(null);
+  const [showAssessment, setShowAssessment] = useState(false);
+  const [showJourney, setShowJourney] = useState(false);
+
+  useAnalytics({ trackUserInteractions: true, trackOutboundLinks: true });
+
+  const handleProfileComplete = (profile: any) => {
+    setUserProfile(profile);
+    setShowAssessment(false);
+    setShowJourney(true);
+  };
+
+  const handleProgressUpdate = (progress: any) => setUserProgress(progress);
+  const handlePlanSave = (plan: any) => console.log("Saving plan:", plan);
+
   return (
     <div className="relative min-h-screen w-full bg-background font-sans">
       <Navbar />
@@ -68,6 +90,32 @@ const Index = () => {
       <main className="pt-20 pb-6">
         {/* Enhanced Hero Section */}
         <HeroSection />
+
+        {/* Interactive Journey Entry */}
+        {!userProfile && !showAssessment && (
+          <section className="max-w-6xl mx-auto px-4 py-16 text-center">
+            <h2 className="text-3xl font-bold text-green-800 mb-4">Start Your Personalized Journey</h2>
+            <p className="text-lg text-green-700 mb-8 max-w-2xl mx-auto">
+              Take our assessment to unlock personalized recommendations and create your action plan
+            </p>
+            <Button onClick={() => setShowAssessment(true)} size="lg" className="bg-amber-600 hover:bg-amber-700">
+              Begin Assessment
+            </Button>
+          </section>
+        )}
+
+        {/* Assessment & Journey Components */}
+        {showAssessment && (
+          <section className="max-w-6xl mx-auto px-4 py-16">
+            <UserProfileAssessment onProfileComplete={handleProfileComplete} existingProfile={userProfile} />
+          </section>
+        )}
+
+        {showJourney && userProfile && (
+          <section className="max-w-6xl mx-auto px-4 py-16">
+            <InteractiveJourneyMap userProfile={userProfile} onProgressUpdate={handleProgressUpdate} />
+          </section>
+        )}
 
         {/* User Personas & How It Works */}
         <UserPersonas />
