@@ -1,4 +1,5 @@
 
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { HeartPulse, Sparkles, Users, BookMarked, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -7,6 +8,10 @@ import { Metadata } from "@/components/Metadata";
 import { EmpowermentStreamCard, type EmpowermentStreamProps } from "@/components/EmpowermentStreamCard";
 import { LazyLoad } from "@/components/LazyLoad";
 import { useAnalytics } from "@/hooks/useAnalytics";
+import EnhancedEcosystemDashboard from "@/components/EnhancedEcosystemDashboard";
+import EcosystemDetailModal from "@/components/EcosystemDetailModal";
+import GuidedTour from "@/components/GuidedTour";
+import DataStorytellingPanel from "@/components/DataStorytellingPanel";
 
 const empowermentStreams: EmpowermentStreamProps[] = [
   {
@@ -76,11 +81,28 @@ const empowermentStreams: EmpowermentStreamProps[] = [
 ];
 
 const EmpowermentStreams = () => {
+  const [selectedSection, setSelectedSection] = useState<string | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isTourOpen, setIsTourOpen] = useState(false);
+
   // Use analytics hook to track page views and interactions
   useAnalytics({
     trackUserInteractions: true,
     trackOutboundLinks: true
   });
+
+  const handleSectionClick = (sectionId: string) => {
+    setSelectedSection(sectionId);
+    setIsModalOpen(true);
+  };
+
+  const handleStartTour = () => {
+    setIsTourOpen(true);
+  };
+
+  const handleTourComplete = () => {
+    setIsTourOpen(false);
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-yellow-50 via-emerald-50 to-white">
@@ -134,6 +156,21 @@ const EmpowermentStreams = () => {
           </div>
         </section>
 
+        {/* Interactive Dashboard */}
+        <section className="max-w-7xl mx-auto px-4 py-12" data-tour="dashboard">
+          <div data-tour="filters">
+            <EnhancedEcosystemDashboard 
+              onSectionClick={handleSectionClick}
+              onStartTour={handleStartTour}
+            />
+          </div>
+        </section>
+
+        {/* Data Storytelling */}
+        <section className="max-w-7xl mx-auto px-4 py-8" data-tour="narrative">
+          <DataStorytellingPanel selectedSection={selectedSection} />
+        </section>
+
         {/* Call to Action */}
         <section 
           className="max-w-4xl mx-auto px-4 py-12 text-center"
@@ -172,6 +209,19 @@ const EmpowermentStreams = () => {
           </div>
         </section>
       </main>
+
+      {/* Modals and Overlays */}
+      <EcosystemDetailModal
+        sectionId={selectedSection}
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
+      
+      <GuidedTour
+        isOpen={isTourOpen}
+        onClose={() => setIsTourOpen(false)}
+        onComplete={handleTourComplete}
+      />
     </div>
   );
 };
