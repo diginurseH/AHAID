@@ -10,7 +10,7 @@ type Translations = {
   };
 };
 
-// Comprehensive translations for AHAID
+// Example translations
 const translations: Translations = {
   'app.title': {
     en: 'Africa\'s Health and Inclusive Digitalization',
@@ -18,48 +18,6 @@ const translations: Translations = {
     sw: 'Afya ya Afrika na Udigitishaji Jumuishi',
     ar: 'صحة أفريقيا والرقمنة الشاملة',
     ha: 'Lafiyar Afrika da Digitization Mai Hadin kai'
-  },
-  'hero.subtitle': {
-    en: 'Where Care Meets Code',
-    fr: 'Où les Soins Rencontrent le Code',
-    sw: 'Mahali Utunzaji Unapokutana na Msimbo',
-    ar: 'حيث تلتقي الرعاية بالتقنية',
-    ha: 'Inda Kulawa ya hadu da Code'
-  },
-  'nav.home': {
-    en: 'Home',
-    fr: 'Accueil',
-    sw: 'Nyumbani',
-    ar: 'الرئيسية',
-    ha: 'Gida'
-  },
-  'nav.ecosystem': {
-    en: 'Ecosystem',
-    fr: 'Écosystème',
-    sw: 'Mazingira',
-    ar: 'النظام البيئي',
-    ha: 'Tsarin halittu'
-  },
-  'nav.community': {
-    en: 'Community',
-    fr: 'Communauté',
-    sw: 'Jamii',
-    ar: 'المجتمع',
-    ha: 'Al\'umma'
-  },
-  'nav.resources': {
-    en: 'Resources',
-    fr: 'Ressources',
-    sw: 'Rasilimali',
-    ar: 'الموارد',
-    ha: 'Albarkatu'
-  },
-  'nav.studio': {
-    en: 'Studio',
-    fr: 'Studio',
-    sw: 'Studio',
-    ar: 'الاستوديو',
-    ha: 'Studio'
   },
   'streams.care': {
     en: 'Care',
@@ -89,90 +47,7 @@ const translations: Translations = {
     ar: 'التجارة',
     ha: 'Kasuwanci'
   },
-  'stakeholder.healthcare': {
-    en: 'Healthcare Workers',
-    fr: 'Travailleurs de la Santé',
-    sw: 'Wafanyakazi wa Afya',
-    ar: 'العاملون في الرعاية الصحية',
-    ha: 'Ma\'aikatan Lafiya'
-  },
-  'stakeholder.government': {
-    en: 'Government & Policy',
-    fr: 'Gouvernement et Politiques',
-    sw: 'Serikali na Sera',
-    ar: 'الحكومة والسياسات',
-    ha: 'Gwamnati da Manufofi'
-  },
-  'stakeholder.developers': {
-    en: 'Developers & Tech Partners',
-    fr: 'Développeurs et Partenaires Tech',
-    sw: 'Wasanidi na Washirika wa Teknolojia',
-    ar: 'المطورون والشركاء التقنيون',
-    ha: 'Masu haɓakawa da Abokan hulɗa na Tech'
-  },
-  'stakeholder.investors': {
-    en: 'Investors & Partners',
-    fr: 'Investisseurs et Partenaires',
-    sw: 'Wawekezaji na Washirika',
-    ar: 'المستثمرون والشركاء',
-    ha: 'Masu saka hannun jari da Abokan hulɗa'
-  },
-  'cta.explore_ecosystem': {
-    en: 'Explore Our Ecosystem',
-    fr: 'Explorez Notre Écosystème',
-    sw: 'Chunguza Mazingira Yetu',
-    ar: 'استكشف نظامنا البيئي',
-    ha: 'Bincika Tsarin Halittarmu'
-  },
-  'cta.join_community': {
-    en: 'Join Community',
-    fr: 'Rejoindre la Communauté',
-    sw: 'Jiunge na Jamii',
-    ar: 'انضم للمجتمع',
-    ha: 'Shiga Al\'umma'
-  },
-  'about.title': {
-    en: 'About AHAID',
-    fr: 'À Propos d\'AHAID',
-    sw: 'Kuhusu AHAID',
-    ar: 'حول AHAID',
-    ha: 'Game da AHAID'
-  },
-  'about.description': {
-    en: 'Creating digital dignity in healthcare through AI-driven tools that empower African healthcare professionals and communities.',
-    fr: 'Créer la dignité numérique dans les soins de santé grâce à des outils pilotés par l\'IA qui responsabilisent les professionnels de la santé et les communautés africains.',
-    sw: 'Kuunda utukufu wa kidijitali katika huduma za afya kupitia zana za AI zinazoweza kuwahimiza wataalamu wa afya na jamii za Kiafrika.',
-    ar: 'خلق الكرامة الرقمية في الرعاية الصحية من خلال أدوات مدعومة بالذكاء الاصطناعي تمكن المهنيين الأفارقة والمجتمعات في مجال الرعاية الصحية.',
-    ha: 'Ƙirƙirar mutunci na dijital a cikin kiwon lafiya ta hanyar kayan aikin da AI ke jagoranta waɗanda ke ƙarfafa ƙwararrun ma\'aikatan lafiya na Afirka da al\'ummomi.'
-  },
-  'values.empathy': {
-    en: 'Empathy & Care',
-    fr: 'Empathie et Soin',
-    sw: 'Huruma na Utunzaji',
-    ar: 'التعاطف والرعاية',
-    ha: 'Tausayi da Kulawa'
-  },
-  'values.accessibility': {
-    en: 'Accessibility',
-    fr: 'Accessibilité',
-    sw: 'Upatikanaji',
-    ar: 'إمكانية الوصول',
-    ha: 'Samun dama'
-  },
-  'values.innovation': {
-    en: 'Innovation',
-    fr: 'Innovation',
-    sw: 'Uvumbuzi',
-    ar: 'الابتكار',
-    ha: 'Ƙirƙira'
-  },
-  'values.afrocentric': {
-    en: 'Afrocentric',
-    fr: 'Afrocentrique',
-    sw: 'Kiafrika',
-    ar: 'أفريقي المحور',
-    ha: 'Na Afirka'
-  }
+  // Add more translations as needed
 };
 
 // Define the context type

@@ -4,7 +4,6 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Users, Building2, Code, Heart, ArrowRight, Download, ExternalLink } from 'lucide-react';
-import { useI18n } from "@/hooks/useI18n";
 
 interface StakeholderRole {
   id: string;
@@ -33,7 +32,7 @@ interface StakeholderRole {
 const stakeholderRoles: StakeholderRole[] = [
   {
     id: 'healthcare',
-    title: 'stakeholder.healthcare',
+    title: 'Healthcare Workers',
     icon: <Heart className="w-6 h-6" />,
     description: 'Access Nursaera platform, clinical tools, and peer collaboration networks',
     primaryActions: [
@@ -54,7 +53,7 @@ const stakeholderRoles: StakeholderRole[] = [
   },
   {
     id: 'government',
-    title: 'stakeholder.government',
+    title: 'Government & Policy',
     icon: <Building2 className="w-6 h-6" />,
     description: 'Policy frameworks, implementation roadmaps, and compliance tracking',
     primaryActions: [
@@ -75,7 +74,7 @@ const stakeholderRoles: StakeholderRole[] = [
   },
   {
     id: 'developers',
-    title: 'stakeholder.developers',
+    title: 'Developers & Tech Partners',
     icon: <Code className="w-6 h-6" />,
     description: 'APIs, SDKs, technical documentation, and developer community',
     primaryActions: [
@@ -96,7 +95,7 @@ const stakeholderRoles: StakeholderRole[] = [
   },
   {
     id: 'investors',
-    title: 'stakeholder.investors',
+    title: 'Investors & Partners',
     icon: <Users className="w-6 h-6" />,
     description: 'Impact metrics, financial models, and partnership opportunities',
     primaryActions: [
@@ -118,7 +117,6 @@ const stakeholderRoles: StakeholderRole[] = [
 ];
 
 export function StakeholderPortal() {
-  const { t } = useI18n();
   const [activeRole, setActiveRole] = useState('healthcare');
 
   const currentRole = stakeholderRoles.find(role => role.id === activeRole);
@@ -151,7 +149,7 @@ export function StakeholderPortal() {
             {stakeholderRoles.map((role) => (
               <TabsTrigger key={role.id} value={role.id} className="flex items-center gap-2">
                 {role.icon}
-                <span className="hidden sm:inline">{t(role.title).split(' ')[0]}</span>
+                <span className="hidden sm:inline">{role.title.split(' ')[0]}</span>
               </TabsTrigger>
             ))}
           </TabsList>
@@ -167,7 +165,7 @@ export function StakeholderPortal() {
                         {role.icon}
                       </div>
                       <div>
-                        <CardTitle className="text-xl">{t(role.title)}</CardTitle>
+                        <CardTitle className="text-xl">{role.title}</CardTitle>
                         <p className="text-muted-foreground mt-1">{role.description}</p>
                       </div>
                     </div>

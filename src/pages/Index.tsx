@@ -3,8 +3,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Sparkles, Users, HeartPulse, BookMarked, ArrowRight, Star, Globe, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
-import { StakeholderPortal } from "@/components/StakeholderPortal";
-import { useI18n } from "@/hooks/useI18n";
 import heroImage from "@/assets/hero-healthcare.jpg";
 import communityImage from "@/assets/community-digital.jpg";
 import innovationImage from "@/assets/innovation-workspace.jpg";
@@ -61,8 +59,6 @@ const empowermentStreams = [
 ];
 
 const Index = () => {
-  const { t } = useI18n();
-  
   return (
     <div className="relative min-h-screen w-full bg-background font-sans">
       <Navbar />
@@ -81,22 +77,22 @@ const Index = () => {
           <div className="relative max-w-6xl mx-auto py-24 px-4 text-center animate-fade-in">
             <div className="mb-8">
               <h1 className="text-5xl md:text-6xl font-bold text-secondary-foreground mb-4 tracking-tight">
-                {t('app.title')}
+                Africa's Health and Inclusive Digitalization (AHAID)
               </h1>
               <p className="text-xl md:text-2xl text-secondary-foreground/90 mb-8 max-w-3xl mx-auto">
-                {t('hero.subtitle')}
+                Where Care Meets Code
               </p>
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Button size="lg" className="bg-primary hover:bg-primary/90 shadow-lg transition-transform hover:scale-105">
                 <Link to="/ecosystem" className="flex items-center">
-                  {t('cta.explore_ecosystem')}
+                  Explore Our Ecosystem
                 </Link>
               </Button>
               <Button size="lg" variant="outline" className="border-secondary-foreground text-secondary-foreground hover:bg-secondary-foreground hover:text-secondary">
                 <Link to="/community" className="flex items-center">
-                  {t('cta.join_community')}
+                  Join Community
                 </Link>
               </Button>
             </div>
@@ -149,10 +145,11 @@ const Index = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl font-bold text-text-primary mb-6">
-                {t('about.title')}
+                About AHAID
               </h2>
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                {t('about.description')}
+                Creating <strong>digital dignity</strong> in healthcare through AI-driven tools 
+                that empower African healthcare professionals and communities.
               </p>
               <p className="text-muted-foreground mb-8">
                 We bridge the gap between cutting-edge technology and compassionate care, 
@@ -227,9 +224,6 @@ const Index = () => {
             ))}
           </div>
         </section>
-
-        {/* Stakeholder Portal */}
-        <StakeholderPortal />
 
         {/* Innovation Showcase */}
         <section className="max-w-6xl mx-auto px-4 py-16">
