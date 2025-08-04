@@ -67,7 +67,15 @@ const Navbar = () => {
       <div className="container max-w-7xl mx-auto flex items-center justify-between px-3 py-1 md:py-2">
         <Link to="/" className="flex items-center gap-3 group" aria-label="AHAID Home">
           <AhaidLogo size={38} />
-          <span className="font-bold text-xl md:text-2xl text-green-900 tracking-tight group-hover:text-amber-700 transition">
+          <div className="hidden xl:block">
+            <div className="text-sm font-bold text-green-800 tracking-wide group-hover:text-amber-700 transition">
+              AFRICA'S HEALTH AND INCLUSIVE DIGITALIZATION
+            </div>
+            <div className="text-xs text-green-600 italic">
+              Where care meets code
+            </div>
+          </div>
+          <span className="xl:hidden font-bold text-xl md:text-2xl text-green-900 tracking-tight group-hover:text-amber-700 transition">
             AHAID
           </span>
         </Link>

@@ -59,6 +59,15 @@ export const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Main Hero Content */}
           <div className="text-center lg:text-left animate-fade-in">
+            <div className="mb-4">
+              <h2 className="text-lg md:text-xl font-semibold text-accent-foreground mb-2 tracking-wide">
+                AFRICA'S HEALTH AND INCLUSIVE DIGITALIZATION
+              </h2>
+              <p className="text-base md:text-lg text-primary-foreground/80 italic">
+                Where care meets code
+              </p>
+            </div>
+            
             <h1 className="text-5xl md:text-6xl font-bold text-primary-foreground mb-6 tracking-tight">
               Transform African Healthcare with{" "}
               <span className="text-accent-foreground">Digital Innovation</span>
