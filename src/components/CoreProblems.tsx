@@ -25,36 +25,36 @@ const CoreProblems = () => {
   const sdgImpacts = [
     {
       sdg: "SDG 3",
-      title: "Good Health",
-      description: "Strengthening community health access",
+      title: "Good Health & Well-being",
+      description: "Strengthening community health access and quality care",
       icon: Heart,
       color: "bg-red-50 border-red-200 text-red-800"
     },
     {
-      sdg: "SDG 4",
-      title: "Quality Education",
-      description: "Healthcare worker training and upskilling",
-      icon: GraduationCap,
-      color: "bg-blue-50 border-blue-200 text-blue-800"
+      sdg: "SDG 5",
+      title: "Gender Equality",
+      description: "Empowering women in healthcare leadership and technology",
+      icon: Users,
+      color: "bg-pink-50 border-pink-200 text-pink-800"
     },
     {
       sdg: "SDG 8",
-      title: "Economic Growth",
-      description: "Creating healthcare business opportunities",
+      title: "Decent Work & Economic Growth",
+      description: "Creating sustainable healthcare business opportunities",
       icon: TrendingUp,
       color: "bg-purple-50 border-purple-200 text-purple-800"
     },
     {
-      sdg: "SDG 10",
-      title: "Reduced Inequalities",
-      description: "Expanding access to vulnerable populations",
-      icon: Users,
-      color: "bg-orange-50 border-orange-200 text-orange-800"
+      sdg: "SDG 9",
+      title: "Innovation & Infrastructure",
+      description: "Digital health innovation and technology infrastructure",
+      icon: GraduationCap,
+      color: "bg-blue-50 border-blue-200 text-blue-800"
     },
     {
       sdg: "SDG 17",
-      title: "Partnerships",
-      description: "Multi-stakeholder collaboration",
+      title: "Partnerships for the Goals",
+      description: "Multi-stakeholder collaboration for health transformation",
       icon: Handshake,
       color: "bg-emerald-50 border-emerald-200 text-emerald-800"
     }
