@@ -1,9 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Sparkles, Users, HeartPulse, BookMarked, ArrowRight, Star, Globe, Zap } from "lucide-react";
+import { Sparkles, Users, HeartPulse, BookMarked, ArrowRight, Star, Globe, Zap, Award, Shield, Users2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
-import heroImage from "@/assets/hero-healthcare.jpg";
+import { HeroSection } from "@/components/HeroSection";
+import { UserPersonas } from "@/components/UserPersonas";
+import { Interactive4CFramework } from "@/components/Interactive4CFramework";
 import communityImage from "@/assets/community-digital.jpg";
 import innovationImage from "@/assets/innovation-workspace.jpg";
 import nurseImage from "@/assets/nurse-technology.jpg";
@@ -31,35 +33,31 @@ const coreValues = [
   },
 ];
 
-const empowermentStreams = [
+const trustIndicators = [
   {
-    title: "Care",
-    summary: "AI-driven health tools for professionals",
-    color: "bg-primary text-primary-foreground",
-    icon: <HeartPulse className="w-8 h-8" />,
-    route: "/resources",
+    icon: <Award className="w-8 h-8" />,
+    title: "WHO Partnership",
+    description: "Collaborative partner in digital health initiatives",
+    value: "Official"
   },
   {
-    title: "Code",
-    summary: "Open-source innovation for health tech",
-    color: "bg-secondary text-secondary-foreground",
-    icon: <Sparkles className="w-8 h-8" />,
-    route: "/studio",
+    icon: <Shield className="w-8 h-8" />,
+    title: "Data Security",
+    description: "HIPAA compliant with end-to-end encryption",
+    value: "Certified"
   },
   {
-    title: "Community",
-    summary: "Connect, share, and grow together",
-    color: "bg-accent text-accent-foreground",
-    icon: <Users className="w-8 h-8" />,
-    route: "/community",
+    icon: <Users2 className="w-8 h-8" />,
+    title: "Global Reach",
+    description: "Active in 15+ African countries",
+    value: "15+ Countries"
   },
   {
-    title: "Commerce",
-    summary: "Digital tools for African enterprises",
-    color: "bg-primary text-primary-foreground",
-    icon: <BookMarked className="w-8 h-8" />,
-    route: "/ecosystem",
-  },
+    icon: <Star className="w-8 h-8" />,
+    title: "User Satisfaction",
+    description: "Average user rating across all platforms",
+    value: "4.8/5"
+  }
 ];
 
 const Index = () => {
@@ -68,79 +66,42 @@ const Index = () => {
       <Navbar />
       
       <main className="pt-20 pb-6">
-        {/* Hero Section with Background Image */}
-        <section id="home" className="relative overflow-hidden">
-          <div className="absolute inset-0">
-            <img 
-              src={heroImage} 
-              alt="African healthcare professionals collaborating" 
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-secondary/80"></div>
-          </div>
-          <div className="relative max-w-6xl mx-auto py-24 px-4 text-center animate-fade-in">
-            <div className="mb-8">
-              <h1 className="text-5xl md:text-6xl font-bold text-secondary-foreground mb-4 tracking-tight">
-                Africa's Health and Inclusive Digitalization (AHAID)
-              </h1>
-              <p className="text-xl md:text-2xl text-secondary-foreground/90 mb-8 max-w-3xl mx-auto">
-                Where Care Meets Code
-              </p>
-            </div>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 shadow-lg transition-transform hover:scale-105">
-                <Link to="/ecosystem" className="flex items-center">
-                  Explore Our Ecosystem
-                </Link>
-              </Button>
-              <Button size="lg" className="bg-primary-foreground text-primary border border-primary hover:bg-primary hover:text-primary-foreground">
-                <Link to="/community" className="flex items-center">
-                  Join Community
-                </Link>
-              </Button>
-            </div>
-          </div>
-        </section>
+        {/* Enhanced Hero Section */}
+        <HeroSection />
 
-        {/* Key Highlights */}
-        <section className="max-w-6xl mx-auto px-4 py-16">
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="hover:shadow-lg transition-shadow border-primary/20">
-              <CardContent className="p-6 text-center">
-                <div className="text-3xl font-bold text-primary mb-2">2,500+</div>
-                <div className="text-muted-foreground mb-4">Healthcare Professionals</div>
-                <Button variant="outline" size="sm" className="border-primary text-primary">
-                  <Link to="/ecosystem" className="flex items-center">
-                    View Impact <ArrowRight className="w-3 h-3 ml-1" />
-                  </Link>
-                </Button>
-              </CardContent>
-            </Card>
-            
-            <Card className="hover:shadow-lg transition-shadow border-accent/20">
-              <CardContent className="p-6 text-center">
-                <div className="text-3xl font-bold text-accent mb-2">4C</div>
-                <div className="text-muted-foreground mb-4">Framework Approach</div>
-                <Button variant="outline" size="sm" className="border-accent text-accent">
-                  <Link to="/empowerment-streams" className="flex items-center">
-                    Learn More <ArrowRight className="w-3 h-3 ml-1" />
-                  </Link>
-                </Button>
-              </CardContent>
-            </Card>
-            
-            <Card className="hover:shadow-lg transition-shadow border-secondary/20">
-              <CardContent className="p-6 text-center">
-                <div className="text-3xl font-bold text-secondary mb-2">24/7</div>
-                <div className="text-muted-foreground mb-4">AI-Powered Support</div>
-                <Button variant="outline" size="sm" className="border-secondary text-secondary">
-                  <Link to="/resources" className="flex items-center">
-                    Explore <ArrowRight className="w-3 h-3 ml-1" />
-                  </Link>
-                </Button>
-              </CardContent>
-            </Card>
+        {/* User Personas & How It Works */}
+        <UserPersonas />
+
+        {/* Trust Indicators */}
+        <section className="max-w-7xl mx-auto px-4 py-16 bg-muted/30">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-foreground mb-4">
+              Trusted by Healthcare Leaders
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Building confidence through partnerships, certifications, and proven results
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {trustIndicators.map((indicator, index) => (
+              <Card key={index} className="hover:shadow-lg transition-shadow text-center">
+                <CardContent className="p-6">
+                  <div className="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center text-primary">
+                    {indicator.icon}
+                  </div>
+                  <div className="text-2xl font-bold text-foreground mb-2">
+                    {indicator.value}
+                  </div>
+                  <h3 className="font-semibold text-foreground mb-2">
+                    {indicator.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    {indicator.description}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </section>
 
@@ -198,38 +159,8 @@ const Index = () => {
           </div>
         </section>
 
-        {/* 4C Framework */}
-        <section id="empowerment" className="max-w-6xl mx-auto px-4 py-16">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-text-primary mb-4">
-              The 4C Framework
-            </h2>
-            <p className="text-lg text-muted-foreground mb-6">Our comprehensive approach to digital health transformation</p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {empowermentStreams.map((stream, index) => (
-              <Card key={index} className="group hover:shadow-xl transition-all duration-300">
-                <CardContent className="p-6 text-center">
-                  <div className={`w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center ${stream.color} group-hover:scale-110 transition-transform`}>
-                    {stream.icon}
-                  </div>
-                  <h3 className="text-xl font-bold text-card-foreground mb-2">
-                    {stream.title}
-                  </h3>
-                  <p className="text-muted-foreground mb-4">
-                    {stream.summary}
-                  </p>
-                   <Button variant="outline" size="sm" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                     <Link to={stream.route}>
-                       Learn More
-                     </Link>
-                   </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </section>
+        {/* Interactive 4C Framework */}
+        <Interactive4CFramework />
 
         {/* Innovation Showcase */}
         <section className="max-w-6xl mx-auto px-4 py-16">
