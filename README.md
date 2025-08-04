@@ -4,16 +4,16 @@
 
 ## About AHAID
 
-AHAID (Africa's Health and Inclusive Digitalization) is a digital health initiative focused on transforming healthcare in Africa through the integration of nursing expertise and technological innovation. The project offers a comprehensive ecosystem of tools, resources, and platforms designed with cultural sensitivity and a deep understanding of African healthcare contexts.
+AHAID (Africa's Health and Inclusive Digitalization) is a comprehensive digital health platform transforming healthcare across Africa through the integration of nursing expertise and technological innovation. Built with cultural sensitivity and deep understanding of African healthcare contexts, AHAID provides an integrated ecosystem of tools, resources, and platforms.
 
 ## Project Overview
 
-AHAID is built around the "4C Framework" of empowerment streams:
+AHAID is structured around the "4C Framework" of empowerment streams:
 
-- **Care** - AI-driven chronic disease support, nurse training, emotional support SOPs
-- **Code** - Open-source innovation hub, technical guides, APIs, and developer resources
-- **Community** - Powerful stories, webinars, emotional wellness resources, testimonials
-- **Commerce** - Digital strategy & tools for small and medium-sized African enterprises
+- **Care** - AI-driven chronic disease support, nurse training programs, and emotional wellness resources
+- **Code** - Open-source innovation hub, developer tools, technical documentation, and API resources
+- **Community** - Stakeholder networks, success stories, webinars, and collaborative platforms
+- **Commerce** - Digital transformation services and tools for small and medium-sized African enterprises
 
 ## Core Values
 
@@ -22,12 +22,15 @@ AHAID is built around the "4C Framework" of empowerment streams:
 - **Innovation & Collaboration** - Creative, collaborative, open-source platforms for real impact
 - **Afrocentric Empowerment** - Rooted in African values, cultures, and community realities
 
-## Key Features
+## Platform Features
 
-- **Nursaera Platform** - AI-powered digital health platform with multilingual support
-- **SME Digital Transformation** - Services for small and medium enterprises
-- **Ecosystem Dashboard** - Interactive visualization of the AHAID ecosystem
-- **Resource Library** - Comprehensive collection of healthcare and tech resources
+- **Interactive Ecosystem Dashboard** - Comprehensive visualization of AHAID's interconnected components
+- **Nursaera Platform** - AI-powered digital health platform with multilingual support and clinical workflows
+- **SME Digital Transformation Hub** - Complete digital strategy and implementation services
+- **Evidence Validation Dashboard** - Real-time impact metrics, pilot study results, and clinical outcomes
+- **Stakeholder Network Portal** - Collaborative platform connecting healthcare professionals, technologists, and policymakers
+- **Comprehensive Resource Library** - Curated collection of healthcare technology resources and documentation
+- **Innovation Studio** - Development environment for healthcare technology solutions
 
 ## Technical Stack
 
@@ -65,10 +68,23 @@ This project is built with:
 ## Project Structure
 
 - `/src/pages` - Main application pages
-- `/src/components` - Reusable UI components
+  - `Index.tsx` - Homepage with 4C Framework overview
+  - `EcosystemOverview.tsx` - Interactive ecosystem dashboard
+  - `Community.tsx` - Community engagement and success stories
+  - `Resources.tsx` - Comprehensive resource library
+  - `Studio.tsx` - Innovation and development environment
+  - `EmpowermentStreams.tsx` - Detailed 4C Framework streams
+- `/src/components` - Reusable UI components and specialized dashboards
+  - `ui/` - Shadcn/ui components library
+  - `EcosystemDashboard.tsx` - Main ecosystem visualization
+  - `NursaeraPlatform.tsx` - Platform feature showcase
+  - `EvidenceValidationDashboard.tsx` - Impact metrics and pilot results
+  - `StakeholderNetwork.tsx` - Network visualization
+  - `SMETransformation.tsx` - SME services component
 - `/src/integrations` - Third-party service integrations (Supabase)
 - `/src/lib` - Utility functions and helpers
-- `/src/hooks` - Custom React hooks
+- `/src/hooks` - Custom React hooks for theming, analytics, and i18n
+- `/src/assets` - Static images and resources
 
 ## Contributing
 
