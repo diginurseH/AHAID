@@ -297,7 +297,7 @@ const Community = () => {
               <Button size="lg" variant="secondary" className="bg-white text-green-800 hover:bg-green-50">
                 Join Our Discord
               </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+              <Button size="lg" className="bg-primary-foreground text-primary border border-primary hover:bg-primary hover:text-primary-foreground">
                 Follow on LinkedIn
               </Button>
             </div>

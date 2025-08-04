@@ -81,7 +81,7 @@ const Resources = () => {
               <Button size="lg" className="bg-green-700 hover:bg-green-800 text-white" asChild>
                 <Link to="/#contact">Contact Support</Link>
               </Button>
-              <Button size="lg" variant="outline" className="border-blue-700 text-blue-800 hover:bg-blue-50" asChild>
+              <Button size="lg" className="bg-primary-foreground text-primary border border-primary hover:bg-primary hover:text-primary-foreground" asChild>
                 <Link to="/community">Join Community</Link>
               </Button>
             </div>

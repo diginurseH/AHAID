@@ -94,7 +94,7 @@ const Index = () => {
                   Explore Our Ecosystem
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" className="border-secondary-foreground text-secondary-foreground hover:bg-secondary-foreground hover:text-secondary">
+              <Button size="lg" className="bg-primary-foreground text-primary border border-primary hover:bg-primary hover:text-primary-foreground">
                 <Link to="/community" className="flex items-center">
                   Join Community
                 </Link>
