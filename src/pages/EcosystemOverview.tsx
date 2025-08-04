@@ -120,13 +120,13 @@ const EcosystemOverview = () => {
                 there's a place for you in our growing ecosystem.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" variant="outline" className="border-secondary-foreground text-secondary-foreground hover:bg-secondary-foreground hover:text-secondary" asChild>
+                <Button size="lg" className="bg-primary-foreground text-primary border border-primary hover:bg-primary hover:text-primary-foreground" asChild>
                   <Link to="/empowerment-streams">Explore Streams</Link>
                 </Button>
-                <Button size="lg" variant="outline" className="border-secondary-foreground text-secondary-foreground hover:bg-secondary-foreground hover:text-secondary" asChild>
+                <Button size="lg" className="bg-primary-foreground text-primary border border-primary hover:bg-primary hover:text-primary-foreground" asChild>
                   <Link to="/resources">Access Resources</Link>
                 </Button>
-                <Button size="lg" variant="outline" className="border-secondary-foreground text-secondary-foreground hover:bg-secondary-foreground hover:text-secondary" asChild>
+                <Button size="lg" className="bg-primary-foreground text-primary border border-primary hover:bg-primary hover:text-primary-foreground" asChild>
                   <Link to="/#contact">Get Involved</Link>
                 </Button>
               </div>
