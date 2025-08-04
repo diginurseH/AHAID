@@ -68,15 +68,6 @@ export const HeroSection = () => {
               </p>
             </div>
             
-            <h1 className="text-5xl md:text-6xl font-bold text-primary-foreground mb-6 tracking-tight">
-              Transform African Healthcare with{" "}
-              <span className="text-accent-foreground">Digital Innovation</span>
-            </h1>
-            
-            <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 max-w-2xl">
-              Empowering nurses, developers, and healthcare leaders across Africa with AI-driven tools that bridge the gap between technology and compassionate care.
-            </p>
-            
             {/* Primary CTA */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
               <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg transition-all hover:scale-105 hover:shadow-xl">
