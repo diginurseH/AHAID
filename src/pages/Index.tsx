@@ -37,24 +37,28 @@ const empowermentStreams = [
     summary: "AI-driven health tools for professionals",
     color: "bg-primary text-primary-foreground",
     icon: <HeartPulse className="w-8 h-8" />,
+    route: "/resources",
   },
   {
     title: "Code",
     summary: "Open-source innovation for health tech",
     color: "bg-secondary text-secondary-foreground",
     icon: <Sparkles className="w-8 h-8" />,
+    route: "/studio",
   },
   {
     title: "Community",
     summary: "Connect, share, and grow together",
     color: "bg-accent text-accent-foreground",
     icon: <Users className="w-8 h-8" />,
+    route: "/community",
   },
   {
     title: "Commerce",
     summary: "Digital tools for African enterprises",
     color: "bg-primary text-primary-foreground",
     icon: <BookMarked className="w-8 h-8" />,
+    route: "/ecosystem",
   },
 ];
 
@@ -216,9 +220,11 @@ const Index = () => {
                   <p className="text-muted-foreground mb-4">
                     {stream.summary}
                   </p>
-                  <Button variant="outline" size="sm" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                    Learn More
-                  </Button>
+                   <Button variant="outline" size="sm" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+                     <Link to={stream.route}>
+                       Learn More
+                     </Link>
+                   </Button>
                 </CardContent>
               </Card>
             ))}
