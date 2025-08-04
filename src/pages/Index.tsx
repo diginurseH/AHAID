@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Sparkles, Users, HeartPulse, BookMarked, ArrowRight, Star, Globe, Zap, Award, Shield, Users2 } from "lucide-react";
+import { Sparkles, Users, HeartPulse, BookMarked, ArrowRight, Star, Globe, Zap, Award, Shield, Users2, Heart } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import { HeroSection } from "@/components/HeroSection";
@@ -153,13 +153,22 @@ const Index = () => {
           </div>
         </section>
 
-        {/* About Us with Image */}
+        {/* Interactive About Us Section */}
         <section id="about" className="max-w-6xl mx-auto px-4 py-16">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-green-800 mb-4">
+              About AHAID
+            </h2>
+            <p className="text-xl text-green-700 mb-2">
+              AFRICA'S HEALTH AND INCLUSIVE DIGITALIZATION
+            </p>
+            <p className="text-lg text-green-600 italic mb-8">
+              Where care meets code
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
             <div>
-              <h2 className="text-4xl font-bold text-text-primary mb-6">
-                About AHAID
-              </h2>
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
                 Creating <strong>digital dignity</strong> in healthcare through AI-driven tools 
                 that empower African healthcare professionals and communities.
@@ -168,19 +177,83 @@ const Index = () => {
                 We bridge the gap between cutting-edge technology and compassionate care, 
                 ensuring every healthcare solution is built with African values at its core.
               </p>
-              <Button className="bg-primary hover:bg-primary/90">
-                <Link to="/ecosystem" className="flex items-center">
-                  Learn Our Story <ArrowRight className="w-4 h-4 ml-2" />
-                </Link>
-              </Button>
+              
+              {/* Interactive Quick Stats */}
+              <div className="grid grid-cols-2 gap-4 mb-8">
+                <Card className="p-4 text-center bg-green-50 border-green-200 hover:shadow-md transition-shadow cursor-pointer">
+                  <div className="text-2xl font-bold text-green-800">12,500+</div>
+                  <div className="text-sm text-green-600">Patients Served</div>
+                </Card>
+                <Card className="p-4 text-center bg-blue-50 border-blue-200 hover:shadow-md transition-shadow cursor-pointer">
+                  <div className="text-2xl font-bold text-blue-800">15</div>
+                  <div className="text-sm text-blue-600">Countries Active</div>
+                </Card>
+                <Card className="p-4 text-center bg-amber-50 border-amber-200 hover:shadow-md transition-shadow cursor-pointer">
+                  <div className="text-2xl font-bold text-amber-800">850+</div>
+                  <div className="text-sm text-amber-600">Healthcare Providers</div>
+                </Card>
+                <Card className="p-4 text-center bg-purple-50 border-purple-200 hover:shadow-md transition-shadow cursor-pointer">
+                  <div className="text-2xl font-bold text-purple-800">94.7%</div>
+                  <div className="text-sm text-purple-600">AI Accuracy</div>
+                </Card>
+              </div>
+
+              {/* Call to Actions */}
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button className="bg-primary hover:bg-primary/90">
+                  <Link to="/about" className="flex items-center">
+                    Learn Our Full Story <ArrowRight className="w-4 h-4 ml-2" />
+                  </Link>
+                </Button>
+                <Button variant="outline" className="border-green-700 text-green-800 hover:bg-green-50">
+                  <Link to="/ecosystem" className="flex items-center">
+                    Explore Ecosystem <Globe className="w-4 h-4 ml-2" />
+                  </Link>
+                </Button>
+              </div>
             </div>
             <div>
               <img 
                 src={nurseImage} 
                 alt="African nurse using digital technology"
-                className="rounded-2xl shadow-xl w-full h-80 object-cover"
+                className="rounded-2xl shadow-xl w-full h-80 object-cover hover:scale-105 transition-transform duration-300"
               />
             </div>
+          </div>
+
+          {/* Interactive Mission & Values Preview */}
+          <div className="grid md:grid-cols-4 gap-6">
+            <Card className="p-6 text-center hover:shadow-lg transition-all duration-200 hover:scale-105 cursor-pointer bg-gradient-to-br from-green-50 to-green-100 border-green-200">
+              <div className="w-12 h-12 mx-auto mb-4 bg-green-600 rounded-lg flex items-center justify-center">
+                <Heart className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="font-semibold text-green-800 mb-2">Empathy & Care</h3>
+              <p className="text-sm text-green-700">AI tools built with emotional intelligence and patient dignity</p>
+            </Card>
+            
+            <Card className="p-6 text-center hover:shadow-lg transition-all duration-200 hover:scale-105 cursor-pointer bg-gradient-to-br from-blue-50 to-blue-100 border-blue-200">
+              <div className="w-12 h-12 mx-auto mb-4 bg-blue-600 rounded-lg flex items-center justify-center">
+                <Users className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="font-semibold text-blue-800 mb-2">Accessibility</h3>
+              <p className="text-sm text-blue-700">Healthcare technology available to all, regardless of location</p>
+            </Card>
+            
+            <Card className="p-6 text-center hover:shadow-lg transition-all duration-200 hover:scale-105 cursor-pointer bg-gradient-to-br from-amber-50 to-amber-100 border-amber-200">
+              <div className="w-12 h-12 mx-auto mb-4 bg-amber-600 rounded-lg flex items-center justify-center">
+                <Sparkles className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="font-semibold text-amber-800 mb-2">Innovation</h3>
+              <p className="text-sm text-amber-700">Creative platforms and collaborative development for real impact</p>
+            </Card>
+            
+            <Card className="p-6 text-center hover:shadow-lg transition-all duration-200 hover:scale-105 cursor-pointer bg-gradient-to-br from-purple-50 to-purple-100 border-purple-200">
+              <div className="w-12 h-12 mx-auto mb-4 bg-purple-600 rounded-lg flex items-center justify-center">
+                <Globe className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="font-semibold text-purple-800 mb-2">Afrocentric</h3>
+              <p className="text-sm text-purple-700">Solutions rooted in African values, customs, and realities</p>
+            </Card>
           </div>
         </section>
 

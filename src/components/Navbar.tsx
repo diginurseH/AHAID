@@ -96,14 +96,31 @@ const Navbar = () => {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <NavigationMenuLink asChild>
-                  <Link
-                    to="/#about"
-                    className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-green-50 hover:text-amber-700 focus:bg-green-50 focus:text-amber-700 focus:outline-none"
-                  >
-                    About
-                  </Link>
-                </NavigationMenuLink>
+                <NavigationMenuTrigger className="bg-background hover:bg-green-50 hover:text-amber-700 focus:bg-green-50 focus:text-amber-700">
+                  About
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <div className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-1 lg:w-[600px] bg-white border border-green-100 shadow-lg z-50">
+                    <NavigationMenuLink asChild>
+                      <Link
+                        to="/#about"
+                        className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-green-50 hover:text-amber-700 focus:bg-green-50 focus:text-amber-700"
+                      >
+                        <div className="text-sm font-medium leading-none text-green-900">About Overview</div>
+                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">Quick introduction to AHAID's mission and values</p>
+                      </Link>
+                    </NavigationMenuLink>
+                    <NavigationMenuLink asChild>
+                      <Link
+                        to="/about"
+                        className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-green-50 hover:text-amber-700 focus:bg-green-50 focus:text-amber-700"
+                      >
+                        <div className="text-sm font-medium leading-none text-green-900">Full About Page</div>
+                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">Complete team, mission, impact metrics, and partnerships</p>
+                      </Link>
+                    </NavigationMenuLink>
+                  </div>
+                </NavigationMenuContent>
               </NavigationMenuItem>
 
               <NavigationMenuItem>
