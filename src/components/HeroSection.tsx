@@ -61,7 +61,7 @@ export const HeroSection = () => {
           <div className="text-center lg:text-left animate-fade-in">
             <div className="mb-4">
               <h2 className="text-lg md:text-xl font-semibold text-accent-foreground mb-2 tracking-wide">
-                AFRICA'S HEALTH AND INCLUSIVE DIGITALIZATION
+                NURSAERA HEALTH
               </h2>
               <p className="text-base md:text-lg text-primary-foreground/80 italic">
                 Where care meets code

@@ -238,7 +238,7 @@ const About = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-green-50 via-white to-blue-50">
       <Metadata 
-        title="About AHAID | Africa's Health and Inclusive Digitalization" 
+        title="About AHAID | Nursaera Health" 
         description="Learn about AHAID's mission to transform African healthcare through AI-driven solutions, our expert team, impact metrics, and partnership ecosystem."
         keywords={["about AHAID", "healthcare innovation", "African health tech", "mission vision", "team", "partnerships"]}
       />
@@ -265,7 +265,7 @@ const About = () => {
               About AHAID
             </h1>
             <p className="text-xl text-green-700 mb-4 max-w-3xl mx-auto">
-              AFRICA'S HEALTH AND INCLUSIVE DIGITALIZATION
+              NURSAERA HEALTH
             </p>
             <p className="text-lg text-green-600 italic mb-8">
               Where care meets code

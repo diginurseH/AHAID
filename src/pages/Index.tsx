@@ -160,7 +160,7 @@ const Index = () => {
               About AHAID
             </h2>
             <p className="text-xl text-green-700 mb-2">
-              AFRICA'S HEALTH AND INCLUSIVE DIGITALIZATION
+              NURSAERA HEALTH
             </p>
             <p className="text-lg text-green-600 italic mb-8">
               Where care meets code
@@ -407,7 +407,7 @@ const Index = () => {
       {/* Footer */}
       <footer className="w-full py-8 px-4 bg-secondary text-secondary-foreground text-center text-xs mt-16 tracking-wide">
         <div className="mb-2">
-          © {new Date().getFullYear()} AHAID – AFRICA'S HEALTH AND INCLUSIVE DIGITALIZATION (AHAID). Where care meets code. Empowering Africa, Digitally & Compassionately.
+          © {new Date().getFullYear()} AHAID – NURSAERA HEALTH (AHAID). Where care meets code. Empowering Africa, Digitally & Compassionately.
         </div>
         <div>
           <a href="/privacy" className="underline hover:text-accent transition">Privacy Policy</a>{" "}

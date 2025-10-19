@@ -14,7 +14,7 @@ const AhaidLogo = ({ size = 48, showFullName = false }: { size?: number; showFul
     {showFullName && (
       <div className="hidden lg:block">
         <div className="text-sm font-bold text-green-800 tracking-wide">
-          AFRICA'S HEALTH AND INCLUSIVE DIGITALIZATION
+          NURSAERA HEALTH
         </div>
         <div className="text-xs text-green-600 italic">
           Where care meets code
