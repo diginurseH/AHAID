@@ -11,11 +11,11 @@ export function Metadata({
   title, 
   description, 
   keywords = [], 
-  ogImage = "/images/ahaid-og.png" 
+  ogImage = "/images/nursaerahealth-og.png" 
 }: MetadataProps) {
   return (
     <Helmet>
-      <title>{title} | AHAID</title>
+      <title>{title} | NURSAERAHEALTH</title>
       <meta name="description" content={description} />
       {keywords.length > 0 && <meta name="keywords" content={keywords.join(", ")} />}
       

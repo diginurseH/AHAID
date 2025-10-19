@@ -88,7 +88,7 @@ const stakeholderRoles: StakeholderRole[] = [
       { label: 'Integration Partners', value: '120+', trend: 'active developers' }
     ],
     resources: [
-      { title: 'API Reference Guide', description: 'Complete documentation for all AHAID ecosystem APIs', link: '/docs/api-reference', type: 'doc' },
+      { title: 'API Reference Guide', description: 'Complete documentation for all NURSAERAHEALTH ecosystem APIs', link: '/docs/api-reference', type: 'doc' },
       { title: 'SDK & Libraries', description: 'Ready-to-use SDKs for popular programming languages', link: '/tools/sdk', type: 'tool' },
       { title: 'Integration Examples', description: 'Live examples and code samples for common use cases', link: '/demo/integration', type: 'demo' }
     ]
@@ -140,7 +140,7 @@ export function StakeholderPortal() {
             Your Pathway to Digital Health Innovation
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Choose your role to access personalized resources, tools, and pathways tailored to your specific needs in the AHAID ecosystem.
+            Choose your role to access personalized resources, tools, and pathways tailored to your specific needs in the NURSAERAHEALTH ecosystem.
           </p>
         </div>
 

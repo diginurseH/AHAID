@@ -114,7 +114,7 @@ export function InteroperabilityDocs() {
             Technical Documentation & Standards
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Comprehensive documentation for seamless integration with AHAID ecosystem modules, 
+            Comprehensive documentation for seamless integration with NURSAERAHEALTH ecosystem modules, 
             ensuring compliance with international health data standards.
           </p>
         </div>

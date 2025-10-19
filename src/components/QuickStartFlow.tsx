@@ -73,7 +73,7 @@ export function QuickStartFlow() {
     <Card className="w-full max-w-4xl mx-auto bg-white/95 backdrop-blur-sm shadow-xl">
       <CardHeader className="text-center">
         <CardTitle className="text-2xl font-bold text-green-800">
-          Find Your Path with AHAID
+          Find Your Path with NURSAERAHEALTH
         </CardTitle>
         <p className="text-green-600">Tell us about yourself to get personalized recommendations</p>
       </CardHeader>

@@ -229,7 +229,7 @@ const EnhancedEcosystemDashboard = ({ onSectionClick, onStartTour }: EnhancedEco
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.href = url;
-    link.download = 'ahaid-ecosystem-map.json';
+    link.download = 'nursaerahealth-ecosystem-map.json';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -377,7 +377,7 @@ const EnhancedEcosystemDashboard = ({ onSectionClick, onStartTour }: EnhancedEco
           </TabsList>
           <TabsContent value="narrative" className="space-y-4">
             <p className="text-green-900">
-              The AHAID ecosystem operates as an interconnected web where each component amplifies the others. 
+              The NURSAERAHEALTH ecosystem operates as an interconnected web where each component amplifies the others. 
               When we transform an SME through our Commerce stream, we create sustainable revenue that funds 
               healthcare initiatives in the Care stream. Our AI platform generates data insights that improve 
               both patient outcomes and business operations.

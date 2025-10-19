@@ -23,7 +23,7 @@ export function updateMetaTags(options: {
   } = options;
 
   // Set document title
-  document.title = title.includes('AHAID') ? title : `${title} | AHAID`;
+  document.title = title.includes('NURSAERAHEALTH') ? title : `${title} | NURSAERAHEALTH`;
 
   // Helper function to get or create meta tag
   const getOrCreateMetaTag = (name: string, nameAttribute: 'name' | 'property'): HTMLMetaElement => {

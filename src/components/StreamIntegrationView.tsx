@@ -145,7 +145,7 @@ const StreamIntegrationView = ({ activeStreams = [], userProgress }: StreamInteg
         },
         {
           phase: "Month 3-4: Revenue Growth",
-          description: "200% revenue increase generates AHAID sustainability funding",
+          description: "200% revenue increase generates NURSAERAHEALTH sustainability funding",
           streams: ["commerce"]
         },
         {

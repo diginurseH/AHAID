@@ -27,7 +27,7 @@ const EcosystemMap = () => {
     <Card className="w-full">
       <CardHeader>
         <CardTitle className="text-2xl text-center text-green-800">
-          AHAID Ecosystem Map
+          NURSAERAHEALTH Ecosystem Map
         </CardTitle>
       </CardHeader>
       <CardContent>

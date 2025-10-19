@@ -80,7 +80,7 @@ export const UserPersonas = () => {
         </h2>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
           Whether you're on the frontlines of care, building the future of health tech, or shaping policy, 
-          AHAID has tools designed specifically for your needs.
+          NURSAERAHEALTH has tools designed specifically for your needs.
         </p>
       </div>
 
@@ -122,7 +122,7 @@ export const UserPersonas = () => {
       <div className="mt-20">
         <div className="text-center mb-12">
           <h3 className="text-2xl font-bold text-foreground mb-4">
-            How AHAID Works
+            How NURSAERAHEALTH Works
           </h3>
           <p className="text-muted-foreground">
             Simple steps to transform your healthcare practice or organization

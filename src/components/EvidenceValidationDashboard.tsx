@@ -110,7 +110,7 @@ const researchPublications = [
     type: 'research'
   },
   {
-    title: 'Nurse Empowerment Through Technology: Evidence from AHAID Pilot Studies',
+    title: 'Nurse Empowerment Through Technology: Evidence from NURSAERAHEALTH Pilot Studies',
     journal: 'International Journal of Nursing Studies',
     date: '2023-11-28',
     impact: 'Medium Impact',

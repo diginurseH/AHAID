@@ -73,7 +73,7 @@ const DataStorytellingPanel = ({ selectedSection }: DataStorytellingPanelProps) 
         },
         {
           name: "Revenue Generation",
-          description: "Successful SME generates sustainable revenue for AHAID",
+          description: "Successful SME generates sustainable revenue for NURSAERAHEALTH",
           metrics: [
             { label: "Monthly Revenue", value: "$2,400", change: 20 },
             { label: "Profit Margin", value: "35%", change: 8 },
@@ -158,7 +158,7 @@ const DataStorytellingPanel = ({ selectedSection }: DataStorytellingPanelProps) 
         { label: "Customer Satisfaction", before: "75%", after: "98%", improvement: "31%" }
       ],
       testimonial: {
-        quote: "AHAID didn't just give us a website - they transformed how we think about our business. We're now reaching customers we never knew existed.",
+        quote: "NURSAERAHEALTH didn't just give us a website - they transformed how we think about our business. We're now reaching customers we never knew existed.",
         author: "Sarah Mensah",
         role: "Owner, Mister's Bakery"
       }

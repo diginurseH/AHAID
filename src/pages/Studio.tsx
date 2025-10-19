@@ -29,7 +29,7 @@ const featuredStories = [
     id: 2,
     title: "Building Digital Bridges in Healthcare",
     excerpt: "How technology is connecting remote communities to life-saving care.",
-    author: "Tech Team AHAID",
+    author: "Tech Team NURSAERAHEALTH",
     date: "2024-01-10",
     readTime: "8 min read",
     category: "Innovation"
@@ -90,20 +90,13 @@ const Studio = () => {
   const displayedStories = showAllStories ? filteredStories : filteredStories.slice(0, 3);
 
   const handleStoryClick = (storyId: number) => {
-    // Create a detailed story view modal or navigate to a dedicated story page
-    const story = featuredStories.find(s => s.id === storyId);
-    if (story) {
-      // For now, show an alert with story details, could be expanded to a modal
-      alert(`Story: ${story.title}\n\nBy: ${story.author}\nDate: ${story.date}\n\n${story.excerpt}\n\nThis would open the full story in a real implementation.`);
-    }
+    // Navigate to community page where stories are featured
+    window.location.href = '/community';
   };
 
   const handleSubmitStory = () => {
-    // Open story submission form in a new window/tab or navigate to contact
-    const isConfirmed = window.confirm("Ready to share your story? We'd love to hear from you!\n\nClick OK to go to our contact form where you can submit your story.");
-    if (isConfirmed) {
-      window.open('/#contact', '_self');
-    }
+    // Navigate to contact form to submit story
+    window.location.href = '/#contact';
   };
 
   const handleGetInTouch = () => {
@@ -123,7 +116,7 @@ const Studio = () => {
         {/* Header Section */}
         <section className="max-w-4xl mx-auto py-12 px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-amber-700 mb-4">
-            AHAID Studio
+            NURSAERAHEALTH Studio
           </h1>
           <p className="text-lg text-green-900 mb-8 max-w-2xl mx-auto">
             Where stories of healing meet innovation. Explore inspiring narratives, 
@@ -264,7 +257,7 @@ const Studio = () => {
             <h3 className="text-2xl font-bold mb-4">Share Your Story</h3>
             <p className="mb-6 text-amber-100">
               Have a story of innovation, care, or transformation? 
-              We'd love to feature your voice in AHAID Studio.
+              We'd love to feature your voice in NURSAERAHEALTH Studio.
             </p>
             <Button 
               size="lg" 

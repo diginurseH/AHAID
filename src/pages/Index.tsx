@@ -157,7 +157,7 @@ const Index = () => {
         <section id="about" className="max-w-6xl mx-auto px-4 py-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-green-800 mb-4">
-              About AHAID
+              About NURSAERAHEALTH
             </h2>
             <p className="text-xl text-green-700 mb-2">
               NURSAERA HEALTH
@@ -351,14 +351,14 @@ const Index = () => {
                 }
                 
                 // Create mailto link with form data
-                const subject = encodeURIComponent('Contact from AHAID Website');
+                const subject = encodeURIComponent('Contact from NURSAERAHEALTH Website');
                 const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
-                const mailtoUrl = `mailto:contact@ahaid.org?subject=${subject}&body=${body}`;
+                const mailtoUrl = `mailto:contact@nursaerahealth.org?subject=${subject}&body=${body}`;
                 
                 window.location.href = mailtoUrl;
                 
                 // Show success message
-                alert('Thank you for your message! Your email client should open now. If not, please email us directly at contact@ahaid.org');
+                alert('Thank you for your message! Your email client should open now. If not, please email us directly at contact@nursaerahealth.org');
               }}
             >
               <div>
@@ -407,7 +407,7 @@ const Index = () => {
       {/* Footer */}
       <footer className="w-full py-8 px-4 bg-secondary text-secondary-foreground text-center text-xs mt-16 tracking-wide">
         <div className="mb-2">
-          © {new Date().getFullYear()} AHAID – NURSAERA HEALTH (AHAID). Where care meets code. Empowering Africa, Digitally & Compassionately.
+          © {new Date().getFullYear()} NURSAERAHEALTH. Where care meets code. Empowering Africa, Digitally & Compassionately.
         </div>
         <div>
           <a href="/privacy" className="underline hover:text-accent transition">Privacy Policy</a>{" "}

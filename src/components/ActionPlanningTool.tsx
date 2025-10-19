@@ -134,7 +134,7 @@ const ActionPlanningTool = ({ userProfile, userProgress, onPlanSave }: ActionPla
     },
     "developer-contribution": {
       title: "Open Source Health Tech Contribution",
-      description: "Contribute to AHAID's open source projects and build health solutions",
+      description: "Contribute to NURSAERAHEALTH's open source projects and build health solutions",
       streams: ["code", "community"],
       goals: ["Make technical contributions", "Build developer network", "Improve health outcomes"],
       suggestedActions: [
@@ -259,7 +259,7 @@ const ActionPlanningTool = ({ userProfile, userProgress, onPlanSave }: ActionPla
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.href = url;
-    link.download = `ahaid-action-plan-${Date.now()}.json`;
+    link.download = `nursaerahealth-action-plan-${Date.now()}.json`;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

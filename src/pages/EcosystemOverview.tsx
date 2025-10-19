@@ -62,7 +62,7 @@ const EcosystemOverview = () => {
                 <div className="flex items-center gap-3 mb-6">
                   <Network className="w-8 h-8 text-primary" />
                   <h1 className="text-4xl md:text-5xl font-bold">
-                    <span className="text-secondary">AHAID</span> <span className="text-primary">Ecosystem</span>
+                    <span className="text-secondary">NURSAERAHEALTH</span> <span className="text-primary">Ecosystem</span>
                   </h1>
                 </div>
                 <p className="text-lg text-muted-foreground mb-6">
@@ -76,7 +76,7 @@ const EcosystemOverview = () => {
               <div>
                 <img 
                   src={ecosystemImage} 
-                  alt="AHAID ecosystem workspace with African professionals" 
+                  alt="NURSAERAHEALTH ecosystem workspace with African professionals" 
                   className="w-full h-80 object-cover rounded-2xl shadow-xl"
                 />
               </div>
@@ -113,7 +113,7 @@ const EcosystemOverview = () => {
           <section id="join" className="py-12">
             <div className="bg-secondary text-secondary-foreground rounded-2xl p-8 text-center">
               <h3 className="text-2xl md:text-3xl font-bold mb-4">
-                Join the AHAID Ecosystem
+                Join the NURSAERAHEALTH Ecosystem
               </h3>
               <p className="text-lg mb-6 opacity-90">
                 Whether you're a healthcare professional, developer, entrepreneur, or community leader, 

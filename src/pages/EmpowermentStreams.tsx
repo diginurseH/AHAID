@@ -75,7 +75,7 @@ const empowermentStreams: EmpowermentStreamProps[] = [
     ],
     proofOfLife: {
       title: "Mister's Bakery Success Story",
-      description: "AHAID successfully implemented a comprehensive digital solution for Mister's Bakery, including a custom web application and WhatsApp integration, resulting in increased customer engagement and streamlined operations."
+      description: "NURSAERAHEALTH successfully implemented a comprehensive digital solution for Mister's Bakery, including a custom web application and WhatsApp integration, resulting in increased customer engagement and streamlined operations."
     }
   },
 ];
@@ -188,9 +188,9 @@ const EmpowermentStreams = () => {
               size="lg" 
               className="bg-amber-700 hover:bg-amber-800 text-white"
               data-action="partner"
-              aria-label="Partner with AHAID"
+              aria-label="Partner with NURSAERAHEALTH"
               onClick={() => {
-                window.location.href = 'mailto:partnerships@ahaid.org?subject=Partnership Inquiry&body=Hello AHAID team, I am interested in exploring partnership opportunities with your organization.';
+                window.location.href = 'mailto:partnerships@nursaerahealth.org?subject=Partnership Inquiry&body=Hello NURSAERAHEALTH team, I am interested in exploring partnership opportunities with your organization.';
               }}
             >
               Partner with Us

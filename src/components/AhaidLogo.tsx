@@ -4,7 +4,7 @@ const AhaidLogo = ({ size = 48, showFullName = false }: { size?: number; showFul
   <div className="flex items-center gap-3">
     <img
       src="/lovable-uploads/9c132ccb-fa9f-49f2-bfab-ae2436d4cf65.png"
-      alt="AHAID Logo"
+      alt="NURSAERAHEALTH Logo"
       width={size}
       height={size}
       className="object-contain"

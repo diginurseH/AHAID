@@ -65,7 +65,7 @@ const Navbar = () => {
   return (
     <nav className="w-full fixed top-0 left-0 z-30 bg-white/90 border-b border-green-50 shadow-sm backdrop-blur-lg">
       <div className="container max-w-7xl mx-auto flex items-center justify-between px-3 py-1 md:py-2">
-        <Link to="/" className="flex items-center gap-3 group" aria-label="AHAID Home">
+        <Link to="/" className="flex items-center gap-3 group" aria-label="NURSAERAHEALTH Home">
           <AhaidLogo size={38} />
           <div className="hidden xl:block">
             <div className="text-sm font-bold text-green-800 tracking-wide group-hover:text-amber-700 transition">
@@ -76,7 +76,7 @@ const Navbar = () => {
             </div>
           </div>
           <span className="xl:hidden font-bold text-xl md:text-2xl text-green-900 tracking-tight group-hover:text-amber-700 transition">
-            AHAID
+            NURSAERAHEALTH
           </span>
         </Link>
 
@@ -107,7 +107,7 @@ const Navbar = () => {
                         className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-green-50 hover:text-amber-700 focus:bg-green-50 focus:text-amber-700"
                       >
                         <div className="text-sm font-medium leading-none text-green-900">About Overview</div>
-                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">Quick introduction to AHAID's mission and values</p>
+                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">Quick introduction to NURSAERAHEALTH's mission and values</p>
                       </Link>
                     </NavigationMenuLink>
                     <NavigationMenuLink asChild>
