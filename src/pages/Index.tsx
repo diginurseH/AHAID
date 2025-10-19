@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import { Sparkles, Users, HeartPulse, BookMarked, ArrowRight, Star, Globe, Zap, Award, Shield, Users2, Heart } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
@@ -84,23 +85,35 @@ const Index = () => {
   const handlePlanSave = (plan: any) => console.log("Saving plan:", plan);
 
   return (
-    <div className="relative min-h-screen w-full bg-background font-sans">
+    <div className="relative min-h-screen w-full bg-background font-sans overflow-hidden">
       <Navbar />
       
       <main className="pt-20 pb-6">
         {/* Enhanced Hero Section */}
-        <HeroSection />
+        <div className="animate-fade-in">
+          <HeroSection />
+        </div>
 
         {/* Interactive Journey Entry */}
         {!userProfile && !showAssessment && (
-          <section className="max-w-6xl mx-auto px-4 py-16 text-center">
-            <h2 className="text-3xl font-bold text-green-800 mb-4">Start Your Personalized Journey</h2>
-            <p className="text-lg text-green-700 mb-8 max-w-2xl mx-auto">
-              Take our assessment to unlock personalized recommendations and create your action plan
-            </p>
-            <Button onClick={() => setShowAssessment(true)} size="lg" className="bg-amber-600 hover:bg-amber-700">
-              Begin Assessment
-            </Button>
+          <section className="max-w-6xl mx-auto px-4 py-16 text-center animate-fade-in">
+            <div className="bg-gradient-to-br from-primary/5 to-secondary/5 rounded-3xl p-12 border border-primary/10 hover:shadow-xl transition-all duration-300">
+              <div className="inline-block p-4 bg-primary/10 rounded-full mb-6 animate-scale-in">
+                <Sparkles className="w-12 h-12 text-primary" />
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Start Your Personalized Journey</h2>
+              <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+                Take our assessment to unlock personalized recommendations and create your action plan
+              </p>
+              <Button 
+                onClick={() => setShowAssessment(true)} 
+                size="lg" 
+                className="bg-primary hover:bg-primary/90 hover-scale shadow-lg"
+              >
+                Begin Assessment
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+            </div>
           </section>
         )}
 
@@ -121,24 +134,28 @@ const Index = () => {
         <UserPersonas />
 
         {/* Trust Indicators */}
-        <section className="max-w-7xl mx-auto px-4 py-16 bg-muted/30">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-foreground mb-4">
+        <section className="max-w-7xl mx-auto px-4 py-16">
+          <div className="text-center mb-12 animate-fade-in">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               Trusted by Healthcare Leaders
             </h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Building confidence through partnerships, certifications, and proven results
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {trustIndicators.map((indicator, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow text-center">
+              <Card 
+                key={index} 
+                className="hover:shadow-xl transition-all duration-300 text-center group hover-scale border-primary/20 animate-fade-in"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
                 <CardContent className="p-6">
-                  <div className="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center text-primary">
+                  <div className="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
                     {indicator.icon}
                   </div>
-                  <div className="text-2xl font-bold text-foreground mb-2">
+                  <div className="text-3xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
                     {indicator.value}
                   </div>
                   <h3 className="font-semibold text-foreground mb-2">
@@ -154,125 +171,131 @@ const Index = () => {
         </section>
 
         {/* Interactive About Us Section */}
-        <section id="about" className="max-w-6xl mx-auto px-4 py-16">
+        <section id="about" className="max-w-6xl mx-auto px-4 py-16 animate-fade-in">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-green-800 mb-4">
+            <div className="inline-block mb-4">
+              <Badge variant="outline" className="text-lg px-6 py-2 border-primary/30 hover:border-primary transition-colors">
+                Our Story
+              </Badge>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
               About NURSAERAHEALTH
             </h2>
-            <p className="text-xl text-green-700 mb-2">
+            <p className="text-xl text-primary/80 mb-2">
               NURSAERA HEALTH
             </p>
-            <p className="text-lg text-green-600 italic mb-8">
+            <p className="text-lg text-muted-foreground italic mb-8">
               Where care meets code
             </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
-            <div>
-              <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                Creating <strong>digital dignity</strong> in healthcare through AI-driven tools 
+            <div className="space-y-6">
+              <p className="text-lg text-muted-foreground leading-relaxed animate-fade-in">
+                Creating <strong className="text-primary">digital dignity</strong> in healthcare through AI-driven tools 
                 that empower African healthcare professionals and communities.
               </p>
-              <p className="text-muted-foreground mb-8">
+              <p className="text-muted-foreground animate-fade-in" style={{ animationDelay: "100ms" }}>
                 We bridge the gap between cutting-edge technology and compassionate care, 
                 ensuring every healthcare solution is built with African values at its core.
               </p>
               
               {/* Interactive Quick Stats */}
-              <div className="grid grid-cols-2 gap-4 mb-8">
-                <Card className="p-4 text-center bg-green-50 border-green-200 hover:shadow-md transition-shadow cursor-pointer">
-                  <div className="text-2xl font-bold text-green-800">12,500+</div>
-                  <div className="text-sm text-green-600">Patients Served</div>
-                </Card>
-                <Card className="p-4 text-center bg-blue-50 border-blue-200 hover:shadow-md transition-shadow cursor-pointer">
-                  <div className="text-2xl font-bold text-blue-800">15</div>
-                  <div className="text-sm text-blue-600">Countries Active</div>
-                </Card>
-                <Card className="p-4 text-center bg-amber-50 border-amber-200 hover:shadow-md transition-shadow cursor-pointer">
-                  <div className="text-2xl font-bold text-amber-800">850+</div>
-                  <div className="text-sm text-amber-600">Healthcare Providers</div>
-                </Card>
-                <Card className="p-4 text-center bg-purple-50 border-purple-200 hover:shadow-md transition-shadow cursor-pointer">
-                  <div className="text-2xl font-bold text-purple-800">94.7%</div>
-                  <div className="text-sm text-purple-600">AI Accuracy</div>
-                </Card>
+              <div className="grid grid-cols-2 gap-4">
+                {[
+                  { value: "12,500+", label: "Patients Served", color: "primary" },
+                  { value: "15", label: "Countries Active", color: "secondary" },
+                  { value: "850+", label: "Healthcare Providers", color: "accent" },
+                  { value: "94.7%", label: "AI Accuracy", color: "primary" }
+                ].map((stat, idx) => (
+                  <Card 
+                    key={idx}
+                    className="p-4 text-center hover:shadow-xl transition-all duration-300 hover-scale cursor-pointer border-primary/20 group animate-fade-in"
+                    style={{ animationDelay: `${(idx + 2) * 100}ms` }}
+                  >
+                    <div className="text-3xl font-bold text-primary group-hover:scale-110 transition-transform">
+                      {stat.value}
+                    </div>
+                    <div className="text-sm text-muted-foreground mt-1">{stat.label}</div>
+                  </Card>
+                ))}
               </div>
 
               {/* Call to Actions */}
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button className="bg-primary hover:bg-primary/90">
+              <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{ animationDelay: "600ms" }}>
+                <Button className="bg-primary hover:bg-primary/90 hover-scale shadow-lg group">
                   <Link to="/about" className="flex items-center">
-                    Learn Our Full Story <ArrowRight className="w-4 h-4 ml-2" />
+                    Learn Our Full Story 
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </Button>
-                <Button variant="outline" className="border-green-700 text-green-800 hover:bg-green-50">
+                <Button variant="outline" className="border-primary/30 hover:border-primary hover:bg-primary/5 hover-scale group">
                   <Link to="/ecosystem" className="flex items-center">
-                    Explore Ecosystem <Globe className="w-4 h-4 ml-2" />
+                    Explore Ecosystem 
+                    <Globe className="w-4 h-4 ml-2 group-hover:rotate-12 transition-transform" />
                   </Link>
                 </Button>
               </div>
             </div>
-            <div>
+            <div className="relative group animate-fade-in" style={{ animationDelay: "300ms" }}>
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
               <img 
                 src={nurseImage} 
                 alt="African nurse using digital technology"
-                className="rounded-2xl shadow-xl w-full h-80 object-cover hover:scale-105 transition-transform duration-300"
+                className="relative rounded-2xl shadow-2xl w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
               />
             </div>
           </div>
 
           {/* Interactive Mission & Values Preview */}
           <div className="grid md:grid-cols-4 gap-6">
-            <Card className="p-6 text-center hover:shadow-lg transition-all duration-200 hover:scale-105 cursor-pointer bg-gradient-to-br from-green-50 to-green-100 border-green-200">
-              <div className="w-12 h-12 mx-auto mb-4 bg-green-600 rounded-lg flex items-center justify-center">
-                <Heart className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="font-semibold text-green-800 mb-2">Empathy & Care</h3>
-              <p className="text-sm text-green-700">AI tools built with emotional intelligence and patient dignity</p>
-            </Card>
-            
-            <Card className="p-6 text-center hover:shadow-lg transition-all duration-200 hover:scale-105 cursor-pointer bg-gradient-to-br from-blue-50 to-blue-100 border-blue-200">
-              <div className="w-12 h-12 mx-auto mb-4 bg-blue-600 rounded-lg flex items-center justify-center">
-                <Users className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="font-semibold text-blue-800 mb-2">Accessibility</h3>
-              <p className="text-sm text-blue-700">Healthcare technology available to all, regardless of location</p>
-            </Card>
-            
-            <Card className="p-6 text-center hover:shadow-lg transition-all duration-200 hover:scale-105 cursor-pointer bg-gradient-to-br from-amber-50 to-amber-100 border-amber-200">
-              <div className="w-12 h-12 mx-auto mb-4 bg-amber-600 rounded-lg flex items-center justify-center">
-                <Sparkles className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="font-semibold text-amber-800 mb-2">Innovation</h3>
-              <p className="text-sm text-amber-700">Creative platforms and collaborative development for real impact</p>
-            </Card>
-            
-            <Card className="p-6 text-center hover:shadow-lg transition-all duration-200 hover:scale-105 cursor-pointer bg-gradient-to-br from-purple-50 to-purple-100 border-purple-200">
-              <div className="w-12 h-12 mx-auto mb-4 bg-purple-600 rounded-lg flex items-center justify-center">
-                <Globe className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="font-semibold text-purple-800 mb-2">Afrocentric</h3>
-              <p className="text-sm text-purple-700">Solutions rooted in African values, customs, and realities</p>
-            </Card>
+            {[
+              { icon: Heart, title: "Empathy & Care", desc: "AI tools built with emotional intelligence and patient dignity", gradient: "from-primary/10 to-primary/5" },
+              { icon: Users, title: "Accessibility", desc: "Healthcare technology available to all, regardless of location", gradient: "from-secondary/10 to-secondary/5" },
+              { icon: Sparkles, title: "Innovation", desc: "Creative platforms and collaborative development for real impact", gradient: "from-accent/10 to-accent/5" },
+              { icon: Globe, title: "Afrocentric", desc: "Solutions rooted in African values, customs, and realities", gradient: "from-primary/10 to-primary/5" }
+            ].map((value, idx) => (
+              <Card 
+                key={idx}
+                className={`p-6 text-center hover:shadow-2xl transition-all duration-300 hover-scale cursor-pointer bg-gradient-to-br ${value.gradient} border-primary/20 group animate-fade-in`}
+                style={{ animationDelay: `${idx * 100}ms` }}
+              >
+                <div className="w-14 h-14 mx-auto mb-4 bg-primary/20 rounded-xl flex items-center justify-center group-hover:bg-primary group-hover:rotate-6 transition-all duration-300">
+                  <value.icon className="w-7 h-7 text-primary group-hover:text-primary-foreground transition-colors" />
+                </div>
+                <h3 className="font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">{value.title}</h3>
+                <p className="text-sm text-muted-foreground">{value.desc}</p>
+              </Card>
+            ))}
           </div>
         </section>
 
         {/* Core Values */}
-        <section className="max-w-6xl mx-auto px-4 py-16 bg-muted/30">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-text-primary mb-4">
+        <section className="max-w-6xl mx-auto px-4 py-16">
+          <div className="text-center mb-12 animate-fade-in">
+            <Badge variant="outline" className="mb-4 px-6 py-2 text-base border-primary/30">
+              Our Values
+            </Badge>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               What Drives Us
             </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Our commitment to healthcare transformation is guided by these core principles
+            </p>
           </div>
           
           <div className="grid md:grid-cols-4 gap-6">
-            {coreValues.map((value) => (
-              <Card key={value.title} className="hover:shadow-lg transition-shadow">
+            {coreValues.map((value, idx) => (
+              <Card 
+                key={value.title} 
+                className="hover:shadow-xl transition-all duration-300 hover-scale border-primary/20 group animate-fade-in"
+                style={{ animationDelay: `${idx * 100}ms` }}
+              >
                 <CardContent className="p-6 text-center">
-                  <div className="w-12 h-12 mx-auto mb-4 bg-accent rounded-lg flex items-center justify-center text-accent-foreground">
+                  <div className="w-14 h-14 mx-auto mb-4 bg-primary/10 rounded-xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 group-hover:scale-110">
                     {value.icon}
                   </div>
-                  <h3 className="font-semibold text-card-foreground mb-2">{value.title}</h3>
+                  <h3 className="font-semibold text-card-foreground mb-2 group-hover:text-primary transition-colors">{value.title}</h3>
                   <p className="text-sm text-muted-foreground">{value.description}</p>
                 </CardContent>
               </Card>
@@ -284,40 +307,49 @@ const Index = () => {
         <Interactive4CFramework />
 
         {/* Innovation Showcase */}
-        <section className="max-w-6xl mx-auto px-4 py-16">
+        <section className="max-w-6xl mx-auto px-4 py-16 animate-fade-in">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
+            <div className="relative group order-2 lg:order-1">
+              <div className="absolute inset-0 bg-gradient-to-br from-secondary/20 to-accent/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
               <img 
                 src={innovationImage} 
                 alt="Innovation workspace with African professionals" 
-                className="w-full h-80 object-cover rounded-2xl shadow-xl"
+                className="relative w-full h-80 object-cover rounded-2xl shadow-2xl group-hover:scale-105 transition-transform duration-500"
               />
             </div>
-            <div>
-              <h2 className="text-3xl font-bold text-text-primary mb-6">
+            <div className="order-1 lg:order-2">
+              <Badge variant="outline" className="mb-4 px-6 py-2 text-base border-primary/30">
+                Innovation
+              </Badge>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
                 Innovation in Action
               </h2>
-              <p className="text-lg text-muted-foreground mb-6">
+              <p className="text-lg text-muted-foreground mb-8">
                 From AI-powered health assistants to digital transformation tools, 
                 we're building technology that understands African healthcare needs.
               </p>
               <div className="space-y-4 mb-8">
-                <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  <span className="text-muted-foreground">Nursaera AI Health Platform</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-secondary rounded-full"></div>
-                  <span className="text-muted-foreground">SME Digital Transformation</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-accent rounded-full"></div>
-                  <span className="text-muted-foreground">Community Health Networks</span>
-                </div>
+                {[
+                  { name: "Nursaera AI Health Platform", icon: Sparkles },
+                  { name: "SME Digital Transformation", icon: Zap },
+                  { name: "Community Health Networks", icon: Users }
+                ].map((item, idx) => (
+                  <div 
+                    key={idx}
+                    className="flex items-center gap-4 p-3 rounded-lg hover:bg-primary/5 transition-colors animate-fade-in group"
+                    style={{ animationDelay: `${idx * 100}ms` }}
+                  >
+                    <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-all">
+                      <item.icon className="w-5 h-5" />
+                    </div>
+                    <span className="text-muted-foreground group-hover:text-foreground transition-colors">{item.name}</span>
+                  </div>
+                ))}
               </div>
-              <Button className="bg-primary hover:bg-primary/90">
+              <Button className="bg-primary hover:bg-primary/90 hover-scale shadow-lg group">
                 <Link to="/studio" className="flex items-center">
-                  Explore Innovations <ArrowRight className="w-4 h-4 ml-2" />
+                  Explore Innovations 
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </Button>
             </div>
@@ -325,17 +357,20 @@ const Index = () => {
         </section>
 
         {/* Contact Section */}
-        <section id="contact" className="max-w-4xl mx-auto px-4 py-16">
+        <section id="contact" className="max-w-4xl mx-auto px-4 py-16 animate-fade-in">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-text-primary mb-4">
+            <Badge variant="outline" className="mb-4 px-6 py-2 text-base border-primary/30">
+              Contact Us
+            </Badge>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               Get In Touch
             </h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Ready to be part of Africa's digital health transformation? Let's connect.
             </p>
           </div>
           
-          <div className="bg-card border rounded-2xl p-8 shadow-lg">
+          <div className="bg-gradient-to-br from-card to-primary/5 border border-primary/20 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-shadow duration-300">
             <form 
               className="grid md:grid-cols-2 gap-6"
               onSubmit={(e) => {
@@ -394,7 +429,7 @@ const Index = () => {
                 />
               </div>
               <div className="md:col-span-2">
-                <Button type="submit" size="lg" className="w-full bg-primary hover:bg-primary/90">
+                <Button type="submit" size="lg" className="w-full bg-primary hover:bg-primary/90 hover-scale shadow-lg">
                   Send Message
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
@@ -405,14 +440,22 @@ const Index = () => {
       </main>
       
       {/* Footer */}
-      <footer className="w-full py-8 px-4 bg-secondary text-secondary-foreground text-center text-xs mt-16 tracking-wide">
-        <div className="mb-2">
-          © {new Date().getFullYear()} NURSAERAHEALTH. Where care meets code. Empowering Africa, Digitally & Compassionately.
-        </div>
-        <div>
-          <a href="/privacy" className="underline hover:text-accent transition">Privacy Policy</a>{" "}
-          |{" "}
-          <a href="#contact" className="underline hover:text-accent transition">Contact</a>
+      <footer className="w-full py-12 px-4 bg-gradient-to-br from-secondary to-secondary/80 text-secondary-foreground text-center mt-16">
+        <div className="max-w-6xl mx-auto">
+          <div className="mb-6 animate-fade-in">
+            <h3 className="text-2xl font-bold mb-2">NURSAERAHEALTH</h3>
+            <p className="text-secondary-foreground/80 italic">Where care meets code</p>
+          </div>
+          <div className="text-sm mb-4 opacity-90">
+            © {new Date().getFullYear()} NURSAERAHEALTH. Empowering Africa, Digitally & Compassionately.
+          </div>
+          <div className="flex justify-center gap-6 text-sm">
+            <a href="/privacy" className="hover:text-accent transition-colors story-link">Privacy Policy</a>
+            <span>|</span>
+            <a href="#contact" className="hover:text-accent transition-colors story-link">Contact</a>
+            <span>|</span>
+            <a href="/about" className="hover:text-accent transition-colors story-link">About</a>
+          </div>
         </div>
       </footer>
     </div>
