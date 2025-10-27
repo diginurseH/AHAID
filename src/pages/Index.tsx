@@ -179,11 +179,8 @@ const Index = () => {
               </Badge>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
-              About NURSAERAHEALTH
+              About Nursaera Health Tech
             </h2>
-            <p className="text-xl text-primary/80 mb-2">
-              NURSAERA HEALTH
-            </p>
             <p className="text-lg text-muted-foreground italic mb-8">
               Where care meets code
             </p>
@@ -192,12 +189,7 @@ const Index = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
             <div className="space-y-6">
               <p className="text-lg text-muted-foreground leading-relaxed animate-fade-in">
-                Creating <strong className="text-primary">digital dignity</strong> in healthcare through AI-driven tools 
-                that empower African healthcare professionals and communities.
-              </p>
-              <p className="text-muted-foreground animate-fade-in" style={{ animationDelay: "100ms" }}>
-                We bridge the gap between cutting-edge technology and compassionate care, 
-                ensuring every healthcare solution is built with African values at its core.
+                Creating <strong className="text-primary">digital dignity</strong> in African healthcare through AI-powered solutions.
               </p>
               
               {/* Interactive Quick Stats */}
@@ -270,38 +262,6 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Core Values */}
-        <section className="max-w-6xl mx-auto px-4 py-16">
-          <div className="text-center mb-12 animate-fade-in">
-            <Badge variant="outline" className="mb-4 px-6 py-2 text-base border-primary/30">
-              Our Values
-            </Badge>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              What Drives Us
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Our commitment to healthcare transformation is guided by these core principles
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-4 gap-6">
-            {coreValues.map((value, idx) => (
-              <Card 
-                key={value.title} 
-                className="hover:shadow-xl transition-all duration-300 hover-scale border-primary/20 group animate-fade-in"
-                style={{ animationDelay: `${idx * 100}ms` }}
-              >
-                <CardContent className="p-6 text-center">
-                  <div className="w-14 h-14 mx-auto mb-4 bg-primary/10 rounded-xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 group-hover:scale-110">
-                    {value.icon}
-                  </div>
-                  <h3 className="font-semibold text-card-foreground mb-2 group-hover:text-primary transition-colors">{value.title}</h3>
-                  <p className="text-sm text-muted-foreground">{value.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </section>
 
         {/* Interactive 4C Framework */}
         <Interactive4CFramework />
@@ -366,7 +326,7 @@ const Index = () => {
               Get In Touch
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Ready to be part of Africa's digital health transformation? Let's connect.
+              Join Africa's digital health transformation.
             </p>
           </div>
           
@@ -386,14 +346,14 @@ const Index = () => {
                 }
                 
                 // Create mailto link with form data
-                const subject = encodeURIComponent('Contact from NURSAERAHEALTH Website');
+                const subject = encodeURIComponent('Contact from Nursaera Health Tech Website');
                 const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
                 const mailtoUrl = `mailto:contact@nursaerahealth.org?subject=${subject}&body=${body}`;
                 
                 window.location.href = mailtoUrl;
                 
                 // Show success message
-                alert('Thank you for your message! Your email client should open now. If not, please email us directly at contact@nursaerahealth.org');
+                alert('Thank you for your message! Your email client should open now.');
               }}
             >
               <div>
@@ -443,11 +403,11 @@ const Index = () => {
       <footer className="w-full py-12 px-4 bg-gradient-to-br from-secondary to-secondary/80 text-secondary-foreground text-center mt-16">
         <div className="max-w-6xl mx-auto">
           <div className="mb-6 animate-fade-in">
-            <h3 className="text-2xl font-bold mb-2">NURSAERAHEALTH</h3>
+            <h3 className="text-2xl font-bold mb-2">Nursaera Health Tech</h3>
             <p className="text-secondary-foreground/80 italic">Where care meets code</p>
           </div>
           <div className="text-sm mb-4 opacity-90">
-            © {new Date().getFullYear()} NURSAERAHEALTH. Empowering Africa, Digitally & Compassionately.
+            © {new Date().getFullYear()} Nursaera Health Tech. Empowering Africa through healthcare innovation.
           </div>
           <div className="flex justify-center gap-6 text-sm">
             <a href="/privacy" className="hover:text-accent transition-colors story-link">Privacy Policy</a>

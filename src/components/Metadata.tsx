@@ -15,7 +15,7 @@ export function Metadata({
 }: MetadataProps) {
   return (
     <Helmet>
-      <title>{title} | NURSAERAHEALTH</title>
+      <title>{title} | Nursaera Health Tech</title>
       <meta name="description" content={description} />
       {keywords.length > 0 && <meta name="keywords" content={keywords.join(", ")} />}
       

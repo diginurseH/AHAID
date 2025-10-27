@@ -31,7 +31,7 @@ const testimonials = [
     id: 1,
     name: "Dr. Amara Kone",
     role: "ICU Nurse, Lagos",
-    quote: "NURSAERAHEALTH's AI tools helped me save 3 hours daily on documentation, giving me more time for patient care.",
+    quote: "Nursaera Health Tech's AI tools helped me save 3 hours daily on documentation, giving me more time for patient care.",
     videoId: "placeholder-1" // In real app, these would be actual video IDs
   },
   {

@@ -193,7 +193,7 @@ const UserProfileAssessment = ({ onProfileComplete, existingProfile }: UserProfi
             <CheckCircle className="w-8 h-8 text-green-600" />
           </div>
           <CardTitle className="text-2xl text-green-800">Assessment Complete!</CardTitle>
-          <p className="text-green-700">Here's your personalized journey through the NURSAERAHEALTH ecosystem</p>
+          <p className="text-green-700">Here's your personalized journey through the Nursaera Health Tech ecosystem</p>
         </CardHeader>
         <CardContent className="space-y-6">
           <div className="grid md:grid-cols-2 gap-6">
@@ -252,7 +252,7 @@ const UserProfileAssessment = ({ onProfileComplete, existingProfile }: UserProfi
     <Card className="w-full max-w-4xl mx-auto">
       <CardHeader>
         <div className="flex items-center justify-between mb-4">
-          <CardTitle className="text-xl text-green-800">Personalize Your NURSAERAHEALTH Experience</CardTitle>
+          <CardTitle className="text-xl text-green-800">Personalize Your Nursaera Health Tech Experience</CardTitle>
           <Badge variant="outline">
             Step {currentStep + 1} of {assessmentQuestions.length}
           </Badge>

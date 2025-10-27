@@ -65,18 +65,18 @@ const Navbar = () => {
   return (
     <nav className="w-full fixed top-0 left-0 z-30 bg-white/90 border-b border-green-50 shadow-sm backdrop-blur-lg">
       <div className="container max-w-7xl mx-auto flex items-center justify-between px-3 py-1 md:py-2">
-        <Link to="/" className="flex items-center gap-3 group" aria-label="NURSAERAHEALTH Home">
+        <Link to="/" className="flex items-center gap-3 group" aria-label="Nursaera Health Tech Home">
           <AhaidLogo size={38} />
           <div className="hidden xl:block">
             <div className="text-sm font-bold text-green-800 tracking-wide group-hover:text-amber-700 transition">
-              NURSAERA HEALTH
+              Nursaera Health Tech
             </div>
             <div className="text-xs text-green-600 italic">
               Where care meets code
             </div>
           </div>
           <span className="xl:hidden font-bold text-xl md:text-2xl text-green-900 tracking-tight group-hover:text-amber-700 transition">
-            NURSAERAHEALTH
+            Nursaera
           </span>
         </Link>
 
@@ -107,7 +107,7 @@ const Navbar = () => {
                         className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-green-50 hover:text-amber-700 focus:bg-green-50 focus:text-amber-700"
                       >
                         <div className="text-sm font-medium leading-none text-green-900">About Overview</div>
-                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">Quick introduction to NURSAERAHEALTH's mission and values</p>
+                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">Quick introduction to our mission and values</p>
                       </Link>
                     </NavigationMenuLink>
                     <NavigationMenuLink asChild>
@@ -180,7 +180,7 @@ const Navbar = () => {
             size="sm"
             className="ml-3 bg-amber-700 hover:bg-amber-800 text-white"
           >
-            <a href="#contact">Get in Touch</a>
+            <Link to="/auth">Get Started</Link>
           </Button>
         </div>
 
@@ -268,7 +268,7 @@ const Navbar = () => {
                       className="w-full bg-amber-700 hover:bg-amber-800 text-white"
                       onClick={() => setMobileMenuOpen(false)}
                     >
-                      <a href="#contact">Get in Touch</a>
+                      <Link to="/auth">Get Started</Link>
                     </Button>
                   </div>
                 </nav>

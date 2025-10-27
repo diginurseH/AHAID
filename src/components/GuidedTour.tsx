@@ -34,7 +34,7 @@ const GuidedTour = ({ isOpen, onClose, onComplete }: GuidedTourProps) => {
   const tourSteps: TourStep[] = [
     {
       id: "welcome",
-      title: "Welcome to NURSAERAHEALTH Ecosystem",
+      title: "Welcome to Nursaera Health Tech Ecosystem",
       content: "This guided tour will walk you through our comprehensive digital health ecosystem. You'll discover how our 4C Framework creates sustainable impact across Africa.",
       position: "bottom"
     },

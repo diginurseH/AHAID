@@ -134,7 +134,7 @@ const ActionPlanningTool = ({ userProfile, userProgress, onPlanSave }: ActionPla
     },
     "developer-contribution": {
       title: "Open Source Health Tech Contribution",
-      description: "Contribute to NURSAERAHEALTH's open source projects and build health solutions",
+      description: "Contribute to Nursaera Health Tech's open source projects and build health solutions",
       streams: ["code", "community"],
       goals: ["Make technical contributions", "Build developer network", "Improve health outcomes"],
       suggestedActions: [

@@ -72,7 +72,7 @@ const teamMembers = [
     experience: "20+ years clinical practice",
     expertise: ["Clinical Decision Support", "Quality Assurance", "Medical Training"],
     image: heroImage,
-    bio: "Ensuring clinical excellence and safety in all NURSAERAHEALTH healthcare solutions and training programs."
+    bio: "Ensuring clinical excellence and safety in all Nursaera Health Tech healthcare solutions and training programs."
   }
 ];
 
@@ -215,7 +215,7 @@ const partnershipCategories = [
 
 const testimonials = [
   {
-    quote: "NURSAERAHEALTH's commitment to transparency and ethical AI development gives us confidence in their solutions.",
+    quote: "Nursaera Health Tech's commitment to transparency and ethical AI development gives us confidence in their solutions.",
     author: "Dr. Maria Santos",
     role: "Chief Medical Officer, Lagos General Hospital",
     category: "transparency"
@@ -238,9 +238,9 @@ const About = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-green-50 via-white to-blue-50">
       <Metadata 
-        title="About NURSAERAHEALTH | Nursaera Health" 
-        description="Learn about NURSAERAHEALTH's mission to transform African healthcare through AI-driven solutions, our expert team, impact metrics, and partnership ecosystem."
-        keywords={["about NURSAERAHEALTH", "healthcare innovation", "African health tech", "mission vision", "team", "partnerships"]}
+        title="About Nursaera Health Tech | Nursaera Health" 
+        description="Learn about Nursaera Health Tech's mission to transform African healthcare through AI-driven solutions, our expert team, impact metrics, and partnership ecosystem."
+        keywords={["about Nursaera Health Tech", "healthcare innovation", "African health tech", "mission vision", "team", "partnerships"]}
       />
       <Navbar />
       
@@ -256,16 +256,16 @@ const About = () => {
           <div className="absolute inset-0">
             <img 
               src={heroImage} 
-              alt="NURSAERAHEALTH team and healthcare professionals" 
+              alt="Nursaera Health Tech team and healthcare professionals" 
               className="w-full h-full object-cover opacity-20"
             />
           </div>
           <div className="relative max-w-6xl mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-green-800 mb-6">
-              About NURSAERAHEALTH
+              About Nursaera Health Tech
             </h1>
             <p className="text-xl text-green-700 mb-4 max-w-3xl mx-auto">
-              NURSAERA HEALTH
+              Nursaera Health Tech
             </p>
             <p className="text-lg text-green-600 italic mb-8">
               Where care meets code

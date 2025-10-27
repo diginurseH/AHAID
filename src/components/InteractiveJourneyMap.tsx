@@ -67,7 +67,7 @@ const InteractiveJourneyMap = ({ userProfile, onProgressUpdate }: InteractiveJou
   const journeySteps: Record<string, JourneyStep> = {
     welcome: {
       id: "welcome",
-      title: "Welcome to Your NURSAERAHEALTH Journey",
+      title: "Welcome to Your Nursaera Health Tech Journey",
       description: "Based on your profile, we've created a personalized path through our ecosystem.",
       type: "milestone",
       streamConnection: ["all"],
@@ -201,7 +201,7 @@ const InteractiveJourneyMap = ({ userProfile, onProgressUpdate }: InteractiveJou
         {
           id: "success_stories",
           label: "See Success Stories",
-          description: "Learn from businesses that have transformed with NURSAERAHEALTH",
+          description: "Learn from businesses that have transformed with Nursaera Health Tech",
           nextStep: "case_studies",
           impact: "Proven transformation strategies"
         },

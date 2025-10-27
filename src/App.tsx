@@ -11,6 +11,7 @@ import EcosystemOverview from "./pages/EcosystemOverview";
 import Resources from "./pages/Resources";
 import Studio from "./pages/Studio";
 import Community from "./pages/Community";
+import Auth from "./pages/Auth";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/resources" element={<Resources />} />
           <Route path="/studio" element={<Studio />} />
           <Route path="/community" element={<Community />} />
+          <Route path="/auth" element={<Auth />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

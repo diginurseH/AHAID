@@ -41,7 +41,7 @@ export function ImpactMetricsSection() {
             Making Real Impact Across Africa
           </h2>
           <p className="text-lg text-green-600 max-w-2xl mx-auto">
-            See how NURSAERAHEALTH is transforming healthcare through technology and community
+            See how Nursaera Health Tech is transforming healthcare through technology and community
           </p>
         </div>
         

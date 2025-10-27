@@ -2,7 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { BookOpen, Calendar, User, ArrowRight, Search, Filter } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import BreadcrumbNav from "@/components/BreadcrumbNav";
@@ -75,6 +75,7 @@ const featuredStories = [
 const categories = ["All", "Care Stories", "Innovation", "Community", "Commerce"];
 
 const Studio = () => {
+  const navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [showAllStories, setShowAllStories] = useState(false);
@@ -89,20 +90,6 @@ const Studio = () => {
 
   const displayedStories = showAllStories ? filteredStories : filteredStories.slice(0, 3);
 
-  const handleStoryClick = (storyId: number) => {
-    // Navigate to community page where stories are featured
-    window.location.href = '/community';
-  };
-
-  const handleSubmitStory = () => {
-    // Navigate to contact form to submit story
-    window.location.href = '/#contact';
-  };
-
-  const handleGetInTouch = () => {
-    // Navigate to home page contact section
-    window.location.href = '/#contact';
-  };
 
   return (
     <div className="relative min-h-screen w-full bg-gradient-to-b from-yellow-50 via-emerald-50 to-white font-sans">
@@ -116,11 +103,10 @@ const Studio = () => {
         {/* Header Section */}
         <section className="max-w-4xl mx-auto py-12 px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-amber-700 mb-4">
-            NURSAERAHEALTH Studio
+            Nursaera Health Tech Studio
           </h1>
           <p className="text-lg text-green-900 mb-8 max-w-2xl mx-auto">
-            Where stories of healing meet innovation. Explore inspiring narratives, 
-            health innovation insights, and personal journeys from across Africa's healthcare landscape.
+            Stories of healing, innovation, and transformation across Africa's healthcare landscape.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
@@ -135,9 +121,9 @@ const Studio = () => {
               size="lg" 
               variant="outline" 
               className="border-green-700 text-green-800"
-              onClick={handleSubmitStory}
+              asChild
             >
-              Submit Your Story
+              <Link to="/#contact">Submit Your Story</Link>
             </Button>
           </div>
         </section>
@@ -186,7 +172,7 @@ const Studio = () => {
               <Card 
                 key={story.id} 
                 className="hover:shadow-lg transition-all duration-300 cursor-pointer hover:transform hover:scale-105"
-                onClick={() => handleStoryClick(story.id)}
+                onClick={() => navigate('/community')}
               >
                 <CardHeader>
                   <div className="flex justify-between items-start mb-2">
@@ -257,15 +243,15 @@ const Studio = () => {
             <h3 className="text-2xl font-bold mb-4">Share Your Story</h3>
             <p className="mb-6 text-amber-100">
               Have a story of innovation, care, or transformation? 
-              We'd love to feature your voice in NURSAERAHEALTH Studio.
+              We'd love to feature your voice in Nursaera Health Tech Studio.
             </p>
             <Button 
               size="lg" 
               variant="secondary" 
               className="bg-white text-amber-700 hover:bg-amber-50"
-              onClick={handleGetInTouch}
+              asChild
             >
-              Get in Touch
+              <Link to="/#contact">Get in Touch</Link>
             </Button>
           </div>
         </section>
